@@ -9,6 +9,8 @@
          <!-- 카카오링크 -->
          <string>kakaolink</string>
      </array>
+     <key>KAKAO_SECURE_MODE</key>
+     <true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
