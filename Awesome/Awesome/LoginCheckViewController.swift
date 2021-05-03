@@ -71,6 +71,16 @@ class LoginCheckViewController: UIViewController {
             }
     }
     }
+    
+    @IBAction func calendarButtonClicked(_ sender: Any) {
+        guard let calendarVC = storyboard?.instantiateViewController(identifier: "CallendarViewController") as? CallendarViewController else {return}
+        
+        self.navigationController?.pushViewController(calendarVC, animated: true)
+    }
+    
+    
+    
+    
 }
 extension LoginCheckViewController : UITableViewDelegate{
     func tableview(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
