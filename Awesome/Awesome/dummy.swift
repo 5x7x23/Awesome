@@ -14,4 +14,12 @@ struct mainViewDummy {
     var information : String
     var time : String
     var backgroundImage : String
+    var person : String
+}
+
+struct scheduleDummy {
+    var name : String
+    var time : String
+    var icon : String
+    var clear : String
 }

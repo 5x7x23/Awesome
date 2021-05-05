@@ -8,7 +8,12 @@
 import UIKit
 import KakaoSDKUser
 
-class LoginCheckViewController: UIViewController {
+class LoginCheckViewController: UIViewController , data {
+    func deleteData() {
+        dummyData.removeFirst()
+        mainTableView.reloadData()
+    }
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var userName: UILabel!
@@ -31,7 +36,6 @@ class LoginCheckViewController: UIViewController {
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
         setDummydata()
-        mainTableView.tintColor = .none
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -42,8 +46,8 @@ class LoginCheckViewController: UIViewController {
     }
     
     func setDummydata(){
-        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 5월 13일", information: "피시방 가서 게임하다가 BHC가서 치킨먹고 할리스가서 커피 한잔 하고 장암동에서 빠이빠이 하자. 내 전화번호는 010-5555-5555", time: "1mAgo", backgroundImage: "cellBackground"),
-                                     mainViewDummy(informationImage: "message", name: "If i die tommorow", information: "오늘밤이 만약 내게 주어진 돛대와 같다면 whiat should i do with this mmmm maybe 지나온 나날들을 시원하게 훑겠지 스물 여섯 컷의 흑백 film 내 머릿속의 스케치", time: "Long Time Ago", backgroundImage: "cellBackground")
+        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 5월 7일", information: "IKK 안녕하세요. ethan입니다~ 팀원분들과 점심식사 하시고, 타운홀에서 커피한잔 어떠신가요?", time: "10mAgo", backgroundImage: "cellBackground",person: "ethan"),mainViewDummy(informationImage: "calendar", name: "2021년 5월 5일", information: "익범 난데 이따 사회적 거리두기 준수하에 간술 어때", time: "10mAgo", backgroundImage: "cellBackground",person: "이민규"), mainViewDummy(informationImage: "calendar", name: "2021년 5월 13일", information: "피시방 가서 게임하다가 BHC가서 치킨먹고 할리스가서 커피 한잔 하고 장암동에서 빠이빠이 하자. 내 전화번호는 010-5555-5555", time: "1mAgo", backgroundImage: "cellBackground",person: "이민규"),
+                                     mainViewDummy(informationImage: "message", name: "If i die tommorow", information: "오늘밤이 만약 내게 주어진 돛대와 같다면 whiat should i do with this mmmm maybe 지나온 나날들을 시원하게 훑겠지 스물 여섯 컷의 흑백 film 내 머릿속의 스케치", time: "Long Time Ago", backgroundImage: "cellBackground",person: "빈지노")
         ])
     }
     
@@ -78,13 +82,24 @@ class LoginCheckViewController: UIViewController {
         self.navigationController?.pushViewController(calendarVC, animated: true)
     }
     
+    func tableView(_ tableView: UITableView,  didSelectRowAt indexPath: IndexPath){
+        mainTableView.deselectRow(at: indexPath, animated: true)
+        guard let promiseVC = storyboard?.instantiateViewController(identifier: "PromiseAlertViewController") as? PromiseAlertViewController else {return}
+        guard let commentVC = storyboard?.instantiateViewController(identifier: "CommentAlertViewController") as? CommentAlertViewController else {return}
+        self.present(promiseVC, animated: true, completion: nil)
+        promiseVC.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, person: dummyData[indexPath.row].person)
+        promiseVC.deleteDelegate = self
+        
+        
+    }
+    
     
     
     
 }
 extension LoginCheckViewController : UITableViewDelegate{
     func tableview(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
-        return 100;
+        return 100
     }
 }
 extension LoginCheckViewController : UITableViewDataSource{

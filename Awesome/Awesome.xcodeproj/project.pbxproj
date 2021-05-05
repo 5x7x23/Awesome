@@ -10,6 +10,8 @@
 		36174C7D26382F0C00E8A0CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36174C7C26382F0C00E8A0CD /* SettingViewController.swift */; };
 		3628EE4C263EB59F0042A9B5 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628EE4B263EB59F0042A9B5 /* dummy.swift */; };
 		36340BF0263FC5AA0089BC15 /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */; };
+		36369F63264291AB00115867 /* PromiseAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36369F62264291AB00115867 /* PromiseAlertViewController.swift */; };
+		36369F67264291BC00115867 /* CommentAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36369F66264291BC00115867 /* CommentAlertViewController.swift */; };
 		363ED88A263FE716005475A1 /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363ED889263FE716005475A1 /* FSCalendar.framework */; };
 		36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36419D9B2636E4630067C89D /* AppDelegate.swift */; };
 		36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36419D9D2636E4630067C89D /* SceneDelegate.swift */; };
@@ -92,9 +94,12 @@
 		3647FB93263864300079ECB4 /* NotoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3647FB4B263864300079ECB4 /* NotoSans-SemiBoldItalic.ttf */; };
 		3647FB94263864300079ECB4 /* NotoSans-SemiCondensedSemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3647FB4C263864300079ECB4 /* NotoSans-SemiCondensedSemiBoldItalic.ttf */; };
 		3647FB95263864300079ECB4 /* NotoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3647FB4D263864300079ECB4 /* NotoSans-Light.ttf */; };
+		367F9C0126426DFC005324A2 /* DatepickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F9C0026426DFC005324A2 /* DatepickerViewController.swift */; };
+		367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */; };
 		368A019B263FE4A300100B01 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A9372637173C0082B4AB /* LoginCheckViewController.swift */; };
 		36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AA7C24263A97080084DD9C /* AlertViewController.swift */; };
+		36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD5CC42642654A00161EAE /* PlusViewController.swift */; };
 		36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */; };
 		36EDFD8F264043250088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		36EDFD92264043280088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -104,6 +109,7 @@
 		36EDFD9C264043320088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		36EDFDE1264044C00088A538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA12636E4630067C89D /* Main.storyboard */; };
 		36EDFDE4264044C10088A538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA12636E4630067C89D /* Main.storyboard */; };
+		36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */; };
 		6FBEEC5B63FA40AA162F6F0F /* Pods_Awesome_AwesomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABCC8A22F5323B18CEBC85C /* Pods_Awesome_AwesomeUITests.framework */; };
 		86094DAEF1575CB1461735CC /* Pods_AwesomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7877149D225BD702B8FD62 /* Pods_AwesomeTests.framework */; };
 		CBC1089136CE1BBCEC802570 /* Pods_Awesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FABECE5BAD859BD3DE8032 /* Pods_Awesome.framework */; };
@@ -146,6 +152,8 @@
 		36174C7C26382F0C00E8A0CD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3628EE4B263EB59F0042A9B5 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
+		36369F62264291AB00115867 /* PromiseAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseAlertViewController.swift; sourceTree = "<group>"; };
+		36369F66264291BC00115867 /* CommentAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAlertViewController.swift; sourceTree = "<group>"; };
 		363ED889263FE716005475A1 /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36419D982636E4630067C89D /* Awesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36419D9B2636E4630067C89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,10 +242,14 @@
 		3647FB4B263864300079ECB4 /* NotoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-SemiBoldItalic.ttf"; path = "../../../Downloads/NotoSans-unhinted/NotoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		3647FB4C263864300079ECB4 /* NotoSans-SemiCondensedSemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-SemiCondensedSemiBoldItalic.ttf"; path = "../../../Downloads/NotoSans-unhinted/NotoSans-SemiCondensedSemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		3647FB4D263864300079ECB4 /* NotoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Light.ttf"; path = "../../../Downloads/NotoSans-unhinted/NotoSans-Light.ttf"; sourceTree = "<group>"; };
+		367F9C0026426DFC005324A2 /* DatepickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatepickerViewController.swift; sourceTree = "<group>"; };
+		367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishDatePickerViewController.swift; sourceTree = "<group>"; };
 		368A017F263FE43F00100B01 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
 		36AA7C24263A97080084DD9C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		36DD5CC42642654A00161EAE /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		487B161AC884EF073C20C8D7 /* Pods-Awesome-AwesomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awesome-AwesomeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ABCC8A22F5323B18CEBC85C /* Pods_Awesome_AwesomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awesome_AwesomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BC82C191638E5C3339558 /* Pods-AwesomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeTests/Pods-AwesomeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +328,12 @@
 				36419DA92636E4630067C89D /* Info.plist */,
 				3647FB05263864140079ECB4 /* font */,
 				3628EE4B263EB59F0042A9B5 /* dummy.swift */,
+				36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */,
+				36DD5CC42642654A00161EAE /* PlusViewController.swift */,
+				367F9C0026426DFC005324A2 /* DatepickerViewController.swift */,
+				367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */,
+				36369F62264291AB00115867 /* PromiseAlertViewController.swift */,
+				36369F66264291BC00115867 /* CommentAlertViewController.swift */,
 			);
 			path = Awesome;
 			sourceTree = "<group>";
@@ -764,9 +782,15 @@
 			files = (
 				36419DED2636ECBC0067C89D /* LoginViewController.swift in Sources */,
 				36340BF0263FC5AA0089BC15 /* CallendarViewController.swift in Sources */,
+				367F9C0126426DFC005324A2 /* DatepickerViewController.swift in Sources */,
+				36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */,
+				36369F63264291AB00115867 /* PromiseAlertViewController.swift in Sources */,
+				36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */,
 				36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */,
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,
+				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
 				36419DA02636E4630067C89D /* ViewController.swift in Sources */,
+				36369F67264291BC00115867 /* CommentAlertViewController.swift in Sources */,
 				36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */,
 				36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */,
 				3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */,
