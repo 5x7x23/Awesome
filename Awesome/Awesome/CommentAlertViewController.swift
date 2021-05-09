@@ -8,23 +8,18 @@
 import UIKit
 
 class CommentAlertViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
-
+        self.informationLabel.numberOfLines = 5
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func okButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }

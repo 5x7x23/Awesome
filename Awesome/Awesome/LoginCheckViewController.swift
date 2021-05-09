@@ -13,12 +13,17 @@ class LoginCheckViewController: UIViewController , data {
         dummyData.removeFirst()
         mainTableView.reloadData()
     }
+    @IBOutlet weak var awesomeLabel: UILabel!
+    @IBOutlet weak var HiLabel: UILabel!
+    @IBOutlet weak var awesomeLabel2: UILabel!
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var userName: UILabel!
     var userNameText : String = ""
     var urlProfile : String = ""
+    
+    var ifPromise : Bool = false
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -36,7 +41,11 @@ class LoginCheckViewController: UIViewController , data {
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
         setDummydata()
-        
+        HiLabel.dynamicFont(fontSize: 24, weight: .semibold)
+        print(HiLabel.font.fontName)
+        awesomeLabel2.dynamicFont(fontSize: 18, weight: .black)
+        awesomeLabel.dynamicFont(fontSize: 18, weight: .black)
+        userName.dynamicFont(fontSize: 24, weight: .semibold)
     }
     override func viewDidAppear(_ animated: Bool) {
         uppdateProfile()
@@ -57,6 +66,7 @@ class LoginCheckViewController: UIViewController , data {
         self.navigationController?.pushViewController(settingVC, animated: true)
         
     }
+    
     
     func uppdateProfile(){
         UserApi.shared.me() {(user, error) in
@@ -82,20 +92,21 @@ class LoginCheckViewController: UIViewController , data {
         self.navigationController?.pushViewController(calendarVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView,  didSelectRowAt indexPath: IndexPath){
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         mainTableView.deselectRow(at: indexPath, animated: true)
         guard let promiseVC = storyboard?.instantiateViewController(identifier: "PromiseAlertViewController") as? PromiseAlertViewController else {return}
         guard let commentVC = storyboard?.instantiateViewController(identifier: "CommentAlertViewController") as? CommentAlertViewController else {return}
-        self.present(promiseVC, animated: true, completion: nil)
-        promiseVC.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, person: dummyData[indexPath.row].person)
-        promiseVC.deleteDelegate = self
         
+        if dummyData[indexPath.row].informationImage == "calendar"{
+            self.present(promiseVC, animated: true, completion: nil)
+            promiseVC.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, person: dummyData[indexPath.row].person)
+            promiseVC.deleteDelegate = self
+        }
+        else{
+            self.present(commentVC, animated: true, completion: nil)
+        }
         
     }
-    
-    
-    
-    
 }
 extension LoginCheckViewController : UITableViewDelegate{
     func tableview(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
@@ -112,8 +123,49 @@ extension LoginCheckViewController : UITableViewDataSource{
 
         dummyCell.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, informationImage: dummyData[indexPath.row].informationImage, time: dummyData[indexPath.row].time, backGround: dummyData[indexPath.row].backgroundImage)
         
+        
         return dummyCell
     }
     
     
+}
+
+extension UILabel {
+  func dynamicFont(fontSize size: CGFloat, weight: UIFont.Weight) {
+    let currentFontName = "NotoSans-SemiBold"
+    var calculatedFont: UIFont?
+    let bounds = UIScreen.main.bounds
+    let height = bounds.size.height
+    
+    switch height {
+    case 568.0: //iphone 5, SE => 4 inch
+      calculatedFont = UIFont(name: currentFontName, size: size * 0.7)
+      resizeFont(calculatedFont: calculatedFont, weight: weight)
+      break
+    case 667.0: //iphone 6, 6s, 7, 8 => 4.7 inch
+      calculatedFont = UIFont(name: currentFontName, size: size * 0.92)
+      resizeFont(calculatedFont: calculatedFont, weight: weight)
+      break
+    case 736.0: //iphone 6s+ 6+, 7+, 8+ => 5.5 inch
+      calculatedFont = UIFont(name: currentFontName, size: size * 0.95)
+     resizeFont(calculatedFont: calculatedFont, weight: weight)
+      break
+    case 812.0: //iphone X, XS => 5.8 inch
+      calculatedFont = UIFont(name: currentFontName, size: size)
+      resizeFont(calculatedFont: calculatedFont, weight: weight)
+      break
+    case 896.0: //iphone XR => 6.1 inch  // iphone XS MAX => 6.5 inch
+      calculatedFont = UIFont(name: currentFontName, size: size * 1.15)
+      resizeFont(calculatedFont: calculatedFont, weight: weight)
+      break
+    default:
+      print("not an iPhone")
+      break
+    }
+  }
+  
+  private func resizeFont(calculatedFont: UIFont?, weight: UIFont.Weight) {
+    self.font = calculatedFont
+    self.font = UIFont.systemFont(ofSize: calculatedFont!.pointSize, weight: weight)
+  }
 }
