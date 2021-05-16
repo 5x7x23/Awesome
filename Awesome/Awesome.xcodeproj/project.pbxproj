@@ -313,27 +313,19 @@
 		36419D9A2636E4630067C89D /* Awesome */ = {
 			isa = PBXGroup;
 			children = (
-				36419D9B2636E4630067C89D /* AppDelegate.swift */,
-				36419D9D2636E4630067C89D /* SceneDelegate.swift */,
-				36419D9F2636E4630067C89D /* ViewController.swift */,
-				36419DA12636E4630067C89D /* Main.storyboard */,
-				3698A9372637173C0082B4AB /* LoginCheckViewController.swift */,
-				36419DEC2636ECBC0067C89D /* LoginViewController.swift */,
-				36174C7C26382F0C00E8A0CD /* SettingViewController.swift */,
-				36AA7C24263A97080084DD9C /* AlertViewController.swift */,
-				36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */,
+				36E5B4F42648528C0079170F /* Storyboards */,
+				36E5B4EC2648520B0079170F /* Source */,
+				36E5B4F3264852510079170F /* ViewControllers */,
+				36E5B4F12648523E0079170F /* Cells */,
+				36E5B4EF2648521F0079170F /* Protocol */,
+				36E5B4F0264852320079170F /* Network */,
+				36E5B4F2264852490079170F /* Views */,
 				36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */,
 				36419DA42636E4630067C89D /* Assets.xcassets */,
 				36419DA62636E4630067C89D /* LaunchScreen.storyboard */,
 				36419DA92636E4630067C89D /* Info.plist */,
 				3647FB05263864140079ECB4 /* font */,
 				3628EE4B263EB59F0042A9B5 /* dummy.swift */,
-				36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */,
-				36DD5CC42642654A00161EAE /* PlusViewController.swift */,
-				367F9C0026426DFC005324A2 /* DatepickerViewController.swift */,
-				367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */,
-				36369F62264291AB00115867 /* PromiseAlertViewController.swift */,
-				36369F66264291BC00115867 /* CommentAlertViewController.swift */,
 			);
 			path = Awesome;
 			sourceTree = "<group>";
@@ -434,6 +426,70 @@
 			);
 			name = font;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		36E5B4EC2648520B0079170F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				36419D9B2636E4630067C89D /* AppDelegate.swift */,
+				36419D9D2636E4630067C89D /* SceneDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		36E5B4EF2648521F0079170F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		36E5B4F0264852320079170F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36E5B4F12648523E0079170F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */,
+				36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		36E5B4F2264852490079170F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36E5B4F3264852510079170F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36419D9F2636E4630067C89D /* ViewController.swift */,
+				3698A9372637173C0082B4AB /* LoginCheckViewController.swift */,
+				36AA7C24263A97080084DD9C /* AlertViewController.swift */,
+				36174C7C26382F0C00E8A0CD /* SettingViewController.swift */,
+				36419DEC2636ECBC0067C89D /* LoginViewController.swift */,
+				36DD5CC42642654A00161EAE /* PlusViewController.swift */,
+				367F9C0026426DFC005324A2 /* DatepickerViewController.swift */,
+				367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */,
+				36369F66264291BC00115867 /* CommentAlertViewController.swift */,
+				36369F62264291AB00115867 /* PromiseAlertViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		36E5B4F42648528C0079170F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				36419DA12636E4630067C89D /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		764DE9A4A469E22B2855F311 /* Frameworks */ = {
