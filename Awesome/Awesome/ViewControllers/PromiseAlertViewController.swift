@@ -12,6 +12,12 @@ protocol data {
 }
 
 class PromiseAlertViewController: UIViewController {
+    @IBOutlet weak var nameConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subjectConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subjectUpConstarint: NSLayoutConstraint!
+    @IBOutlet weak var subjectDownConstarint: NSLayoutConstraint!
+    @IBOutlet weak var nameRigthConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var promiseObject: UILabel!
@@ -22,7 +28,49 @@ class PromiseAlertViewController: UIViewController {
         self.view.backgroundColor = .clear
         self.promiseObject.lineBreakStrategy = .hangulWordPriority
         self.promiseObject.numberOfLines = 5
-        // Do any additional setup after loading the view.
+        let width = UIScreen.main.bounds.width
+        
+//        375  아이폰8
+//        414 아이폰 11
+//        375 아이폰 11프로
+//        414 아이폰 프맥
+//        390 아이폰 12,12프로
+//        428 아이폰 12프맥
+//        360 아이폰 12미니
+        if width == 375 { // 아이폰8, 아이폰 11프로
+            subjectConstraint.constant = 60
+            nameConstraint.constant = 60
+            subjectUpConstarint.constant = 20
+            subjectDownConstarint.constant = 20
+        }
+        if width == 414{ //아이폰 11
+            subjectConstraint.constant = 70
+            nameConstraint.constant = 70
+            nameRigthConstraint.constant = 25
+            subjectUpConstarint.constant = 35
+            subjectDownConstarint.constant = 35
+        }
+        if width == 390{
+            subjectConstraint.constant = 70
+            nameConstraint.constant = 70
+            nameRigthConstraint.constant = 25
+            subjectUpConstarint.constant = 25
+            subjectDownConstarint.constant = 25
+        }
+        if width == 428{
+            subjectConstraint.constant = 70
+            nameConstraint.constant = 70
+            nameRigthConstraint.constant = 30
+            subjectUpConstarint.constant = 45
+            subjectDownConstarint.constant = 45
+        }
+        if width == 360{
+            subjectConstraint.constant = 65
+            nameConstraint.constant = 65
+            nameRigthConstraint.constant = 30
+            subjectUpConstarint.constant = 20
+            subjectDownConstarint.constant = 20
+        }
     }
     
     
@@ -39,15 +87,5 @@ class PromiseAlertViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         deleteDelegate?.deleteData()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

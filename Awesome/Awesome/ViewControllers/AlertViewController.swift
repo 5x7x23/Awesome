@@ -9,11 +9,13 @@ import UIKit
 import KakaoSDKAuth
 
 class AlertViewController: UIViewController {
-
+    @IBOutlet weak var backgroundView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         view.isOpaque = true
+        self.view.sendSubviewToBack(backgroundView)
     }
     @IBAction func alertButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

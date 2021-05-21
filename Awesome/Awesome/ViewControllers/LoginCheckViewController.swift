@@ -132,7 +132,7 @@ extension LoginCheckViewController : UITableViewDataSource{
 
 extension UILabel {
   func dynamicFont(fontSize size: CGFloat, weight: UIFont.Weight) {
-    let currentFontName = "NotoSans-SemiBold"
+    let currentFontName = "GmarketSansTTFBold"
     var calculatedFont: UIFont?
     let bounds = UIScreen.main.bounds
     let height = bounds.size.height

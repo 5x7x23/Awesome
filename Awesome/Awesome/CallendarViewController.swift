@@ -2,6 +2,7 @@ import UIKit
 import FSCalendar
 
 class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var monthDay: UILabel!
@@ -16,30 +17,20 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     
     lazy var scheduleButtons: [UIButton] = [self.plusScheduleButton, self.notScheduleButton]
     var isShowFloating: Bool = false
+    var isSchedule:Bool = false
    
     var dummySData : [scheduleDummy] = []
     
     func setDummydata(){
-        if checkDate != "2021-05-05"{
-            if checkDate == "2021-05-07"{
-                dummySData = []
-                dummySData.append(contentsOf:[scheduleDummy(name: "ethan", time: "14:00 ~ 15:00", icon: "continueIcon", clear:"")
-                ])
-                
-            }
-            else{
+        if checkDate == "2021-05-05"{
+            isSchedule = true
             dummySData = []
-            dummySData.append(contentsOf:[scheduleDummy(name: "", time: "", icon: "clearIcon", clear:"🙄 특별히 약속이 없네요 🙄️")
+            dummySData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon", clear:"") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon",clear:"")
             ])
-            print("hihihi")
-            }
         }
-            else{
-                dummySData = []
-        dummySData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon", clear:"") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon",clear:"")
-        ])
-                print("byebyebye")
-            }
+        else{
+            isSchedule = false
+        }
     }
     
     @IBAction func scheduleButtonClicked(_ sender: Any) {
@@ -48,6 +39,10 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
             button.isHidden = false
             button.alpha = 0
             UIView.animate(withDuration: 0.3) {
+                if let image = UIImage(named: "closeButton") {
+                    self!.ScheduleButton.setImage(image, for: .normal)
+                }
+                
                 button.alpha = 1
                 self?.view.layoutIfNeeded()
             }
@@ -57,6 +52,9 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         else{
         scheduleButtons.reversed().forEach { button in
             UIView.animate(withDuration: 0.3) {
+                if let image = UIImage(named: "schesuleButton") {
+                    self.ScheduleButton.setImage(image, for: .normal)
+                }
                 button.isHidden = true
                 self.view.layoutIfNeeded()
             }
@@ -70,19 +68,22 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         super.viewDidLoad()
         calendar.delegate = self
         calendar.dataSource = self
-        calendar.backgroundColor = UIColor(red: 241/255, green: 239/255, blue: 228/255, alpha: 1)
+        calendar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         calendar.appearance.headerDateFormat = ""
-        calendar.appearance.weekdayFont = UIFont(name: "NotoSans-Regular", size: 14)
+        calendar.appearance.weekdayFont = UIFont(name: "", size: 14)
         calendar.calendarWeekdayView.weekdayLabels[0].text = "Su"
+        calendar.calendarWeekdayView.weekdayLabels
         calendar.calendarWeekdayView.weekdayLabels[1].text = "Mo"
         calendar.calendarWeekdayView.weekdayLabels[2].text = "Tu"
         calendar.calendarWeekdayView.weekdayLabels[3].text = "We"
         calendar.calendarWeekdayView.weekdayLabels[4].text = "Th"
         calendar.calendarWeekdayView.weekdayLabels[5].text = "Fr"
         calendar.calendarWeekdayView.weekdayLabels[6].text = "Sa"
-        calendar.appearance.titleFont = UIFont(name: "NotoSans-Regular", size: 14)
+        calendar.appearance.titleFont = UIFont(name: "GmarketSansTTFBold.ttf", size: 14)
         labelChanged(yearD: yearData, monthD: monthData)
         self.view.sendSubviewToBack(scheduleTableView)
+        self.view.sendSubviewToBack(calendar)
+        self.view.sendSubviewToBack(headerView)
         scheduleTableView.delegate = self
         scheduleTableView.dataSource = self
         scheduleTableView.separatorStyle = .none
@@ -141,15 +142,31 @@ extension CallendarViewController : UITableViewDelegate{
 
 extension CallendarViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSchedule == true{
             return dummySData.count
+        }
+        else{
+            return 1
+        }
     
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let dummyScheduleCell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier, for: indexPath) as? ScheduleTableViewCell else {return UITableViewCell() }
-        
+        //약속셀
+            guard let dummyScheduleCell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as? ScheduleTableViewCell else {return UITableViewCell() }
+        //특별한 약속이 없네여~
+        guard let noScheduleCell = tableView.dequeueReusableCell(withIdentifier: NoScheduleTableViewCell.identifier) else {return UITableViewCell() }
+        //스케쥴이 있을때
+        if isSchedule == true{
             dummyScheduleCell.setData(nameData: dummySData[indexPath.row].name, timedata: dummySData[indexPath.row].time, scIcon: dummySData[indexPath.row].icon, clearCell: dummySData[indexPath.row].clear)
-        return dummyScheduleCell
+            return dummyScheduleCell
+        }
+        if isSchedule == false{
+            return noScheduleCell
+        }
+        
+        
+        return UITableViewCell()
     }
     
 }

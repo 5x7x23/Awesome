@@ -37,6 +37,7 @@ class PlusViewController: UIViewController,dateData {
         let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
             self.nameText = nameAlert.textFields?[0].text ?? ""
             self.nameLabel.text = self.nameText
+           
         }
         
         let cancelAction = UIAlertAction(title: "취소", style: .default)
