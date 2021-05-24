@@ -22,8 +22,6 @@
 		36419DA32636E4630067C89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA12636E4630067C89D /* Main.storyboard */; };
 		36419DA52636E4630067C89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA42636E4630067C89D /* Assets.xcassets */; };
 		36419DA82636E4630067C89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA62636E4630067C89D /* LaunchScreen.storyboard */; };
-		36419DB32636E4630067C89D /* AwesomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36419DB22636E4630067C89D /* AwesomeTests.swift */; };
-		36419DBE2636E4630067C89D /* AwesomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36419DBD2636E4630067C89D /* AwesomeUITests.swift */; };
 		36419DED2636ECBC0067C89D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36419DEC2636ECBC0067C89D /* LoginViewController.swift */; };
 		36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36429E3D26564AEC006CF81F /* NoScheduleTableViewCell.swift */; };
 		36429E402657E2BF006CF81F /* NotScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */; };
@@ -100,11 +98,7 @@
 		36419DA72636E4630067C89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36419DA92636E4630067C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36419DAE2636E4630067C89D /* AwesomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		36419DB22636E4630067C89D /* AwesomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeTests.swift; sourceTree = "<group>"; };
-		36419DB42636E4630067C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36419DB92636E4630067C89D /* AwesomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		36419DBD2636E4630067C89D /* AwesomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeUITests.swift; sourceTree = "<group>"; };
-		36419DBF2636E4630067C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36419DEC2636ECBC0067C89D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36429E3D26564AEC006CF81F /* NoScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotScheduleViewController.swift; sourceTree = "<group>"; };
@@ -158,8 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				36419D9A2636E4630067C89D /* Awesome */,
-				36419DB12636E4630067C89D /* AwesomeTests */,
-				36419DBC2636E4630067C89D /* AwesomeUITests */,
 				36419D992636E4630067C89D /* Products */,
 				764DE9A4A469E22B2855F311 /* Frameworks */,
 				A6EC8831195C19B0E07F4194 /* Pods */,
@@ -194,24 +186,6 @@
 				3628EE4B263EB59F0042A9B5 /* dummy.swift */,
 			);
 			path = Awesome;
-			sourceTree = "<group>";
-		};
-		36419DB12636E4630067C89D /* AwesomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				36419DB22636E4630067C89D /* AwesomeTests.swift */,
-				36419DB42636E4630067C89D /* Info.plist */,
-			);
-			path = AwesomeTests;
-			sourceTree = "<group>";
-		};
-		36419DBC2636E4630067C89D /* AwesomeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				36419DBD2636E4630067C89D /* AwesomeUITests.swift */,
-				36419DBF2636E4630067C89D /* Info.plist */,
-			);
-			path = AwesomeUITests;
 			sourceTree = "<group>";
 		};
 		3647FB05263864140079ECB4 /* font */ = {
@@ -591,7 +565,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36419DB32636E4630067C89D /* AwesomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +572,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36419DBE2636E4630067C89D /* AwesomeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
