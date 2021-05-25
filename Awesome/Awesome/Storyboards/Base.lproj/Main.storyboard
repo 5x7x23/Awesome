@@ -559,7 +559,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB4-ZN-fES">
-                                <rect key="frame" x="80" y="558" width="69.666666666666686" height="18"/>
+                                <rect key="frame" x="80" y="558" width="69.333333333333314" height="18"/>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="18"/>
                                 <color key="textColor" red="0.57647061349999995" green="0.57647061349999995" blue="0.57647061349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -764,7 +764,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maK-wW-EBe">
-                                        <rect key="frame" x="80" y="20" width="100" height="25"/>
+                                        <rect key="frame" x="87.666666666666686" y="20" width="100" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Sg3-OZ-bfK"/>
                                             <constraint firstAttribute="width" constant="100" id="hr4-Qs-W8H"/>
@@ -774,10 +774,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="FBI-P0-ZGv">
-                                        <rect key="frame" x="266" y="5" width="64" height="64"/>
+                                        <rect key="frame" x="260" y="5" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="HY6-G4-lLR"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="75" id="ngN-05-9Qy"/>
+                                            <constraint firstAttribute="width" constant="70" id="KtE-0A-sUd"/>
+                                            <constraint firstAttribute="height" constant="70" id="ypY-sb-U8o"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -791,10 +791,10 @@
                                     <constraint firstItem="W6p-9W-NIc" firstAttribute="top" secondItem="KpR-3f-DZN" secondAttribute="top" constant="50" id="JZr-Po-gEI"/>
                                     <constraint firstAttribute="height" constant="100" id="Mqk-YV-Jw2"/>
                                     <constraint firstItem="D5i-1O-elp" firstAttribute="leading" secondItem="KpR-3f-DZN" secondAttribute="leading" constant="45" id="NzC-4v-LGS"/>
+                                    <constraint firstItem="maK-wW-EBe" firstAttribute="leading" secondItem="myO-WE-fqr" secondAttribute="trailing" id="Uj6-AF-0nI"/>
                                     <constraint firstItem="W6p-9W-NIc" firstAttribute="leading" secondItem="D5i-1O-elp" secondAttribute="trailing" constant="1" id="Vzr-8u-551"/>
                                     <constraint firstAttribute="trailing" secondItem="rQY-ju-zu8" secondAttribute="trailing" constant="45" id="Wfx-3H-gWX"/>
                                     <constraint firstItem="myO-WE-fqr" firstAttribute="leading" secondItem="KpR-3f-DZN" secondAttribute="leading" constant="45" id="YLW-IF-trQ"/>
-                                    <constraint firstItem="maK-wW-EBe" firstAttribute="leading" secondItem="KpR-3f-DZN" secondAttribute="leading" constant="80" id="syM-3V-dQb"/>
                                     <constraint firstAttribute="trailing" secondItem="FBI-P0-ZGv" secondAttribute="trailing" constant="45" id="zlH-xq-qNH"/>
                                 </constraints>
                             </view>

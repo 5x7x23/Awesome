@@ -22,6 +22,7 @@ class LoginCheckViewController: UIViewController , data {
     @IBOutlet weak var userName: UILabel!
     var userNameText : String = ""
     var urlProfile : String = ""
+    let screenWith = UIScreen.main.bounds.width
     
     var ifPromise : Bool = false
     
@@ -30,28 +31,40 @@ class LoginCheckViewController: UIViewController , data {
     var dummyData : [mainViewDummy] = []
     
     override func viewDidLoad() {
-        profileImage.layer.borderWidth = 1
-        profileImage.layer.masksToBounds = false
-        profileImage.layer.borderColor = UIColor.clear.cgColor
-        profileImage.layer.cornerRadius = profileImage.frame.height/2
-        profileImage.clipsToBounds = true
         super.viewDidLoad()
         uppdateProfile()
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
         setDummydata()
-        HiLabel.dynamicFont(fontSize: 24, weight: .semibold)
         print(HiLabel.font.fontName)
-        awesomeLabel2.dynamicFont(fontSize: 18, weight: .black)
-        awesomeLabel.dynamicFont(fontSize: 18, weight: .black)
-        userName.dynamicFont(fontSize: 24, weight: .semibold)
+        profileImageRound()
+        HiLabel.font = HiLabel.font.withSize(resolutionFontSize(size: 24))
+        userName.font = userName.font.withSize(resolutionFontSize(size: 24))
+        awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
+        awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
+
     }
     override func viewDidAppear(_ animated: Bool) {
         uppdateProfile()
         }
     override func viewWillAppear(_ animated: Bool) {
         uppdateProfile()
+    }
+    
+    func profileImageRound(){
+        profileImage.layer.borderWidth = 1
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = UIColor.clear.cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.clipsToBounds = true
+        let scale = screenWith/428
+        profileImage.frame.size = CGSize(width: profileImage.frame.width * scale, height: profileImage.frame.height * scale)
+    }
+    func resolutionFontSize(size : CGFloat) -> CGFloat{
+        let sizeFormatter = size/428
+        let result = screenWith * sizeFormatter
+        return result
     }
     
     func setDummydata(){
@@ -109,7 +122,7 @@ class LoginCheckViewController: UIViewController , data {
     }
 }
 extension LoginCheckViewController : UITableViewDelegate{
-    func tableview(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
         return 100
     }
 }
@@ -128,44 +141,4 @@ extension LoginCheckViewController : UITableViewDataSource{
     }
     
     
-}
-
-extension UILabel {
-  func dynamicFont(fontSize size: CGFloat, weight: UIFont.Weight) {
-    let currentFontName = "GmarketSansTTFBold"
-    var calculatedFont: UIFont?
-    let bounds = UIScreen.main.bounds
-    let height = bounds.size.height
-    
-    switch height {
-    case 568.0: //iphone 5, SE => 4 inch
-      calculatedFont = UIFont(name: currentFontName, size: size * 0.7)
-      resizeFont(calculatedFont: calculatedFont, weight: weight)
-      break
-    case 667.0: //iphone 6, 6s, 7, 8 => 4.7 inch
-      calculatedFont = UIFont(name: currentFontName, size: size * 0.92)
-      resizeFont(calculatedFont: calculatedFont, weight: weight)
-      break
-    case 736.0: //iphone 6s+ 6+, 7+, 8+ => 5.5 inch
-      calculatedFont = UIFont(name: currentFontName, size: size * 0.95)
-     resizeFont(calculatedFont: calculatedFont, weight: weight)
-      break
-    case 812.0: //iphone X, XS => 5.8 inch
-      calculatedFont = UIFont(name: currentFontName, size: size)
-      resizeFont(calculatedFont: calculatedFont, weight: weight)
-      break
-    case 896.0: //iphone XR => 6.1 inch  // iphone XS MAX => 6.5 inch
-      calculatedFont = UIFont(name: currentFontName, size: size * 1.15)
-      resizeFont(calculatedFont: calculatedFont, weight: weight)
-      break
-    default:
-      print("not an iPhone")
-      break
-    }
-  }
-  
-  private func resizeFont(calculatedFont: UIFont?, weight: UIFont.Weight) {
-    self.font = calculatedFont
-    self.font = UIFont.systemFont(ofSize: calculatedFont!.pointSize, weight: weight)
-  }
 }

@@ -38,30 +38,9 @@
 		36EDFD982640432D0088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		36EDFD9B264043300088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		36EDFD9C264043320088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		36EDFDE1264044C00088A538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA12636E4630067C89D /* Main.storyboard */; };
-		36EDFDE4264044C10088A538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36419DA12636E4630067C89D /* Main.storyboard */; };
 		36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */; };
-		6FBEEC5B63FA40AA162F6F0F /* Pods_Awesome_AwesomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABCC8A22F5323B18CEBC85C /* Pods_Awesome_AwesomeUITests.framework */; };
-		86094DAEF1575CB1461735CC /* Pods_AwesomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7877149D225BD702B8FD62 /* Pods_AwesomeTests.framework */; };
 		CBC1089136CE1BBCEC802570 /* Pods_Awesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FABECE5BAD859BD3DE8032 /* Pods_Awesome.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		36419DAF2636E4630067C89D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 36419D902636E4620067C89D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36419D972636E4630067C89D;
-			remoteInfo = Awesome;
-		};
-		36419DBA2636E4630067C89D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 36419D902636E4620067C89D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36419D972636E4630067C89D;
-			remoteInfo = Awesome;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		368A019C263FE4A300100B01 /* Embed Frameworks */ = {
@@ -97,8 +76,6 @@
 		36419DA42636E4630067C89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36419DA72636E4630067C89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36419DA92636E4630067C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36419DAE2636E4630067C89D /* AwesomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		36419DB92636E4630067C89D /* AwesomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36419DEC2636ECBC0067C89D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36429E3D26564AEC006CF81F /* NoScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotScheduleViewController.swift; sourceTree = "<group>"; };
@@ -129,22 +106,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36419DAB2636E4630067C89D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				86094DAEF1575CB1461735CC /* Pods_AwesomeTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36419DB62636E4630067C89D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FBEEC5B63FA40AA162F6F0F /* Pods_Awesome_AwesomeUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -162,8 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				36419D982636E4630067C89D /* Awesome.app */,
-				36419DAE2636E4630067C89D /* AwesomeTests.xctest */,
-				36419DB92636E4630067C89D /* AwesomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,45 +272,6 @@
 			productReference = 36419D982636E4630067C89D /* Awesome.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36419DAD2636E4630067C89D /* AwesomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36419DC52636E4630067C89D /* Build configuration list for PBXNativeTarget "AwesomeTests" */;
-			buildPhases = (
-				63D7A32C220474922FA21CB1 /* [CP] Check Pods Manifest.lock */,
-				36419DAA2636E4630067C89D /* Sources */,
-				36419DAB2636E4630067C89D /* Frameworks */,
-				36419DAC2636E4630067C89D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36419DB02636E4630067C89D /* PBXTargetDependency */,
-			);
-			name = AwesomeTests;
-			productName = AwesomeTests;
-			productReference = 36419DAE2636E4630067C89D /* AwesomeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		36419DB82636E4630067C89D /* AwesomeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36419DC82636E4630067C89D /* Build configuration list for PBXNativeTarget "AwesomeUITests" */;
-			buildPhases = (
-				CDEBBF5C54086A6D2D7D8940 /* [CP] Check Pods Manifest.lock */,
-				36419DB52636E4630067C89D /* Sources */,
-				36419DB62636E4630067C89D /* Frameworks */,
-				36419DB72636E4630067C89D /* Resources */,
-				B1909426342D43C469411337 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36419DBB2636E4630067C89D /* PBXTargetDependency */,
-			);
-			name = AwesomeUITests;
-			productName = AwesomeUITests;
-			productReference = 36419DB92636E4630067C89D /* AwesomeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -363,14 +283,6 @@
 				TargetAttributes = {
 					36419D972636E4630067C89D = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					36419DAD2636E4630067C89D = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 36419D972636E4630067C89D;
-					};
-					36419DB82636E4630067C89D = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 36419D972636E4630067C89D;
 					};
 				};
 			};
@@ -388,8 +300,6 @@
 			projectRoot = "";
 			targets = (
 				36419D972636E4630067C89D /* Awesome */,
-				36419DAD2636E4630067C89D /* AwesomeTests */,
-				36419DB82636E4630067C89D /* AwesomeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -414,22 +324,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36419DAC2636E4630067C89D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36EDFDE1264044C00088A538 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36419DB72636E4630067C89D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36EDFDE4264044C10088A538 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -449,67 +343,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Awesome-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		63D7A32C220474922FA21CB1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AwesomeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1909426342D43C469411337 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CDEBBF5C54086A6D2D7D8940 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Awesome-AwesomeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -561,34 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36419DAA2636E4630067C89D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36419DB52636E4630067C89D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		36419DB02636E4630067C89D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36419D972636E4630067C89D /* Awesome */;
-			targetProxy = 36419DAF2636E4630067C89D /* PBXContainerItemProxy */;
-		};
-		36419DBB2636E4630067C89D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36419D972636E4630067C89D /* Awesome */;
-			targetProxy = 36419DBA2636E4630067C89D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36419DA12636E4630067C89D /* Main.storyboard */ = {
@@ -789,94 +595,6 @@
 			};
 			name = Release;
 		};
-		36419DC62636E4630067C89D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 629BC82C191638E5C3339558 /* Pods-AwesomeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24ZACT97M;
-				INFOPLIST_FILE = AwesomeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = proj805.AwesomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Awesome.app/Awesome";
-			};
-			name = Debug;
-		};
-		36419DC72636E4630067C89D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A445A736E937FBB71DB1107D /* Pods-AwesomeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24ZACT97M;
-				INFOPLIST_FILE = AwesomeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = proj805.AwesomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Awesome.app/Awesome";
-			};
-			name = Release;
-		};
-		36419DC92636E4630067C89D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 487B161AC884EF073C20C8D7 /* Pods-Awesome-AwesomeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24ZACT97M;
-				INFOPLIST_FILE = AwesomeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = proj805.AwesomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Awesome;
-			};
-			name = Debug;
-		};
-		36419DCA2636E4630067C89D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 189C07D5E8EE78BA7DB2FB7B /* Pods-Awesome-AwesomeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U24ZACT97M;
-				INFOPLIST_FILE = AwesomeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = proj805.AwesomeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Awesome;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -894,24 +612,6 @@
 			buildConfigurations = (
 				36419DC32636E4630067C89D /* Debug */,
 				36419DC42636E4630067C89D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36419DC52636E4630067C89D /* Build configuration list for PBXNativeTarget "AwesomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36419DC62636E4630067C89D /* Debug */,
-				36419DC72636E4630067C89D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36419DC82636E4630067C89D /* Build configuration list for PBXNativeTarget "AwesomeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36419DC92636E4630067C89D /* Debug */,
-				36419DCA2636E4630067C89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
