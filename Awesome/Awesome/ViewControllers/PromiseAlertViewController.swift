@@ -12,80 +12,72 @@ protocol data {
 }
 
 class PromiseAlertViewController: UIViewController {
-    @IBOutlet weak var nameConstraint: NSLayoutConstraint!
-    @IBOutlet weak var subjectConstraint: NSLayoutConstraint!
-    @IBOutlet weak var subjectUpConstarint: NSLayoutConstraint!
-    @IBOutlet weak var subjectDownConstarint: NSLayoutConstraint!
-    @IBOutlet weak var nameRigthConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var promiseObject: UILabel!
     var deleteDelegate : data?
+    @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var timeView: UIView!
+    @IBOutlet weak var subjectView: UIView!
+    @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var denineButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var headerLabelConstraint: NSLayoutConstraint!
+    
+    let width = UIScreen.main.bounds.width
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
         self.promiseObject.lineBreakStrategy = .hangulWordPriority
         self.promiseObject.numberOfLines = 5
-        let width = UIScreen.main.bounds.width
+        setRadius()
+        setLabelFont()
         
-//        375  아이폰8
-//        414 아이폰 11
-//        375 아이폰 11프로
-//        414 아이폰 프맥
-//        390 아이폰 12,12프로
-//        428 아이폰 12프맥
-//        360 아이폰 12미니
-        if width == 375 { // 아이폰8, 아이폰 11프로
-            subjectConstraint.constant = 60
-            nameConstraint.constant = 60
-            subjectUpConstarint.constant = 20
-            subjectDownConstarint.constant = 20
-        }
-        if width == 414{ //아이폰 11
-            subjectConstraint.constant = 70
-            nameConstraint.constant = 70
-            nameRigthConstraint.constant = 25
-            subjectUpConstarint.constant = 35
-            subjectDownConstarint.constant = 35
-        }
-        if width == 390{
-            subjectConstraint.constant = 70
-            nameConstraint.constant = 70
-            nameRigthConstraint.constant = 25
-            subjectUpConstarint.constant = 25
-            subjectDownConstarint.constant = 25
-        }
-        if width == 428{
-            subjectConstraint.constant = 70
-            nameConstraint.constant = 70
-            nameRigthConstraint.constant = 30
-            subjectUpConstarint.constant = 45
-            subjectDownConstarint.constant = 45
-        }
-        if width == 360{
-            subjectConstraint.constant = 65
-            nameConstraint.constant = 65
-            nameRigthConstraint.constant = 30
-            subjectUpConstarint.constant = 20
-            subjectDownConstarint.constant = 20
-        }
+       
     }
-    
-    
+    func setLabelFont(){
+        headerLabelConstraint.constant = headerLabelConstraint.constant * (width/428)
+        
+    }
+//    func resolutionFontSize(size : CGFloat) -> CGFloat{
+//        let sizeFormatter = size/320
+//        let result = width * sizeFormatter
+//        return result
+//    }
     func setData(name : String , information : String, person : String){
         nameLabel.text = person
         timeLabel.text = name
         promiseObject.text = information
     }
-    @IBAction func acceptButtonClicked(_ sender: Any) {
+    
+    func setRadius(){
+        backgroundView.clipsToBounds = true
+        backgroundView.layer.cornerRadius = 12
+        nameView.clipsToBounds = true
+        nameView.layer.cornerRadius = 12
+        timeView.clipsToBounds = true
+        timeView.layer.cornerRadius = 12
+        subjectView.clipsToBounds = true
+        subjectView.layer.cornerRadius = 12
+        acceptButton.clipsToBounds = true
+        acceptButton.layer.cornerRadius = 20
+        denineButton.clipsToBounds = true
+        denineButton.layer.cornerRadius = 20
+    }
+  
+        
+        @IBAction func acceptButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         deleteDelegate?.deleteData()
     }
-    @IBAction func denineButtonClicked(_ sender: Any) {
+    
+        
+        @IBAction func denineButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         deleteDelegate?.deleteData()
     }
 }
+
 

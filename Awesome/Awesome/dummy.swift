@@ -13,7 +13,6 @@ struct mainViewDummy {
     var name : String
     var information : String
     var time : String
-    var backgroundImage : String
     var person : String
 }
 

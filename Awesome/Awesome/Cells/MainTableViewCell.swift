@@ -10,13 +10,16 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
     static let identifier : String = "MainTableViewCell"
     
-    @IBOutlet weak var cellBackGround: UIImageView!
+    @IBOutlet weak var cellBackgroundView: UIView!
     @IBOutlet weak var informationimage: UIImageView!
     @IBOutlet weak var scInformation: UILabel!
     @IBOutlet weak var scName: UILabel!
     @IBOutlet weak var timeAgo: UILabel!
-    
     public static var ifPromise : Bool = false
+
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,17 +33,21 @@ class MainTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func setData(name : String , information : String, informationImage : String, time : String, backGround : String){
+    func setRadius(){
+        cellBackgroundView.clipsToBounds = true
+        cellBackgroundView.layer.cornerRadius = 20
+    }
+    func setLabelMag(){
+        
+    }
+    func setData(name : String , information : String, informationImage : String, time : String){
         if let image = UIImage(named: informationImage){
             informationimage.image = image
-        }
-        if let backgroundImage = UIImage(named: backGround){
-            cellBackGround.image = backgroundImage
         }
         scName.text = name
         scInformation.text = information
         timeAgo.text = time
+        setRadius()
     }
 
 }
