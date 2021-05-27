@@ -52,13 +52,13 @@ class LoginCheckViewController: UIViewController , data {
     }
     
     func profileImageRound(){
-        profileImageButton?.layer.borderWidth = 1
-        profileImageButton?.layer.masksToBounds = false
-        profileImageButton?.layer.borderColor = UIColor.clear.cgColor
-        profileImageButton?.layer.cornerRadius = profileImageButton.frame.height/2
-        profileImageButton?.clipsToBounds = true
+        self.profileImageButton?.layer.borderWidth = 1
+        self.profileImageButton?.layer.masksToBounds = false
+        self.profileImageButton?.layer.borderColor = UIColor.clear.cgColor
+        self.profileImageButton?.layer.cornerRadius = profileImageButton.frame.height/2
+        self.profileImageButton?.clipsToBounds = true
         let scale = screenWith/428
-        profileImageButton?.frame.size = CGSize(width: profileImageButton.frame.width * scale, height: profileImageButton.frame.height * scale)
+        self.profileImageButton?.frame.size = CGSize(width: profileImageButton.frame.width * scale, height: profileImageButton.frame.height * scale)
     }
     func resolutionFontSize(size : CGFloat) -> CGFloat{
         let sizeFormatter = size/428
@@ -75,9 +75,10 @@ class LoginCheckViewController: UIViewController , data {
     @IBAction func settingButtonClicked(_ sender: Any) {
         guard let settingVC = storyboard?.instantiateViewController(identifier: "SettingViewController") as? SettingViewController else {return}
         self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    func dataUrl(){
         
     }
-    
     
     func uppdateProfile(){
         UserApi.shared.me() {(user, error) in
@@ -92,8 +93,11 @@ class LoginCheckViewController: UIViewController , data {
                 if let url = user?.kakaoAccount?.profile?.profileImageUrl,
                     let data = try? Data(contentsOf: url) {
 //                    self.profileImageButton?.setImage(UIImage(data: data), for: .normal)
-                    self.profileImageButton?.setBackgroundImage(UIImage(data: data), for: .normal)
-//                    self.profileImage?.image = UIImage(data: data)
+                    let profileimage = UIImage(data: data)
+                    
+                    self.profileImageButton?.setBackgroundImage(profileimage, for: .normal)
+                    self.profileImageButton?.backgroundImage(for: profileimage)
+                    print(url)
             }
             }
     }

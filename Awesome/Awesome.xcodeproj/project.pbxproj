@@ -137,7 +137,6 @@
 				36E5B4EF2648521F0079170F /* Protocol */,
 				36E5B4F0264852320079170F /* Network */,
 				36E5B4F2264852490079170F /* Views */,
-				36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */,
 				36419DA42636E4630067C89D /* Assets.xcassets */,
 				36419DA62636E4630067C89D /* LaunchScreen.storyboard */,
 				36419DA92636E4630067C89D /* Info.plist */,
@@ -212,6 +211,7 @@
 				36369F66264291BC00115867 /* CommentAlertViewController.swift */,
 				36369F62264291AB00115867 /* PromiseAlertViewController.swift */,
 				36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */,
+				36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
