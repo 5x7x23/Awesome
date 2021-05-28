@@ -92,14 +92,13 @@ class LoginCheckViewController: UIViewController , data {
                 _ = user
                 if let url = user?.kakaoAccount?.profile?.profileImageUrl,
                     let data = try? Data(contentsOf: url) {
-//                    self.profileImageButton?.setImage(UIImage(data: data), for: .normal)
                     let profileimage = UIImage(data: data)
-                    
                     self.profileImageButton?.setBackgroundImage(profileimage, for: .normal)
-                    self.profileImageButton?.backgroundImage(for: profileimage)
-                    print(url)
+                    print(profileimage)
+                    
+                }
             }
-            }
+               
     }
     }
     
