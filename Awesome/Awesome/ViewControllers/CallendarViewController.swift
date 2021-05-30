@@ -25,7 +25,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         if checkDate == "2021-05-05"{
             isSchedule = true
             dummySData = []
-            dummySData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon", clear:"") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon",clear:"")
+            dummySData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon")
             ])
         }
         else{
@@ -70,9 +70,8 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         calendar.dataSource = self
         calendar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         calendar.appearance.headerDateFormat = ""
-        calendar.appearance.weekdayFont = UIFont(name: "", size: 14)
+        calendar.appearance.weekdayFont = UIFont(name: "Inter.ttf", size: 14)
         calendar.calendarWeekdayView.weekdayLabels[0].text = "Su"
-        calendar.calendarWeekdayView.weekdayLabels
         calendar.calendarWeekdayView.weekdayLabels[1].text = "Mo"
         calendar.calendarWeekdayView.weekdayLabels[2].text = "Tu"
         calendar.calendarWeekdayView.weekdayLabels[3].text = "We"
@@ -130,6 +129,11 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         
         self.present(plusVC, animated: true, completion: nil)
     }
+    @IBAction func notScheduleButtonCliecked(_ sender: Any) {
+        guard let notVC = storyboard?.instantiateViewController(identifier: "NotScheduleViewController") as? NotScheduleViewController else {return}
+        self.present(notVC, animated: true, completion: nil
+        )
+    }
 }
 
 
@@ -158,7 +162,7 @@ extension CallendarViewController : UITableViewDataSource{
         guard let noScheduleCell = tableView.dequeueReusableCell(withIdentifier: NoScheduleTableViewCell.identifier) else {return UITableViewCell() }
         //스케쥴이 있을때
         if isSchedule == true{
-            dummyScheduleCell.setData(nameData: dummySData[indexPath.row].name, timedata: dummySData[indexPath.row].time, scIcon: dummySData[indexPath.row].icon, clearCell: dummySData[indexPath.row].clear)
+            dummyScheduleCell.setData(nameData: dummySData[indexPath.row].name, timedata: dummySData[indexPath.row].time, scIcon: dummySData[indexPath.row].icon)
             return dummyScheduleCell
         }
         if isSchedule == false{

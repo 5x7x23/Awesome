@@ -13,7 +13,6 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var scheduleIcon: UIImageView!
     @IBOutlet weak var time: UILabel!
     static let identifier : String = "ScheduleTableViewCell"
-    @IBOutlet weak var clearLabel: UILabel!
     @IBOutlet weak var downView: UIView!
     
     override func awakeFromNib() {
@@ -26,13 +25,11 @@ class ScheduleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setData(nameData : String, timedata : String, scIcon: String, clearCell: String){
+    func setData(nameData : String, timedata : String, scIcon: String){
         if let image = UIImage(named: scIcon){
             scheduleIcon.image = image
         }
         name.text = nameData
         time.text = timedata
-        clearLabel.text = clearCell
-       
     }
 }

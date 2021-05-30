@@ -20,5 +20,4 @@ struct scheduleDummy {
     var name : String
     var time : String
     var icon : String
-    var clear : String
 }
