@@ -32,7 +32,6 @@ class FinishDatePickerViewController: UIViewController {
            
     }
     @IBAction func okButtonClicked(_ sender: Any) {
-        guard let plusVC = storyboard?.instantiateViewController(identifier: "PlusViewController") as? PlusViewController else {return}
         finishDelegate?.finishDateSend(data: chooseDate)
         self.dismiss(animated: true, completion: nil)
         print(chooseDate)

@@ -36,7 +36,6 @@ class DatepickerViewController: UIViewController {
            
     }
     @IBAction func okButtonClicked(_ sender: Any) {
-        guard let plusVC = storyboard?.instantiateViewController(identifier: "PlusViewController") as? PlusViewController else {return}
         delegate?.dataSend(data: chooseDate)
         self.dismiss(animated: true, completion: nil)
         print(chooseDate)

@@ -9,26 +9,38 @@ import UIKit
 
 class PlusViewController: UIViewController,dateData {
     func dataSend(data: String) {
-        timeLabel.text = data
+        startTimeButton.setTitle(data, for: .normal)
     }
     func finishDateSend(data: String) {
-        finishTimeLabel.text = data
+        finishTimeButton.setTitle(data, for: .normal)
     }
+    @IBOutlet weak var nameButton: UIButton!
+    @IBOutlet weak var startTimeButton: UIButton!
+    @IBOutlet weak var finishTimeButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var okButton: UIButton!
     
-
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var finishTimeLabel: UILabel!
     var nameText : String = "이름"
     var startTime : String = "시작시간"
     var finishTime : String = "종료시간"
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setRound()
         self.view.backgroundColor = .clear
-        nameLabel.text = nameText
-        
+    }
+    
+    func setRound(){
+        nameButton.clipsToBounds = true
+        nameButton.layer.cornerRadius = 20
+        startTimeButton.clipsToBounds = true
+        startTimeButton.layer.cornerRadius = 20
+        finishTimeButton.clipsToBounds = true
+        finishTimeButton.layer.cornerRadius = 20
+        backgroundView.clipsToBounds = true
+        backgroundView.layer.cornerRadius = 20
+        okButton.clipsToBounds = true
+        okButton.layer.cornerRadius = 20
     }
     
     @IBAction func nameButtonClicked(_ sender: Any) {
@@ -36,7 +48,7 @@ class PlusViewController: UIViewController,dateData {
         nameAlert.addTextField()
         let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
             self.nameText = nameAlert.textFields?[0].text ?? ""
-            self.nameLabel.text = self.nameText
+            self.nameButton.setTitle(self.nameText, for: .normal)
            
         }
         

@@ -18,6 +18,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var withdrawView: UIView!
     @IBOutlet weak var logoutView: UIView!
     
+    @IBOutlet weak var shareMyAwesome: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewRadius()
@@ -44,6 +45,18 @@ class SettingViewController: UIViewController {
         
     }
     @IBAction func linkshareButtonClicked(_ sender: Any) {
+        var objectsToShare = [String]()
+        if let text = shareMyAwesome.text{
+                   objectsToShare.append(text)
+                   print("[INFO] textField's Text : ", text)
+               }
+               
+               let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+               activityVC.popoverPresentationController?.sourceView = self.view
+               
+               // 공유하기 기능 중 제외할 기능이 있을 때 사용
+       //        activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+               self.present(activityVC, animated: true, completion: nil)
         
         
     }
