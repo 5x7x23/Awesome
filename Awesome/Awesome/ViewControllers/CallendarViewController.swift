@@ -1,5 +1,6 @@
 import UIKit
 import FSCalendar
+import EventKit
 
 class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     @IBOutlet weak var headerView: UIView!
@@ -14,12 +15,15 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     @IBOutlet weak var ScheduleButton: UIButton!
     @IBOutlet weak var scheduleTableView: UITableView!
     var checkDate : String = "2021-05-05"
+    let eventStore = EKEventStore()
+    
     
     lazy var scheduleButtons: [UIButton] = [self.plusScheduleButton, self.notScheduleButton]
     var isShowFloating: Bool = false
     var isSchedule:Bool = false
    
     var dummySData : [scheduleDummy] = []
+    var events : [Date] = []
     
     func setDummydata(){
         if checkDate == "2021-05-05"{
@@ -66,20 +70,9 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarSet()
         calendar.delegate = self
         calendar.dataSource = self
-        calendar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        calendar.appearance.headerDateFormat = ""
-        calendar.appearance.weekdayFont = UIFont(name: "Inter.ttf", size: 14)
-        calendar.calendarWeekdayView.weekdayLabels[0].text = "Su"
-        calendar.calendarWeekdayView.weekdayLabels[1].text = "Mo"
-        calendar.calendarWeekdayView.weekdayLabels[2].text = "Tu"
-        calendar.calendarWeekdayView.weekdayLabels[3].text = "We"
-        calendar.calendarWeekdayView.weekdayLabels[4].text = "Th"
-        calendar.calendarWeekdayView.weekdayLabels[5].text = "Fr"
-        calendar.calendarWeekdayView.weekdayLabels[6].text = "Sa"
-        calendar.appearance.titleFont = UIFont(name: "GmarketSansTTFBold.ttf", size: 14)
-        labelChanged(yearD: yearData, monthD: monthData)
         self.view.sendSubviewToBack(scheduleTableView)
         self.view.sendSubviewToBack(calendar)
         self.view.sendSubviewToBack(headerView)
@@ -87,8 +80,21 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         scheduleTableView.dataSource = self
         scheduleTableView.separatorStyle = .none
         setDummydata()
+        setUpEvents()
         print("viewdidload")
 
+    }
+    func calendarSet(){
+        calendar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        calendar.appearance.headerDateFormat = ""
+        calendar.calendarWeekdayView.weekdayLabels[0].text = "Su"
+        calendar.calendarWeekdayView.weekdayLabels[1].text = "Mo"
+        calendar.calendarWeekdayView.weekdayLabels[2].text = "Tu"
+        calendar.calendarWeekdayView.weekdayLabels[3].text = "We"
+        calendar.calendarWeekdayView.weekdayLabels[4].text = "Th"
+        calendar.calendarWeekdayView.weekdayLabels[5].text = "Fr"
+        calendar.calendarWeekdayView.weekdayLabels[6].text = "Sa"
+        labelChanged(yearD: yearData, monthD: monthData)
     }
     
     func refreshControl(){
@@ -172,7 +178,23 @@ extension CallendarViewController : UITableViewDataSource{
         
         return UITableViewCell()
     }
+    func setUpEvents() {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "ko_KR")
+    formatter.dateFormat = "yyyy-MM-dd"
+    let xmas = formatter.date(from: "2020-12-25")
+    let userDate = formatter.date(from: "2021-06-01")
+    events = [xmas!, userDate!]
     
-}
+    }
 
+  
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        if self.events.contains(date){
+            return 1
+        }
+        return 0
+    }
+}
 
