@@ -16,6 +16,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     @IBOutlet weak var scheduleTableView: UITableView!
     var checkDate : String = "2021-05-05"
     let eventStore = EKEventStore()
+   
     
     
     lazy var scheduleButtons: [UIButton] = [self.plusScheduleButton, self.notScheduleButton]
@@ -23,7 +24,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     var isSchedule:Bool = false
    
     var dummySData : [scheduleDummy] = []
-    var events : [Date] = []
+    var Userevents : [Date] = []
     
     func setDummydata(){
         if checkDate == "2021-05-05"{
@@ -67,7 +68,20 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         }
 
     }
-    
+    //캘린더 불러오기
+    func requestAccess() {
+            eventStore.requestAccess(to: .event) { (granted, error) in
+                if granted {
+                    DispatchQueue.main.async {
+                        // load events
+                        self.setUserEvent()
+                    }
+                }
+            }
+    }
+    func setUserEvent(){
+       
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarSet()
@@ -82,6 +96,8 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         setDummydata()
         setUpEvents()
         print("viewdidload")
+        setUserEvent()
+        requestAccess()
 
     }
     func calendarSet(){
@@ -184,16 +200,27 @@ extension CallendarViewController : UITableViewDataSource{
     formatter.dateFormat = "yyyy-MM-dd"
     let xmas = formatter.date(from: "2020-12-25")
     let userDate = formatter.date(from: "2021-06-01")
-    events = [xmas!, userDate!]
+    Userevents = [xmas!, userDate!]
     
     }
 
   
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        if self.events.contains(date){
+        let nowdate = Date()
+        let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+        let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+    let weekFromNow = Date().advanced(by: 30.0)
+        print("1호오오잇",weekFromNow)
+        let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
+        print("2호오오잇",predicate)
+    let events = eventStore.events(matching: predicate)
+        print(events)
+        if self.Userevents.contains(date){
             return 1
         }
+        print(events.index(after: 0), events.count)
+        print(events[3])
         return 0
     }
 }
