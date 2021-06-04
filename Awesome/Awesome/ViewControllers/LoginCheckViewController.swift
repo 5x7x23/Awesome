@@ -94,13 +94,13 @@ class LoginCheckViewController: UIViewController , data {
                     let data = try? Data(contentsOf: url) {
                     let profileimage = UIImage(data: data)
                     self.profileImageButton?.setBackgroundImage(profileimage, for: .normal)
-                    print(profileimage)
                     
                 }
             }
                
     }
     }
+
     
     @IBAction func calendarButtonClicked(_ sender: Any) {
         guard let calendarVC = storyboard?.instantiateViewController(identifier: "CallendarViewController") as? CallendarViewController else {return}
@@ -145,3 +145,4 @@ extension LoginCheckViewController : UITableViewDataSource{
     
     
 }
+

@@ -215,12 +215,9 @@ extension CallendarViewController : UITableViewDataSource{
         let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
         print("2호오오잇",predicate)
     let events = eventStore.events(matching: predicate)
-        print(events)
         if self.Userevents.contains(date){
             return 1
         }
-        print(events.index(after: 0), events.count)
-        print(events[3])
         return 0
     }
 }
