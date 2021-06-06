@@ -34,12 +34,10 @@ class PromiseAlertViewController: UIViewController {
         self.promiseObject.numberOfLines = 5
         setRadius()
         setLabelFont()
-        
-       
+
     }
     func setLabelFont(){
         headerLabelConstraint.constant = headerLabelConstraint.constant * (width/428)
-        
     }
 //    func resolutionFontSize(size : CGFloat) -> CGFloat{
 //        let sizeFormatter = size/320
