@@ -17,10 +17,6 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var timeAgo: UILabel!
     public static var ifPromise : Bool = false
 
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

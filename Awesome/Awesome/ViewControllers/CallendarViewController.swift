@@ -16,6 +16,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     @IBOutlet weak var scheduleTableView: UITableView!
     var checkDate : String = "2021-05-05"
     let eventStore = EKEventStore()
+    var isEvent :Bool = false
    
     
     
@@ -27,15 +28,42 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
     var Userevents : [Date] = []
     
     func setDummydata(){
-        if checkDate == "2021-05-05"{
+        if checkDate == "2021-06-08"{
             isSchedule = true
             dummySData = []
             dummySData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon")
             ])
         }
-        else{
-            isSchedule = false
+        else {
+            let nowdate = Date()
+            let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+            let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+        let weekFromNow = Date().advanced(by: 30.0)
+            let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
+            isSchedule = true
+            dummySData = []
+            let events = eventStore.events(matching: predicate)
+            let formatter = DateFormatter()
+            let startTimeFormatter = DateFormatter()
+            let finishTimeFormatter = DateFormatter()
+            formatter.locale = Locale(identifier: "ko_KR")
+            formatter.dateFormat = "yyyy-MM-dd"
+            startTimeFormatter.dateFormat = "HH:mm"
+            finishTimeFormatter.dateFormat = "HH:mm"
+            let comma : String = " ~ "
+
+            for event in events {
+                let start = formatter.string(from: event.startDate)
+                let startTime = startTimeFormatter.string(from: event.startDate)
+                let finishTime = finishTimeFormatter.string(from: event.endDate)
+                if checkDate == start{
+                dummySData.append(contentsOf:[scheduleDummy(name: event.title, time: startTime + comma + finishTime, icon: "continueIcon")])
+                    Userevents.append(event.startDate)
+                print("dd", event)
+                }
         }
+        }
+       
     }
     
     @IBAction func scheduleButtonClicked(_ sender: Any) {
@@ -95,9 +123,9 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         scheduleTableView.separatorStyle = .none
         setDummydata()
         setUpEvents()
-        print("viewdidload")
         setUserEvent()
         requestAccess()
+
 
     }
     func calendarSet(){
@@ -130,6 +158,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         checkDate = checkSchedule.string(from: date)
         print(checkDate)
         setDummydata()
+        printEventCell()
         scheduleTableView.reloadData()
         
       }
@@ -195,28 +224,37 @@ extension CallendarViewController : UITableViewDataSource{
         return UITableViewCell()
     }
     func setUpEvents() {
+        let nowdate = Date()
+        let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+        let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+    let weekFromNow = Date().advanced(by: 30.0)
+        let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
     let formatter = DateFormatter()
     formatter.locale = Locale(identifier: "ko_KR")
     formatter.dateFormat = "yyyy-MM-dd"
     let xmas = formatter.date(from: "2020-12-25")
-    let userDate = formatter.date(from: "2021-06-01")
+    let userDate = formatter.date(from: "2021-06-08")
     Userevents = [xmas!, userDate!]
-    
+    let events = eventStore.events(matching: predicate)
+        let UpdateFormatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+        for event in events {
+            Userevents.append(event.startDate)
+        }
+    }
+    func printEventCell(){
+       
+        
     }
 
   
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        let nowdate = Date()
-        let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
-        let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
-    let weekFromNow = Date().advanced(by: 30.0)
-        print("1호오오잇",weekFromNow)
-        let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
-        print("2호오오잇",predicate)
-    let events = eventStore.events(matching: predicate)
         if self.Userevents.contains(date){
+            print("꽥",Userevents)
             return 1
+            
         }
         return 0
     }
