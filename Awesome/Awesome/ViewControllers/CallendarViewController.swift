@@ -125,8 +125,6 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         setUpEvents()
         setUserEvent()
         requestAccess()
-
-
     }
     func calendarSet(){
         calendar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
@@ -248,8 +246,6 @@ extension CallendarViewController : UITableViewDataSource{
         
     }
 
-  
-    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         if self.Userevents.contains(date){
             print("꽥",Userevents)
