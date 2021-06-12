@@ -7,10 +7,12 @@
 
 import UIKit
 
-class CommentAlertViewController: UIViewController {
+class CommentAlertViewController: UIViewController{
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
+    var deleteDelegate : data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,7 @@ class CommentAlertViewController: UIViewController {
     }
     @IBAction func okButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        deleteDelegate?.deleteData()
     }
     
 }

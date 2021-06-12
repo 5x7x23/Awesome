@@ -124,7 +124,6 @@
 		8DC3A79C7AE185F9080CC17A155EB439 /* KakaoSDKAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 975AC923E3A864EEB6C7247219F15A9C /* KakaoSDKAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		905CD81527CF23ADCE23A7BDC81D712A /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFADE60E64CCDB1C35304203A105CE23 /* KakaoSDKCommon.framework */; };
 		911448B2EDA2FF880108F77642797A88 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09D736C240C4D922BFF60573622D1D0 /* ResponseSerialization.swift */; };
-		915D79DEF75291695C5C731F731CE061 /* Pods-AwesomeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB8B061655652BC140506ED0125B5EC9 /* Pods-AwesomeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		919B72E0CE7743838A947288D10AAEA3 /* FSCalendarDynamicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 69994073937BD7C2D718D287153E992B /* FSCalendarDynamicHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91A96B98AD78AAD881AB6389B1368405 /* FSCalendarWeekdayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 192A635438F544CB299ABF5149F78D73 /* FSCalendarWeekdayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91B837CE0DCD8EDB300FCDFFA1279162 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74521FCF18243E968DDC3711D279099 /* HTTPHeaders.swift */; };
@@ -140,7 +139,6 @@
 		9FED70D1E1FBFB80E974E999EF732258 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71E3F5DB2B99209F0ED60F9B19E646 /* RetryPolicy.swift */; };
 		A0652CD2EF525F7EFE1C641DCF71A2F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		A1A9B4D41A6C860F732824A00C42679B /* ChannelRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB0CD863AC517C94E82CA41FD5021F /* ChannelRelations.swift */; };
-		A406EC80CACF8B3AD50FD49DFAD881BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		A71BF461E41A362BDF6F2B8D17991AC5 /* KakaoSDKUser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 349771C9F26C663F8D6DE873A49B2C3B /* KakaoSDKUser-dummy.m */; };
 		A80F0B96B2DB93C9013EFC0AE61C0E41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		A855BA677B1ED7D0AA1DE679D5DFC65A /* EncodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1F860B8DE335D2D4E8F84CEC7CBA /* EncodingContainer+AnyCollection.swift */; };
@@ -149,7 +147,6 @@
 		ABE4DC3A99B9DE5F1DE0AF76C0E18EE6 /* MessageSendResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F11AAADEF317AA2ACC1163C37B12A /* MessageSendResult.swift */; };
 		AC9ED150099EA09957C4C66D85DE64B6 /* KakaoSDKLink-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E96D56DB461CA25D23D8B5AD5C3E3F /* KakaoSDKLink-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B478CB8F8624ACC71D5D9BE5DBE8F0F8 /* TalkProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4713A302A784F78ACA5B843A0F3C319 /* TalkProfile.swift */; };
-		B5CF3B72D20FC72BF0BB03DB045EE98F /* Pods-AwesomeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3B1FDC4450E6AF8B3CB2780520648E /* Pods-AwesomeTests-dummy.m */; };
 		B90D9F6047D7FB3E1A1F025C9EC3ADB5 /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFADE60E64CCDB1C35304203A105CE23 /* KakaoSDKCommon.framework */; };
 		BA4618552515686F83F7873D094EB189 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0FD9906B72E2A2EE35274F28F96918 /* QuartzCore.framework */; };
 		BADEDF3F5C6B8ECA687B3061C65C7E5D /* FSCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FFFBEE6161DCB4FBF4E9EF3C3F38D0 /* FSCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -165,7 +162,6 @@
 		C6D5A4B4028B2C43380C9FA58BD5C8CA /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF42FCE383038E021CFE00CF50F1C93 /* Alamofire-dummy.m */; };
 		C88CC71331785A38D458B2E7400E4826 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3D4DBDF00B35838239E6037B4F181 /* KakaoSDKAuth.framework */; };
 		C8A85E08DB937BC1F0F30600F9AB8625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
-		CD0C3844B547F48ED1F3437C3133017C /* Pods-Awesome-AwesomeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9EA0C2696B85746DE5B70413841254 /* Pods-Awesome-AwesomeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5B652E15F4F38A3247F75B7DBCB212 /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C354D4159CAAE3629E13C227A6D609F9 /* OAuthToken.swift */; };
 		CD776933519DA01C4291296A2DD65A8C /* KakaoSDKTalk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FD071007B6C0E1F8EED71E7B7C64E5 /* KakaoSDKTalk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC0D07FF0C3C1815ED7FDE960AE0F5F /* KakaoSDKTemplate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8F96B046483415B1268A72CB6ACFC /* KakaoSDKTemplate-dummy.m */; };
@@ -176,10 +172,9 @@
 		D192D52340F6B27DA840BE2FA9F49EE9 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C034F112EC47CFB80E3D44D1A8E98 /* FSCalendarTransitionCoordinator.m */; };
 		D193907B09981ADC9CD225FB4D619361 /* TokenManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51A32621B649F00ECB88FD9BECE2854 /* TokenManagable.swift */; };
 		D31FC7FDD450C4CDD633ECBAD27C6221 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174B7F1BF8C811816553A676C95D7C3 /* URLEncodedFormEncoder.swift */; };
-		D515A080B5B6B3F0F395A3928424F54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		D5EAAFB6FAD77A8F0699345149BA3CBB /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB3701369153A1CEEFC67FF7717DEA /* URLRequest+Alamofire.swift */; };
 		D78BB0AB0D522407E59B43C91420C75D /* DecodingContainer+AnyCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF939AF25B81BA376E6A3827FBE76F5 /* DecodingContainer+AnyCollection.swift */; };
-		D8DF99EF7826908CE10E4C8C8107723B /* Pods-Awesome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 380E4429D460137B481E4F1ACD1270CC /* Pods-Awesome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8DF99EF7826908CE10E4C8C8107723B /* Pods-Awesome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC5391F074FF7C1FDE445419F74DFB98 /* Pods-Awesome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9F992E8100DC6448DE21FEC3CE77CE4 /* AccessTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7DF9CCF5F842B247E8F4821EE0960 /* AccessTokenInfo.swift */; };
 		DC627AFC5B585686898B014184AFCABD /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924FB444F93067BAB5482D0E06357E97 /* AuthenticationInterceptor.swift */; };
 		DEA8746B8ACC9D6CE9EBDEA8F8CB2E27 /* FSCalendarCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C2814C86E87BD5E29A436B3DE70004 /* FSCalendarCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -190,7 +185,6 @@
 		E6B9542EC08F7006955089F4B79B6803 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		E8BADF3A3A768F139726E1DDC51602F4 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1657A4955F34D60D68DF71BACC39DB8 /* Auth.swift */; };
 		E955A06A714BDA6DFBC2D35BDF53A129 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D163F1A82D8725730AD077174A9C61 /* User.swift */; };
-		E9F765A5E8EADA02754A77948797EA77 /* Pods-Awesome-AwesomeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1096C58C4E1550DA5D364C3CEC8CB500 /* Pods-Awesome-AwesomeUITests-dummy.m */; };
 		EDC93BD7B9262119AE145E4C7A9D0212 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486CC7090984DE68BA6616B7221B588 /* Request.swift */; };
 		F0C526D6DB5A6D1A037FAF84C0EC52E1 /* SdkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F6A674A813DD6E592A2DC24FC97B9 /* SdkError.swift */; };
 		F0F3224FF592F9BA2A044A2FC2BD4CCD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA292A55577F2F288B161687FCFC73 /* Validation.swift */; };
@@ -198,7 +192,7 @@
 		F22386EFB02408A64644B63CBBF5101D /* SdkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE17879117025E469110B4027744251 /* SdkLog.swift */; };
 		F390EE3F6501EA735B348A94C0416E8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C308D8CB491A40ABE254B43889254658 /* Foundation.framework */; };
 		F70EF854395CDE981A8336E4FF0310FE /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A427CDB1F6A5D8D0B46E9F83B05B4C3 /* URLSessionConfiguration+Alamofire.swift */; };
-		F86E6BD9EC05C85E30A02DF6BF17C6B2 /* Pods-Awesome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 300F4913B6E8075017B381B181EB7619 /* Pods-Awesome-dummy.m */; };
+		F86E6BD9EC05C85E30A02DF6BF17C6B2 /* Pods-Awesome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D59E006ABFC9FFD616C377AE2E3822D9 /* Pods-Awesome-dummy.m */; };
 		F924CD9F52DF26DE57A8FBC70489F594 /* LinkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C81767CE385D2198159E4F1358A152 /* LinkApi.swift */; };
 		FA789B4EAF76671DD8CFFD5789121B54 /* SdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5706314018033FCE86F031CA318F21 /* SdkUtils.swift */; };
 		FAF9A610429F44DDE172D5DDBB95F60C /* SdkCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A56803B15A68EAA1418F27C647FD40 /* SdkCrypto.swift */; };
@@ -208,13 +202,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02E3F8F32F17882A9139962F5F55D585 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1A7357D2A67F44CF3FBB03F86D5EE1A;
-			remoteInfo = KakaoSDKTemplate;
-		};
 		0BF15CC89124E2E4E6516D29E1A3BB31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -250,13 +237,6 @@
 			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
 			remoteInfo = KakaoSDKAuth;
 		};
-		22730294E564C6DFC2BD093378483E45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D5A57148A87D92D55D862B88D618006;
-			remoteInfo = "Pods-Awesome";
-		};
 		2C69F387ABAE714684D0933753292554 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -270,13 +250,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
 			remoteInfo = KakaoSDKCommon;
-		};
-		31075A8DDC5D500B82237A4F336DE269 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 50476624BF09EB04ABAFA83A0C21C625;
-			remoteInfo = KakaoSDKLink;
 		};
 		321C06792CD03F7578ACFD456A65DE81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -298,27 +271,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 50476624BF09EB04ABAFA83A0C21C625;
 			remoteInfo = KakaoSDKLink;
-		};
-		53BB843D5E1C5E35A9A1C54F0989D54D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		597D9026376F80FE72081F878ED761F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
-			remoteInfo = KakaoSDKAuth;
-		};
-		5FCBE784639C4AE81226FA5E14DCEA36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61118587C74B2D3D0EFFE67F0116FE65;
-			remoteInfo = KakaoSDKNavi;
 		};
 		6904E114AF12A23367171C77B286F7CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -355,13 +307,6 @@
 			remoteGlobalIDString = 83CA882AD877ED964BDF66235E416BC1;
 			remoteInfo = KakaoSDKAuth;
 		};
-		8B8DEF6E03F0794299BD0B80E32402C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
-			remoteInfo = FSCalendar;
-		};
 		8D0595456B626A6FDAAE9191A34DC02A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -375,13 +320,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
-		};
-		9CB259516FA6D6833F7016BF11288771 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D10EA6E592FB0476FCF38A6C5EC1D148;
-			remoteInfo = KakaoSDKTalk;
 		};
 		A6F9BB242F12A983DF78547B74C80F9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -425,13 +363,6 @@
 			remoteGlobalIDString = 994F7F59C816D7363585E82EBA0764BC;
 			remoteInfo = KakaoSDKStory;
 		};
-		D263A2EF211AFB9C9D43A81353652B51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F7BF367078951B6E8BC95B3DA89967A;
-			remoteInfo = KakaoSDKUser;
-		};
 		D26E578D5E798E51E112D58772BA90B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -459,13 +390,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 994F7F59C816D7363585E82EBA0764BC;
 			remoteInfo = KakaoSDKStory;
-		};
-		DDBE98566B5418959B2B1D78D189553E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1BF4C51498D9D2512ED81F0E6911BE7B;
-			remoteInfo = KakaoSDK;
 		};
 		E1A071DCFF7BD02B6B4F352A9FEA72A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -502,20 +426,6 @@
 			remoteGlobalIDString = F1A7357D2A67F44CF3FBB03F86D5EE1A;
 			remoteInfo = KakaoSDKTemplate;
 		};
-		F64556B49088319F4BE222BE51B3B6F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 205D6EF1B8DCC8419E2F53266F6ADCDC;
-			remoteInfo = KakaoSDKCommon;
-		};
-		F8FA0BB486331AEC48E352D945A02AE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 994F7F59C816D7363585E82EBA0764BC;
-			remoteInfo = KakaoSDKStory;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -526,13 +436,14 @@
 		0BF71D65A76C92940784AE7DE139D561 /* KakaoSDKAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKAuth.debug.xcconfig; sourceTree = "<group>"; };
 		0C67B7ECE17300230855A4A0FE6B4C6B /* KakaoSDKUser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKUser.debug.xcconfig; sourceTree = "<group>"; };
 		0E1BDEE9786D1D93AA9CE2D18BE5D8F0 /* KakaoSDKLink-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaoSDKLink-Info.plist"; sourceTree = "<group>"; };
-		1096C58C4E1550DA5D364C3CEC8CB500 /* Pods-Awesome-AwesomeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Awesome-AwesomeUITests-dummy.m"; sourceTree = "<group>"; };
 		10C81767CE385D2198159E4F1358A152 /* LinkApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkApi.swift; path = sources/KakaoSDKLink/LinkApi.swift; sourceTree = "<group>"; };
 		1353D6A467F43A6A3EA21D310BD35A31 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaoSDKUser.framework; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14743C522FF29659A4BD778B45974D49 /* Pods-Awesome.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Awesome.modulemap"; sourceTree = "<group>"; };
 		162F11AAADEF317AA2ACC1163C37B12A /* MessageSendResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageSendResult.swift; path = sources/KakaoSDKTalk/model/MessageSendResult.swift; sourceTree = "<group>"; };
 		18C89AFE67F817605A42EC3CC4DD8951 /* KakaoSDKLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKLink.release.xcconfig; sourceTree = "<group>"; };
 		192A635438F544CB299ABF5149F78D73 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		1A389EC95BEF60B8013E987E343091D8 /* KakaoSDKTalk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKTalk-dummy.m"; sourceTree = "<group>"; };
+		1BAFE39B02EF7C8418D18C9CB844BE32 /* Pods-Awesome-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-Info.plist"; sourceTree = "<group>"; };
 		1C3667F63B5740E797CAE4ECD4BF0BD2 /* FSCalendarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
 		1C86CDB18DAF8D22E69D76A1C563A254 /* KakaoSDKCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKCommon.debug.xcconfig; sourceTree = "<group>"; };
 		1F8F2FA04B6A06AFCDF0EEA370C88E1C /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
@@ -545,21 +456,19 @@
 		25BDA6E824AD6CBD857358A023C694AD /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaoSDKCommon.framework; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2767FDB9CCC4E375AC1C99D9F1F39A84 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
 		27D163F1A82D8725730AD077174A9C61 /* User.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = User.swift; path = sources/KakaoSDKUser/model/User.swift; sourceTree = "<group>"; };
-		2A04F917E3C5807A3294AB0F2F9E79AB /* Pods-Awesome-AwesomeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-AwesomeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		28A8B4E7E84B0267B2F96F82AA67B65D /* Pods-Awesome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome.release.xcconfig"; sourceTree = "<group>"; };
+		2A09DD9AE71401D085B78A202ACE24F4 /* Pods-Awesome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Awesome-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2A732A37462DC74A8AF965C29FEE5564 /* KakaoSDKTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKTalk.release.xcconfig; sourceTree = "<group>"; };
 		2CD0E159235CE9738802767E836F21C6 /* URL+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Utils.swift"; path = "sources/KakaoSDKCommon/common/extension/URL+Utils.swift"; sourceTree = "<group>"; };
-		2D0A4755475E457BAD7315634E71DDD0 /* Pods-Awesome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Awesome-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2E228C82C94CA55124636ED05C546A8E /* TemplateModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TemplateModels.swift; path = sources/KakaoSDKTemplate/model/TemplateModels.swift; sourceTree = "<group>"; };
 		2E6BFD345439C893F5C1DE4D41A24CA3 /* KakaoSDKCommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaoSDKCommon-Info.plist"; sourceTree = "<group>"; };
 		2EA230D190C90772BF7ACFC30CC207BF /* ImageUploadResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageUploadResult.swift; path = sources/KakaoSDKLink/model/ImageUploadResult.swift; sourceTree = "<group>"; };
 		2F4F37D36B3B9157DDEE5F54969BB854 /* KakaoSDKUser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKUser-umbrella.h"; sourceTree = "<group>"; };
 		2FE8F96B046483415B1268A72CB6ACFC /* KakaoSDKTemplate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKTemplate-dummy.m"; sourceTree = "<group>"; };
-		300F4913B6E8075017B381B181EB7619 /* Pods-Awesome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Awesome-dummy.m"; sourceTree = "<group>"; };
 		306019B785AD17AB0FE6EA4FC7E0E3C6 /* NaviModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NaviModels.swift; path = sources/KakaoSDKNavi/KakaoSDKNaviCommon/NaviModels.swift; sourceTree = "<group>"; };
 		312C56E6671B9E80153DF80DDC8E715E /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		325F1D63828A28D6B817616DBF3AC60E /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		349771C9F26C663F8D6DE873A49B2C3B /* KakaoSDKUser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKUser-dummy.m"; sourceTree = "<group>"; };
-		380E4429D460137B481E4F1ACD1270CC /* Pods-Awesome-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Awesome-umbrella.h"; sourceTree = "<group>"; };
 		38A2979D2BEF48EAA814A61EF960FA98 /* KakaoSDKNavi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKNavi-dummy.m"; sourceTree = "<group>"; };
 		391A7BFBEA0F4211D054D1427C494060 /* FSCalendarCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
 		39248F753D02923C1BCD8FE175E8B576 /* KakaoSDKNavi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaoSDKNavi-Info.plist"; sourceTree = "<group>"; };
@@ -567,7 +476,6 @@
 		3B1D3AA6AD1D9044ABC3BF8BF121050D /* Array+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "sources/KakaoSDKCommon/common/extension/Array+Utils.swift"; sourceTree = "<group>"; };
 		3BB364C8D98A8098FB2B9AA168BAC7D6 /* KakaoSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDK.release.xcconfig; sourceTree = "<group>"; };
 		3CBDE759DD9D3038F4E894379EC0AD78 /* FSCalendar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSCalendar-Info.plist"; sourceTree = "<group>"; };
-		3CC910D9BF4FE292EACDCC2AA69540B2 /* Pods-AwesomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EC5B1BED0BAE23A5FD437FC8314C4AA /* FSCalendarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
 		3F5941C46332A2C4D74E92D83D313D8A /* SdkCoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkCoder.swift; path = sources/KakaoSDKCommon/common/common/SdkCoder.swift; sourceTree = "<group>"; };
 		409C97BA83468F4D5DC2351289575948 /* KakaoSDKCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKCommon-umbrella.h"; sourceTree = "<group>"; };
@@ -593,29 +501,25 @@
 		5FA8F0591B1DC4EBFE40173B3CF421B8 /* Story.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Story.swift; path = sources/KakaoSDKStory/model/Story.swift; sourceTree = "<group>"; };
 		606EF589F7AF3CE199BA3AFC2C55AF95 /* TokenManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenManager.swift; path = sources/KakaoSDKAuth/auth/TokenManager.swift; sourceTree = "<group>"; };
 		60ACD9AFB566C5189E7E7909EEC4A034 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarTransitionCoordinator.h; path = FSCalendar/FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		632F46632082BC673710EFE94BD59445 /* Pods-Awesome-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Awesome-frameworks.sh"; sourceTree = "<group>"; };
 		6507BA720BA7F822F53049F7A206677F /* TalkApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TalkApi.swift; path = sources/KakaoSDKTalk/TalkApi.swift; sourceTree = "<group>"; };
 		653B727C96041C6896B393F9A1FD96AF /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
 		667A0529A4421AC432FCD22FC6C2330D /* Urls.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Urls.swift; path = sources/KakaoSDKCommon/common/common/Urls.swift; sourceTree = "<group>"; };
 		687BC12F2327DC62315DEEA31C73CD47 /* KakaoSDKNavi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKNavi.release.xcconfig; sourceTree = "<group>"; };
 		69994073937BD7C2D718D287153E992B /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
-		6A915400F653E29AF4742FCB15C1FBB2 /* Pods-Awesome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B98ED0B3184E92AE40714465195D200 /* KakaoSDKNavi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKNavi.h; path = sources/KakaoSDKNavi/KakaoSDKNavi.h; sourceTree = "<group>"; };
 		6C1F536E78DA58FB704F40841A82B194 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarSeparatorDecorationView.h; path = FSCalendar/FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
 		6C2CC135466B8B98C488568CFA23B6AA /* KakaoSDKUser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaoSDKUser-Info.plist"; sourceTree = "<group>"; };
-		6C97DF763C9EBC8AB2EB0370741FF4EB /* Pods-Awesome-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-Info.plist"; sourceTree = "<group>"; };
 		6CCD080D93857F43EB4B5C610BA7CB74 /* KakaoSDKTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKTemplate.h; path = sources/KakaoSDKTemplate/KakaoSDKTemplate.h; sourceTree = "<group>"; };
 		6E9AB6A8AB6A0A436F4109CF4F407393 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6FB186B3CD0966FD47FB05AAA99B5FAA /* KakaoSDKTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKTemplate.release.xcconfig; sourceTree = "<group>"; };
 		72242E00F498DCB9A66E15F321BFA5D7 /* KakaoSDKNavi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKNavi-umbrella.h"; sourceTree = "<group>"; };
 		7377A0697495F566537E43275DD47E0E /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		73BD39D32C63A32E88015EA1702EB75F /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
-		7487A4108E875A6B99788D06589B4B12 /* Pods-Awesome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome.release.xcconfig"; sourceTree = "<group>"; };
 		751D55F999930B487D58A6F5F32BC67F /* FSCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
 		761724F194389527BEA567A7FD7BBBD9 /* KakaoSDKUser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaoSDKUser.modulemap; sourceTree = "<group>"; };
-		780B40250BA0DE61229983D25CACF4DB /* Pods-Awesome-AwesomeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Awesome-AwesomeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7AAF58DC7DE4A7AABA7B54BB58986DA8 /* AuthErrorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthErrorInfo.swift; path = sources/KakaoSDKCommon/common/model/AuthErrorInfo.swift; sourceTree = "<group>"; };
 		7BE78191C1D5FF4BEDF347C32D06EBD3 /* KakaoSDKLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKLink.h; path = sources/KakaoSDKLink/KakaoSDKLink.h; sourceTree = "<group>"; };
-		7C61C8F642C0F3D5D1C2E9986BC0510D /* Pods-Awesome-AwesomeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-AwesomeUITests-Info.plist"; sourceTree = "<group>"; };
 		7D47DBC7AD5221A209A180FBEB5E374A /* Friends.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Friends.swift; path = sources/KakaoSDKTalk/model/Friends.swift; sourceTree = "<group>"; };
 		7E5706314018033FCE86F031CA318F21 /* SdkUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SdkUtils.swift; path = sources/KakaoSDKCommon/common/common/SdkUtils.swift; sourceTree = "<group>"; };
 		802E3D4141E07740CABB676C547E214E /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -631,7 +535,6 @@
 		8A21C4920C3B08CF8C278A478A03050E /* KakaoSDKLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKLink.debug.xcconfig; sourceTree = "<group>"; };
 		8A46BA34D6E169016A5150B2789BD75B /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = sources/KakaoSDKCommon/common/common/Common.swift; sourceTree = "<group>"; };
 		8B9F3B469DB4B39C0E67324A545A8D3C /* NaviApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NaviApi.swift; path = sources/KakaoSDKNavi/NaviApi.swift; sourceTree = "<group>"; };
-		8C1681D12363869C2E34881DBA8A9AD2 /* Pods-Awesome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome.debug.xcconfig"; sourceTree = "<group>"; };
 		8DCA49B9B7AEA4F34B6109B222C3A713 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		8FC7DF9CCF5F842B247E8F4821EE0960 /* AccessTokenInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessTokenInfo.swift; path = sources/KakaoSDKUser/model/AccessTokenInfo.swift; sourceTree = "<group>"; };
 		90EF5048EA013626410A1D442D5256E7 /* KakaoSDKAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKAuth.release.xcconfig; sourceTree = "<group>"; };
@@ -646,12 +549,9 @@
 		9BE23EA9F2247624ED709BD946C81F30 /* LinkInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkInfo.swift; path = sources/KakaoSDKStory/model/LinkInfo.swift; sourceTree = "<group>"; };
 		9C0777970F85B2AD33EF42BB53B071BF /* Dictionary+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Utils.swift"; path = "sources/KakaoSDKCommon/common/extension/Dictionary+Utils.swift"; sourceTree = "<group>"; };
 		9C18E62FE508E5236F18BFDD7A1F66FE /* KakaoSDKStory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKStory-dummy.m"; sourceTree = "<group>"; };
-		9C3692B2E7BB54F10701611A7949876E /* Pods_Awesome_AwesomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Awesome_AwesomeUITests.framework; path = "Pods-Awesome-AwesomeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0E56404A234C3736519ADFC2F9CF78 /* KakaoSDKNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaoSDKNavi.framework; path = KakaoSDKNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D9EA0C2696B85746DE5B70413841254 /* Pods-Awesome-AwesomeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Awesome-AwesomeUITests-umbrella.h"; sourceTree = "<group>"; };
 		9DF0C86AF4C09572514DC9586372F978 /* KakaoSDKTalk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKTalk.h; path = sources/KakaoSDKTalk/KakaoSDKTalk.h; sourceTree = "<group>"; };
-		9E3B1FDC4450E6AF8B3CB2780520648E /* Pods-AwesomeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AwesomeTests-dummy.m"; sourceTree = "<group>"; };
 		9EEED8C34A4F00A4D9EFDCCA619F9D25 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
 		9F453801F27585052F413F613C847DB2 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaoSDKAuth.framework; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08234FC90A74215653444E06DB093DE /* KakaoSDKStory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KakaoSDKStory.h; path = sources/KakaoSDKStory/KakaoSDKStory.h; sourceTree = "<group>"; };
@@ -660,7 +560,6 @@
 		A286CA5FE2C0A75C206AE1F065A030EF /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		A2A545FD09D22ECE5CDF57973D75FE0B /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
 		A2E96D56DB461CA25D23D8B5AD5C3E3F /* KakaoSDKLink-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKLink-umbrella.h"; sourceTree = "<group>"; };
-		A47516B3AD81B43F7A5846AB28C7AF47 /* Pods-Awesome-AwesomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome-AwesomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A478E7E76967697B329CAA014129E3F8 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		A4EC270A4B00DF24D2A0B5DB77037DE3 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
 		A6FD4FCD3758BB4C97F8BAE77EBA58B9 /* KakaoSDKTemplate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKTemplate-prefix.pch"; sourceTree = "<group>"; };
@@ -683,17 +582,14 @@
 		B78A6CC69841B1B02D2E4AD2DE9B6751 /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSCalendar.modulemap; sourceTree = "<group>"; };
 		B850193FD049147BFCB8682E3401D2B6 /* KakaoSDKTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKTemplate.debug.xcconfig; sourceTree = "<group>"; };
 		B880DC9633A4F16E0B457488DF4F3917 /* ValidationResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationResult.swift; path = sources/KakaoSDKLink/model/ValidationResult.swift; sourceTree = "<group>"; };
-		B8F985F8D1667C5216373BBBCCEE4323 /* Pods-Awesome-AwesomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome-AwesomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B9BB3701369153A1CEEFC67FF7717DEA /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		BA2C034F112EC47CFB80E3D44D1A8E98 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		BC71E3F5DB2B99209F0ED60F9B19E646 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		BDE94A62705AEFC400B08F0DC4B98043 /* FSCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
 		BFADE60E64CCDB1C35304203A105CE23 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01535400128C9B21951A66730C05114 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
-		C1351A03789D9A07948A7492E5F06C94 /* Pods-Awesome-AwesomeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Awesome-AwesomeUITests.modulemap"; sourceTree = "<group>"; };
 		C1499340F4987E2355CB7FE0E4D36CA4 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
 		C308D8CB491A40ABE254B43889254658 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C310B0A7D72B1AAC533A25AE979FBD45 /* Pods-AwesomeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AwesomeTests-Info.plist"; sourceTree = "<group>"; };
 		C354D4159CAAE3629E13C227A6D609F9 /* OAuthToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthToken.swift; path = sources/KakaoSDKAuth/model/OAuthToken.swift; sourceTree = "<group>"; };
 		C35C8BBB78AE30512498E5ADF4E47765 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		C48496880087B888C9C63424EEE4DDB9 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
@@ -704,11 +600,9 @@
 		C65FBFA338123E6751A326043E776496 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
 		C74521FCF18243E968DDC3711D279099 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
 		C82A5058423E60A03C2203158A29DC7A /* StoryProfile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryProfile.swift; path = sources/KakaoSDKStory/model/StoryProfile.swift; sourceTree = "<group>"; };
-		C8A5B4730F4015AFFC543BE964826DB2 /* Pods-AwesomeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AwesomeTests.modulemap"; sourceTree = "<group>"; };
 		CAA3A33FABF87804A772E3CC9BBEF33E /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
-		CB79AB1F7CC3B62608C6262C097D51EA /* Pods-Awesome.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Awesome.modulemap"; sourceTree = "<group>"; };
-		CB8B061655652BC140506ED0125B5EC9 /* Pods-AwesomeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AwesomeTests-umbrella.h"; sourceTree = "<group>"; };
 		CBF42FCE383038E021CFE00CF50F1C93 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		CC5391F074FF7C1FDE445419F74DFB98 /* Pods-Awesome-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Awesome-umbrella.h"; sourceTree = "<group>"; };
 		CCBFDA66CB44ABF7E2A41A4C05142E86 /* Data+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Utils.swift"; path = "sources/KakaoSDKCommon/common/extension/Data+Utils.swift"; sourceTree = "<group>"; };
 		CD8FA1A247A84AA9F9E5B9E89E3B51AF /* KakaoSDKLink-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKLink-prefix.pch"; sourceTree = "<group>"; };
 		CE0D50F35CABD27EAE7308BF3546C87C /* FSCalendarCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
@@ -717,15 +611,13 @@
 		D1321745139BA8AB83F04FCB3B2DD801 /* KakaoSDKCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaoSDKCommon-dummy.m"; sourceTree = "<group>"; };
 		D1964F1792049EE604519F77388A5159 /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarSeparatorDecorationView.m; path = FSCalendar/FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
 		D26D36B5D5865B1E67FA1B1ED9A99F99 /* KakaoSDKStory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaoSDKStory.modulemap; sourceTree = "<group>"; };
-		D3AEF5E4E03AB24EBA5C456F3A9DBE00 /* Pods-AwesomeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AwesomeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D3B129CA25C6F98195FF93F75EA546B1 /* FSCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCalendar.debug.xcconfig; sourceTree = "<group>"; };
 		D3C8A3027C25204B9C25E6061673AE50 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		D3F5A835FA3D539FEF555D24DF691F38 /* Pods-Awesome-AwesomeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Awesome-AwesomeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		D59E006ABFC9FFD616C377AE2E3822D9 /* Pods-Awesome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Awesome-dummy.m"; sourceTree = "<group>"; };
 		D636661E976F26D3FCB4286D71FD8EFD /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		D7BDA455979CA115BAA46567D397BC21 /* Pods_AwesomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AwesomeTests.framework; path = "Pods-AwesomeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D877C987BF42825BCC14D6883ACE0FD4 /* KakaoSDKNavi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaoSDKNavi.debug.xcconfig; sourceTree = "<group>"; };
-		D8B304C3BD3E4062AF46F2343425CD3E /* Pods-AwesomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AwesomeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D942DF70CCB418F86DE440B0687DA501 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
+		DAFD2A480A93C72A5B629E8DD8E6FD93 /* Pods-Awesome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Awesome.debug.xcconfig"; sourceTree = "<group>"; };
 		DB38569D1CEDF1A5DC75AD151DF0A575 /* KakaoSDKTalk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaoSDKTalk-prefix.pch"; sourceTree = "<group>"; };
 		DBC4DAB69C03E920EAB39B3D1E23E2AF /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		DD0D2D3939BFD42B0800E614914CFD0E /* FSCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-prefix.pch"; sourceTree = "<group>"; };
@@ -741,7 +633,6 @@
 		E3C9EC59A3AEEC8254DED0B7C3A53D84 /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = sources/KakaoSDKCommon/common/common/Properties.swift; sourceTree = "<group>"; };
 		E3EBAA0D3C2B9376DA1D1969411055BE /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		E5C3D4DBDF00B35838239E6037B4F181 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8ECA982061541367A2BDA8BCAF42CB4 /* Pods-AwesomeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AwesomeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E905B5BA7B946DF9B38A4A5F750BA63E /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
 		E9AA1F860B8DE335D2D4E8F84CEC7CBA /* EncodingContainer+AnyCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EncodingContainer+AnyCollection.swift"; path = "sources/KakaoSDKCommon/common/extension/EncodingContainer+AnyCollection.swift"; sourceTree = "<group>"; };
 		EA7D3431D952C05E334EFCC12F94697C /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeaderView.m; path = FSCalendar/FSCalendarHeaderView.m; sourceTree = "<group>"; };
@@ -749,7 +640,7 @@
 		EC28AB394578B6E5B7B075C0675918DF /* KakaoSDKCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KakaoSDKCommon.swift; path = sources/KakaoSDKCommon/common/KakaoSDKCommon.swift; sourceTree = "<group>"; };
 		ED5DBD179C9CCC1AA722B23AFF1660E0 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		F09D736C240C4D922BFF60573622D1D0 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		F1348C4BC85541972B28FB131B78BA82 /* Pods-Awesome-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Awesome-frameworks.sh"; sourceTree = "<group>"; };
+		F17F99C78AF2C09BBA96A69D2B27468C /* Pods-Awesome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Awesome-acknowledgements.plist"; sourceTree = "<group>"; };
 		F25BACB28D63877B7A3E2F66EFE21F9B /* UserApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserApi.swift; path = sources/KakaoSDKUser/UserApi.swift; sourceTree = "<group>"; };
 		F3293930F24CE679D7A3F675D27BDEB0 /* KakaoSDKAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaoSDKAuth.modulemap; sourceTree = "<group>"; };
 		F51ED62B7F746E07B991A33501B08E2F /* KakaoSDKNavi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaoSDKNavi.modulemap; sourceTree = "<group>"; };
@@ -791,22 +682,6 @@
 				A80F0B96B2DB93C9013EFC0AE61C0E41 /* Foundation.framework in Frameworks */,
 				12D0CB330C1C475935ACA2EA9374003E /* KakaoSDKAuth.framework in Frameworks */,
 				598863E8CAAAA78FB83A7054D2C64BD8 /* KakaoSDKCommon.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43AD83BDD2A044761C06E5AED22EBD41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D515A080B5B6B3F0F395A3928424F54A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AAC2A5AAFA0A5DD19A94860AFEA005A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A406EC80CACF8B3AD50FD49DFAD881BE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,23 +818,6 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		2DEFA34307B807A08EA95134525A9E5D /* Pods-Awesome-AwesomeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C1351A03789D9A07948A7492E5F06C94 /* Pods-Awesome-AwesomeUITests.modulemap */,
-				780B40250BA0DE61229983D25CACF4DB /* Pods-Awesome-AwesomeUITests-acknowledgements.markdown */,
-				2A04F917E3C5807A3294AB0F2F9E79AB /* Pods-Awesome-AwesomeUITests-acknowledgements.plist */,
-				1096C58C4E1550DA5D364C3CEC8CB500 /* Pods-Awesome-AwesomeUITests-dummy.m */,
-				D3F5A835FA3D539FEF555D24DF691F38 /* Pods-Awesome-AwesomeUITests-frameworks.sh */,
-				7C61C8F642C0F3D5D1C2E9986BC0510D /* Pods-Awesome-AwesomeUITests-Info.plist */,
-				9D9EA0C2696B85746DE5B70413841254 /* Pods-Awesome-AwesomeUITests-umbrella.h */,
-				A47516B3AD81B43F7A5846AB28C7AF47 /* Pods-Awesome-AwesomeUITests.debug.xcconfig */,
-				B8F985F8D1667C5216373BBBCCEE4323 /* Pods-Awesome-AwesomeUITests.release.xcconfig */,
-			);
-			name = "Pods-Awesome-AwesomeUITests";
-			path = "Target Support Files/Pods-Awesome-AwesomeUITests";
-			sourceTree = "<group>";
-		};
 		2E45DCAF0A4654E35A1CC4911651A3B3 /* KakaoSDKNavi */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,42 +897,6 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		5769A32449276A2E8788B2265AA8C2E1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */,
-				9F453801F27585052F413F613C847DB2 /* KakaoSDKAuth.framework */,
-				25BDA6E824AD6CBD857358A023C694AD /* KakaoSDKCommon.framework */,
-				C61DAFBC2F2165AB3AA00130523B904E /* KakaoSDKLink.framework */,
-				9D0E56404A234C3736519ADFC2F9CF78 /* KakaoSDKNavi.framework */,
-				A1130D1DAB31B2DFE7B4CA725878272F /* KakaoSDKStory.framework */,
-				AC302B35325DB24BC9CAD7752F5076BC /* KakaoSDKTalk.framework */,
-				577744C58D2473190267533B410590A1 /* KakaoSDKTemplate.framework */,
-				1353D6A467F43A6A3EA21D310BD35A31 /* KakaoSDKUser.framework */,
-				C5534040F882FBB575629840625F2FE0 /* Pods_Awesome.framework */,
-				9C3692B2E7BB54F10701611A7949876E /* Pods_Awesome_AwesomeUITests.framework */,
-				D7BDA455979CA115BAA46567D397BC21 /* Pods_AwesomeTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5B79A919AC969F574F33C83849D69516 /* Pods-AwesomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				C8A5B4730F4015AFFC543BE964826DB2 /* Pods-AwesomeTests.modulemap */,
-				D3AEF5E4E03AB24EBA5C456F3A9DBE00 /* Pods-AwesomeTests-acknowledgements.markdown */,
-				E8ECA982061541367A2BDA8BCAF42CB4 /* Pods-AwesomeTests-acknowledgements.plist */,
-				9E3B1FDC4450E6AF8B3CB2780520648E /* Pods-AwesomeTests-dummy.m */,
-				C310B0A7D72B1AAC533A25AE979FBD45 /* Pods-AwesomeTests-Info.plist */,
-				CB8B061655652BC140506ED0125B5EC9 /* Pods-AwesomeTests-umbrella.h */,
-				3CC910D9BF4FE292EACDCC2AA69540B2 /* Pods-AwesomeTests.debug.xcconfig */,
-				D8B304C3BD3E4062AF46F2343425CD3E /* Pods-AwesomeTests.release.xcconfig */,
-			);
-			name = "Pods-AwesomeTests";
-			path = "Target Support Files/Pods-AwesomeTests";
-			sourceTree = "<group>";
-		};
 		68B878FCB748A35B36EA8915A7FACEBE /* KakaoSDKTalk */ = {
 			isa = PBXGroup;
 			children = (
@@ -1147,6 +969,24 @@
 			);
 			name = FSCalendar;
 			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+		79AC56E5FFD29FDB3372D43DC1C5E586 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */,
+				9F453801F27585052F413F613C847DB2 /* KakaoSDKAuth.framework */,
+				25BDA6E824AD6CBD857358A023C694AD /* KakaoSDKCommon.framework */,
+				C61DAFBC2F2165AB3AA00130523B904E /* KakaoSDKLink.framework */,
+				9D0E56404A234C3736519ADFC2F9CF78 /* KakaoSDKNavi.framework */,
+				A1130D1DAB31B2DFE7B4CA725878272F /* KakaoSDKStory.framework */,
+				AC302B35325DB24BC9CAD7752F5076BC /* KakaoSDKTalk.framework */,
+				577744C58D2473190267533B410590A1 /* KakaoSDKTemplate.framework */,
+				1353D6A467F43A6A3EA21D310BD35A31 /* KakaoSDKUser.framework */,
+				C5534040F882FBB575629840625F2FE0 /* Pods_Awesome.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		80A73DAB0FAFE904FC7094539A816E1B /* Support Files */ = {
@@ -1277,23 +1117,6 @@
 			path = "../Target Support Files/KakaoSDKTalk";
 			sourceTree = "<group>";
 		};
-		AFE2092BC5699182E6A9F223AA5E89DE /* Pods-Awesome */ = {
-			isa = PBXGroup;
-			children = (
-				CB79AB1F7CC3B62608C6262C097D51EA /* Pods-Awesome.modulemap */,
-				2D0A4755475E457BAD7315634E71DDD0 /* Pods-Awesome-acknowledgements.markdown */,
-				6A915400F653E29AF4742FCB15C1FBB2 /* Pods-Awesome-acknowledgements.plist */,
-				300F4913B6E8075017B381B181EB7619 /* Pods-Awesome-dummy.m */,
-				F1348C4BC85541972B28FB131B78BA82 /* Pods-Awesome-frameworks.sh */,
-				6C97DF763C9EBC8AB2EB0370741FF4EB /* Pods-Awesome-Info.plist */,
-				380E4429D460137B481E4F1ACD1270CC /* Pods-Awesome-umbrella.h */,
-				8C1681D12363869C2E34881DBA8A9AD2 /* Pods-Awesome.debug.xcconfig */,
-				7487A4108E875A6B99788D06589B4B12 /* Pods-Awesome.release.xcconfig */,
-			);
-			name = "Pods-Awesome";
-			path = "Target Support Files/Pods-Awesome";
-			sourceTree = "<group>";
-		};
 		B3D2C32633F789C0CC7C2E638258F0CF /* KakaoSDKLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -1321,16 +1144,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KakaoSDKNavi";
-			sourceTree = "<group>";
-		};
-		BD1FD789F55D53365F2621247AD14CA6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFE2092BC5699182E6A9F223AA5E89DE /* Pods-Awesome */,
-				2DEFA34307B807A08EA95134525A9E5D /* Pods-Awesome-AwesomeUITests */,
-				5B79A919AC969F574F33C83849D69516 /* Pods-AwesomeTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		BF5839DBF973F3FCCD982DF3CB1578DF /* Support Files */ = {
@@ -1369,8 +1182,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				A179183D89A402B0AD56278106C0DAEC /* Frameworks */,
 				ECCC49BE574ACFF5400E35763BD0A77E /* Pods */,
-				5769A32449276A2E8788B2265AA8C2E1 /* Products */,
-				BD1FD789F55D53365F2621247AD14CA6 /* Targets Support Files */,
+				79AC56E5FFD29FDB3372D43DC1C5E586 /* Products */,
+				F80CB1F9BC9FEC627C7B6C9DC93EBFC3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1403,6 +1216,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F0C4EFF2A4DD93A9AC9013E8813DF7B9 /* Pods-Awesome */ = {
+			isa = PBXGroup;
+			children = (
+				14743C522FF29659A4BD778B45974D49 /* Pods-Awesome.modulemap */,
+				2A09DD9AE71401D085B78A202ACE24F4 /* Pods-Awesome-acknowledgements.markdown */,
+				F17F99C78AF2C09BBA96A69D2B27468C /* Pods-Awesome-acknowledgements.plist */,
+				D59E006ABFC9FFD616C377AE2E3822D9 /* Pods-Awesome-dummy.m */,
+				632F46632082BC673710EFE94BD59445 /* Pods-Awesome-frameworks.sh */,
+				1BAFE39B02EF7C8418D18C9CB844BE32 /* Pods-Awesome-Info.plist */,
+				CC5391F074FF7C1FDE445419F74DFB98 /* Pods-Awesome-umbrella.h */,
+				DAFD2A480A93C72A5B629E8DD8E6FD93 /* Pods-Awesome.debug.xcconfig */,
+				28A8B4E7E84B0267B2F96F82AA67B65D /* Pods-Awesome.release.xcconfig */,
+			);
+			name = "Pods-Awesome";
+			path = "Target Support Files/Pods-Awesome";
+			sourceTree = "<group>";
+		};
 		F3BE2062E61BBDD45E370E5B6CA931DD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1416,6 +1246,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KakaoSDKCommon";
+			sourceTree = "<group>";
+		};
+		F80CB1F9BC9FEC627C7B6C9DC93EBFC3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0C4EFF2A4DD93A9AC9013E8813DF7B9 /* Pods-Awesome */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1515,14 +1353,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE3CA53D17420BFFD2B867479CC5090A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD0C3844B547F48ED1F3437C3133017C /* Pods-Awesome-AwesomeUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C6656C3FA5D3C9334D01941A0FCB4C6A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1540,36 +1370,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F95E7367733577D102DF4E69756AD94E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				915D79DEF75291695C5C731F731CE061 /* Pods-AwesomeTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C3F8FC42C940BBD83612C18C3E66B71 /* Pods-AwesomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79990740E3BC190BDA90573DA4720F53 /* Build configuration list for PBXNativeTarget "Pods-AwesomeTests" */;
-			buildPhases = (
-				F95E7367733577D102DF4E69756AD94E /* Headers */,
-				E94A19949D822197CD4164449E989574 /* Sources */,
-				5AAC2A5AAFA0A5DD19A94860AFEA005A /* Frameworks */,
-				5C4241914094C405838AAA7E1B37C5CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9269C8110CF1DE3886B7379143A2006 /* PBXTargetDependency */,
-			);
-			name = "Pods-AwesomeTests";
-			productName = "Pods-AwesomeTests";
-			productReference = D7BDA455979CA115BAA46567D397BC21 /* Pods_AwesomeTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1747C1FC0D7AED6F717CE32ACF418CF5 /* Build configuration list for PBXNativeTarget "FSCalendar" */;
@@ -1645,35 +1448,6 @@
 			name = KakaoSDKLink;
 			productName = KakaoSDKLink;
 			productReference = C61DAFBC2F2165AB3AA00130523B904E /* KakaoSDKLink.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		538018313D6814DEA3962D062713155E /* Pods-Awesome-AwesomeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F039FE8BBF269A0A114A8A34D3D756F /* Build configuration list for PBXNativeTarget "Pods-Awesome-AwesomeUITests" */;
-			buildPhases = (
-				BE3CA53D17420BFFD2B867479CC5090A /* Headers */,
-				C294F06E09B8D8EB15789490E66D64AF /* Sources */,
-				43AD83BDD2A044761C06E5AED22EBD41 /* Frameworks */,
-				FD81FC10D3A41D701B0D3971FC48AAAF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				79488DC331E818000B23D5E66BA412D4 /* PBXTargetDependency */,
-				C07B858300E44EF578C777C7AB33EDD2 /* PBXTargetDependency */,
-				E80E630413EA43B995998CDC36CC47E6 /* PBXTargetDependency */,
-				EBF2BF196DAFFF5E72064A6C6249D14B /* PBXTargetDependency */,
-				B61B2CD3E13921D049B83DE15F4EF9A5 /* PBXTargetDependency */,
-				DBF8005332FD3909CF69C56960F821D7 /* PBXTargetDependency */,
-				277A5778011E9422A246926CDDDF5036 /* PBXTargetDependency */,
-				A41F8A914B2F90BB49A398685FF53B3D /* PBXTargetDependency */,
-				83F91865153BE3822EB3C79E68E553D6 /* PBXTargetDependency */,
-				E50231C22FADE75A4A61998BF08BE021 /* PBXTargetDependency */,
-				205F26EDDBCB0269199BAD14E5E9CD54 /* PBXTargetDependency */,
-			);
-			name = "Pods-Awesome-AwesomeUITests";
-			productName = "Pods-Awesome-AwesomeUITests";
-			productReference = 9C3692B2E7BB54F10701611A7949876E /* Pods_Awesome_AwesomeUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		61118587C74B2D3D0EFFE67F0116FE65 /* KakaoSDKNavi */ = {
@@ -1839,7 +1613,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5769A32449276A2E8788B2265AA8C2E1 /* Products */;
+			productRefGroup = 79AC56E5FFD29FDB3372D43DC1C5E586 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1855,8 +1629,6 @@
 				F1A7357D2A67F44CF3FBB03F86D5EE1A /* KakaoSDKTemplate */,
 				3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */,
 				9D5A57148A87D92D55D862B88D618006 /* Pods-Awesome */,
-				538018313D6814DEA3962D062713155E /* Pods-Awesome-AwesomeUITests */,
-				0C3F8FC42C940BBD83612C18C3E66B71 /* Pods-AwesomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1891,13 +1663,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A8B0FE015D4E53548BC6D9DD8F53939 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C4241914094C405838AAA7E1B37C5CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1940,13 +1705,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F55CA98E8C93B232101DADF83D8625F6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD81FC10D3A41D701B0D3971FC48AAAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2105,14 +1863,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C294F06E09B8D8EB15789490E66D64AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9F765A5E8EADA02754A77948797EA77 /* Pods-Awesome-AwesomeUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C8F2F034EC00CE94239B10140B153019 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2143,14 +1893,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E94A19949D822197CD4164449E989574 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5CF3B72D20FC72BF0BB03DB045EE98F /* Pods-AwesomeTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAA87211742ACD02E4FBDB368662C693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2168,18 +1910,6 @@
 			name = KakaoSDKTemplate;
 			target = F1A7357D2A67F44CF3FBB03F86D5EE1A /* KakaoSDKTemplate */;
 			targetProxy = D938470D2ACB60B79D78C46748C87BA0 /* PBXContainerItemProxy */;
-		};
-		205F26EDDBCB0269199BAD14E5E9CD54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKUser;
-			target = 3F7BF367078951B6E8BC95B3DA89967A /* KakaoSDKUser */;
-			targetProxy = D263A2EF211AFB9C9D43A81353652B51 /* PBXContainerItemProxy */;
-		};
-		277A5778011E9422A246926CDDDF5036 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKNavi;
-			target = 61118587C74B2D3D0EFFE67F0116FE65 /* KakaoSDKNavi */;
-			targetProxy = 5FCBE784639C4AE81226FA5E14DCEA36 /* PBXContainerItemProxy */;
 		};
 		2EF5BCD43F123E209C5FCA4B67D78376 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2253,23 +1983,11 @@
 			target = D10EA6E592FB0476FCF38A6C5EC1D148 /* KakaoSDKTalk */;
 			targetProxy = C76A18871C78ABBC9E2DE6EB72ABC14C /* PBXContainerItemProxy */;
 		};
-		79488DC331E818000B23D5E66BA412D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 53BB843D5E1C5E35A9A1C54F0989D54D /* PBXContainerItemProxy */;
-		};
 		7EB34A709C1E4ABBB970F03140A78AEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKAuth;
 			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
 			targetProxy = 2144B4A0D4BBA9C8CA503F1A2063F898 /* PBXContainerItemProxy */;
-		};
-		83F91865153BE3822EB3C79E68E553D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKTalk;
-			target = D10EA6E592FB0476FCF38A6C5EC1D148 /* KakaoSDKTalk */;
-			targetProxy = 9CB259516FA6D6833F7016BF11288771 /* PBXContainerItemProxy */;
 		};
 		95E66955BEB1CDB93FA8DF3196B97D98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2288,12 +2006,6 @@
 			name = KakaoSDKCommon;
 			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
 			targetProxy = A6F9BB242F12A983DF78547B74C80F9D /* PBXContainerItemProxy */;
-		};
-		A41F8A914B2F90BB49A398685FF53B3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKStory;
-			target = 994F7F59C816D7363585E82EBA0764BC /* KakaoSDKStory */;
-			targetProxy = F8FA0BB486331AEC48E352D945A02AE2 /* PBXContainerItemProxy */;
 		};
 		AC6CB7BEF0BB70A9241BA8BEA3A81E59 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2319,12 +2031,6 @@
 			target = 994F7F59C816D7363585E82EBA0764BC /* KakaoSDKStory */;
 			targetProxy = CE79D6B9F3C8EB53B21BEDD629226521 /* PBXContainerItemProxy */;
 		};
-		B61B2CD3E13921D049B83DE15F4EF9A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKCommon;
-			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
-			targetProxy = F64556B49088319F4BE222BE51B3B6F9 /* PBXContainerItemProxy */;
-		};
 		B85650CF94232FED5F45D5C6EE1338DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKCommon;
@@ -2336,12 +2042,6 @@
 			name = KakaoSDK;
 			target = 1BF4C51498D9D2512ED81F0E6911BE7B /* KakaoSDK */;
 			targetProxy = C6EA85C6A1D64C96185237EF65A91A56 /* PBXContainerItemProxy */;
-		};
-		C07B858300E44EF578C777C7AB33EDD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FSCalendar;
-			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
-			targetProxy = 8B8DEF6E03F0794299BD0B80E32402C4 /* PBXContainerItemProxy */;
 		};
 		C762BBFDB383A7D3F0978189793A1E18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2367,18 +2067,6 @@
 			target = 205D6EF1B8DCC8419E2F53266F6ADCDC /* KakaoSDKCommon */;
 			targetProxy = EA2757EE76D3320ADDB1CB78AD258022 /* PBXContainerItemProxy */;
 		};
-		D9269C8110CF1DE3886B7379143A2006 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Awesome";
-			target = 9D5A57148A87D92D55D862B88D618006 /* Pods-Awesome */;
-			targetProxy = 22730294E564C6DFC2BD093378483E45 /* PBXContainerItemProxy */;
-		};
-		DBF8005332FD3909CF69C56960F821D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKLink;
-			target = 50476624BF09EB04ABAFA83A0C21C625 /* KakaoSDKLink */;
-			targetProxy = 31075A8DDC5D500B82237A4F336DE269 /* PBXContainerItemProxy */;
-		};
 		E16F5BFD3E5B532D8B4479CA28F157DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KakaoSDKTalk;
@@ -2390,24 +2078,6 @@
 			name = KakaoSDKAuth;
 			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
 			targetProxy = 20C0F82E1EC7D38CCF6C6887F5EC4C6E /* PBXContainerItemProxy */;
-		};
-		E50231C22FADE75A4A61998BF08BE021 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKTemplate;
-			target = F1A7357D2A67F44CF3FBB03F86D5EE1A /* KakaoSDKTemplate */;
-			targetProxy = 02E3F8F32F17882A9139962F5F55D585 /* PBXContainerItemProxy */;
-		};
-		E80E630413EA43B995998CDC36CC47E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDK;
-			target = 1BF4C51498D9D2512ED81F0E6911BE7B /* KakaoSDK */;
-			targetProxy = DDBE98566B5418959B2B1D78D189553E /* PBXContainerItemProxy */;
-		};
-		EBF2BF196DAFFF5E72064A6C6249D14B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KakaoSDKAuth;
-			target = 83CA882AD877ED964BDF66235E416BC1 /* KakaoSDKAuth */;
-			targetProxy = 597D9026376F80FE72081F878ED761F0 /* PBXContainerItemProxy */;
 		};
 		F325B55FED95C9A0CDC0405A19F9DF8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2574,7 +2244,7 @@
 		};
 		39F9948F65CE186D1920FF12C737870F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C1681D12363869C2E34881DBA8A9AD2 /* Pods-Awesome.debug.xcconfig */;
+			baseConfigurationReference = DAFD2A480A93C72A5B629E8DD8E6FD93 /* Pods-Awesome.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2645,44 +2315,6 @@
 			};
 			name = Release;
 		};
-		4EB0EF8F42F835CDBBBF753C3E8AAD1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8F985F8D1667C5216373BBBCCEE4323 /* Pods-Awesome-AwesomeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		553835B7578DFA2059B2CCF1B94C0FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A21C4920C3B08CF8C278A478A03050E /* KakaoSDKLink.debug.xcconfig */;
@@ -2717,44 +2349,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		63574E36F7EC4313C1A3FD972ADC7B0A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8B304C3BD3E4062AF46F2343425CD3E /* Pods-AwesomeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AwesomeTests/Pods-AwesomeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AwesomeTests/Pods-AwesomeTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		63837F5B6411B8A7207061F036386E86 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3344,43 +2938,6 @@
 			};
 			name = Release;
 		};
-		CB3F0B9DF2562917994F32AFD57C2399 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47516B3AD81B43F7A5846AB28C7AF47 /* Pods-Awesome-AwesomeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Awesome-AwesomeUITests/Pods-Awesome-AwesomeUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		CDAE5DDC580E385D38FBC5EA4FE78DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B850193FD049147BFCB8682E3401D2B6 /* KakaoSDKTemplate.debug.xcconfig */;
@@ -3453,7 +3010,7 @@
 		};
 		EEB3ED9378A90EFC7D5DA901D0C8F009 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7487A4108E875A6B99788D06589B4B12 /* Pods-Awesome.release.xcconfig */;
+			baseConfigurationReference = 28A8B4E7E84B0267B2F96F82AA67B65D /* Pods-Awesome.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3488,43 +3045,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		F963972764A05A698392EFA3C25BEB7D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CC910D9BF4FE292EACDCC2AA69540B2 /* Pods-AwesomeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AwesomeTests/Pods-AwesomeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AwesomeTests/Pods-AwesomeTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3565,15 +3085,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F039FE8BBF269A0A114A8A34D3D756F /* Build configuration list for PBXNativeTarget "Pods-Awesome-AwesomeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB3F0B9DF2562917994F32AFD57C2399 /* Debug */,
-				4EB0EF8F42F835CDBBBF753C3E8AAD1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		529ECB7FE63AB327EC0AECA9EC5FCE0E /* Build configuration list for PBXNativeTarget "KakaoSDKCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3606,15 +3117,6 @@
 			buildConfigurations = (
 				2444D36F2CB5FF3F9469EF5F6322EA10 /* Debug */,
 				9B66E952E27F29569285AB82461A2F34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79990740E3BC190BDA90573DA4720F53 /* Build configuration list for PBXNativeTarget "Pods-AwesomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F963972764A05A698392EFA3C25BEB7D /* Debug */,
-				63574E36F7EC4313C1A3FD972ADC7B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

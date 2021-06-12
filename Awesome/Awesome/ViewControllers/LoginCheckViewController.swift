@@ -12,6 +12,7 @@ class LoginCheckViewController: UIViewController , data {
     func deleteData() {
         dummyData.removeFirst()
         mainTableView.reloadData()
+        noSchedule()
     }
     @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var HiLabel: UILabel!
@@ -43,6 +44,14 @@ class LoginCheckViewController: UIViewController , data {
         awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
         awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
 
+       
+
+    }
+    func noSchedule(){
+        if dummyData.count == 0{
+            mainTableView.backgroundView = UIImageView(image: UIImage(named: "mainNoSCBackground.png"))
+            print("배경변경")
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         uppdateProfile()
@@ -69,6 +78,7 @@ class LoginCheckViewController: UIViewController , data {
     func setDummydata(){
         dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 6월 7일", information: "IKK 안녕하세요. ethan입니다~ 팀원분들과 점심식사 하시고, 타운홀에서 커피한잔 어떠신가요?", time: "10mAgo", person: "ethan"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 8일", information: "익범 난데 이따 사회적 거리두기 준수하에 간술 어때", time: "10mAgo",person: "이민규"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 5일", information: "피시방 가서 게임하다가 BHC가서 치킨먹고 할리스가서 커피 한잔 하고 장암동에서 빠이빠이 하자. 내 전화번호는 010-5555-5555", time: "1mAgo",person: "이민규"), mainViewDummy(informationImage: "message", name: "If i die tommorow", information: "오늘밤이 만약 내게 주어진 돛대와 같다면 whiat should i do with this mmmm maybe 지나온 나날들을 시원하게 훑겠지 스물 여섯 컷의 흑백 film 내 머릿속의 스케치", time: "Long Time Ago",person: "빈지노")
         ])
+        
     }
     
     
@@ -120,6 +130,7 @@ class LoginCheckViewController: UIViewController , data {
         }
         else{
             self.present(commentVC, animated: true, completion: nil)
+            commentVC.deleteDelegate = self
         }
         
     }

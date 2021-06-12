@@ -38,7 +38,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
             let nowdate = Date()
             let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
             let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
-        let weekFromNow = Date().advanced(by: 30.0)
+            let weekFromNow = Date().advanced(by: 30.0)
             let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
             isSchedule = true
             dummySData = []
@@ -158,6 +158,7 @@ class CallendarViewController: UIViewController, FSCalendarDelegate, FSCalendarD
         setDummydata()
         printEventCell()
         scheduleTableView.reloadData()
+        
         
       }
    

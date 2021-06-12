@@ -4,21 +4,9 @@
 target 'Awesome' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+pod 'FSCalendar'
 
   # Pods for Awesome
-
     pod 'KakaoSDK'
-    pod 'FSCalendar'
-
-
-  target 'AwesomeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'AwesomeUITests' do
-    # Pods for testing
-  end
 
 end
