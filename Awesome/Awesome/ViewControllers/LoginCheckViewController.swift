@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKUser
 
+
 class LoginCheckViewController: UIViewController , data {
     func deleteData() {
         dummyData.removeFirst()
@@ -27,6 +28,7 @@ class LoginCheckViewController: UIViewController , data {
     var ifPromise : Bool = false
     
     @IBOutlet weak var mainTableView: UITableView!
+    let refreshControl = UIRefreshControl()
     
     var dummyData : [mainViewDummy] = []
     
@@ -43,10 +45,17 @@ class LoginCheckViewController: UIViewController , data {
         userName.font = userName.font.withSize(resolutionFontSize(size: 24))
         awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
         awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
-
        
 
     }
+    
+    func refresh(){
+        refreshControl.endRefreshing()
+        mainTableView.refreshControl = refreshControl
+
+
+    }
+    
     func noSchedule(){
         if dummyData.count == 0{
             mainTableView.backgroundView = UIImageView(image: UIImage(named: "mainNoSCBackground.png"))
@@ -80,6 +89,7 @@ class LoginCheckViewController: UIViewController , data {
         ])
         
     }
+    
     
     
     @IBAction func settingButtonClicked(_ sender: Any) {

@@ -29,6 +29,11 @@
 		36429E402657E2BF006CF81F /* NotScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */; };
 		367F9C0126426DFC005324A2 /* DatepickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F9C0026426DFC005324A2 /* DatepickerViewController.swift */; };
 		367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */; };
+		3681BC3C2675CA6100896A9A /* KakaoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC3B2675CA6100896A9A /* KakaoLoginViewController.swift */; };
+		3681BC402675CE0E00896A9A /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */; };
+		3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */; };
+		3681BC442675CFAF00896A9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC432675CFAF00896A9A /* Constants.swift */; };
+		3681BC462675D0DE00896A9A /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC452675D0DE00896A9A /* NetworkResult.swift */; };
 		368A019B263FE4A300100B01 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A9372637173C0082B4AB /* LoginCheckViewController.swift */; };
 		36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AA7C24263A97080084DD9C /* AlertViewController.swift */; };
@@ -85,6 +90,11 @@
 		36429E3F2657E2BF006CF81F /* NotScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotScheduleViewController.swift; sourceTree = "<group>"; };
 		367F9C0026426DFC005324A2 /* DatepickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatepickerViewController.swift; sourceTree = "<group>"; };
 		367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishDatePickerViewController.swift; sourceTree = "<group>"; };
+		3681BC3B2675CA6100896A9A /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
+		3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
+		3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKakaoLoginDataService.swift; sourceTree = "<group>"; };
+		3681BC432675CFAF00896A9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3681BC452675D0DE00896A9A /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		368A017F263FE43F00100B01 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
 		36AA7C24263A97080084DD9C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +171,22 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		3681BC3D2675CDD200896A9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3681BC3E2675CDE000896A9A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		36E5B4EC2648520B0079170F /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +206,10 @@
 		36E5B4F0264852320079170F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3681BC432675CFAF00896A9A /* Constants.swift */,
+				3681BC452675D0DE00896A9A /* NetworkResult.swift */,
+				3681BC3E2675CDE000896A9A /* Service */,
+				3681BC3D2675CDD200896A9A /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -218,6 +248,7 @@
 				36340BEF263FC5AA0089BC15 /* CallendarViewController.swift */,
 				361262142663F11E00E1475E /* StartDateViewController.swift */,
 				361262162663F12E00E1475E /* FinishDataViewController.swift */,
+				3681BC3B2675CA6100896A9A /* KakaoLoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -390,15 +421,20 @@
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,
 				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
 				36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */,
+				3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */,
 				36419DA02636E4630067C89D /* ViewController.swift in Sources */,
 				36369F67264291BC00115867 /* CommentAlertViewController.swift in Sources */,
 				36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */,
 				36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */,
 				361262172663F12E00E1475E /* FinishDataViewController.swift in Sources */,
 				3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */,
+				3681BC402675CE0E00896A9A /* KakaoLoginDataModel.swift in Sources */,
+				3681BC3C2675CA6100896A9A /* KakaoLoginViewController.swift in Sources */,
 				3628EE4C263EB59F0042A9B5 /* dummy.swift in Sources */,
+				3681BC462675D0DE00896A9A /* NetworkResult.swift in Sources */,
 				36174C7D26382F0C00E8A0CD /* SettingViewController.swift in Sources */,
 				36429E402657E2BF006CF81F /* NotScheduleViewController.swift in Sources */,
+				3681BC442675CFAF00896A9A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

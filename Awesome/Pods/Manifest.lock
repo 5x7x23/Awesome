@@ -38,6 +38,7 @@ PODS:
     - KakaoSDKCommon (= 2.4.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - FSCalendar
   - KakaoSDK
 
@@ -68,6 +69,6 @@ SPEC CHECKSUMS:
   KakaoSDKTemplate: 8bb288765bfc0195631da809b2d707f09495acdf
   KakaoSDKUser: 11955811d99d1ff1f1dfd5428afe69937e31ccef
 
-PODFILE CHECKSUM: c95cb20e458e5253d1713efe9ecf9df3cb65ded4
+PODFILE CHECKSUM: 68bdc181ba77d510dd7a0b242680828ff51c94eb
 
 COCOAPODS: 1.10.1

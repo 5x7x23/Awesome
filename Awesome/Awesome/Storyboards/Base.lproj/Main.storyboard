@@ -19,6 +19,21 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Kakao Login View Controller-->
+        <scene sceneID="f20-qW-WpO">
+            <objects>
+                <viewController storyboardIdentifier="KakaoLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="waM-pt-O43" customClass="KakaoLoginViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhk-dy-eHs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sJV-PX-sIj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNI-Oe-Q90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-631"/>
+        </scene>
         <!--Promise Alert View Controller-->
         <scene sceneID="hGh-m3-TTz">
             <objects>
@@ -273,27 +288,52 @@
                                 <color key="backgroundColor" red="0.94901961089999998" green="0.65098041299999998" blue="0.050980389119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQc-e1-Fec">
-                                <rect key="frame" x="50" y="471" width="220" height="70"/>
-                                <state key="normal" image="Login"/>
+                                <rect key="frame" x="35" y="428" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.99989503619999998" green="1" blue="0.999871552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xFf-iT-dfC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                <state key="normal" title="카카오계정으로 시작하기">
+                                    <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAN-1K-hRQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq4-7W-iNr">
+                                <rect key="frame" x="35" y="498" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.99989503619999998" green="1" blue="0.999871552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u1s-FM-sjd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                <state key="normal" title="애플계정으로 시작하기">
+                                    <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="appleLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dg1-ji-dEl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mq4-7W-iNr" secondAttribute="bottom" constant="20" id="99w-gV-Bi6"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eki-fo-c4q"/>
-                            <constraint firstItem="MQc-e1-Fec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RGr-oM-Tbz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MQc-e1-Fec" secondAttribute="bottom" multiplier="105:100" id="TsA-YK-YbS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQc-e1-Fec" secondAttribute="trailing" constant="35" id="NuH-bd-jFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mq4-7W-iNr" secondAttribute="trailing" constant="35" id="Q14-Ch-JzA"/>
+                            <constraint firstItem="mq4-7W-iNr" firstAttribute="top" secondItem="MQc-e1-Fec" secondAttribute="bottom" constant="20" id="XHS-Sd-Uz5"/>
                             <constraint firstAttribute="trailing" secondItem="6F3-G4-e9a" secondAttribute="trailing" id="h6z-de-qll"/>
+                            <constraint firstItem="MQc-e1-Fec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="m8t-1D-eVI"/>
                             <constraint firstAttribute="bottom" secondItem="6F3-G4-e9a" secondAttribute="bottom" id="nbn-Vc-auR"/>
+                            <constraint firstItem="mq4-7W-iNr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="pOK-dB-v6Y"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rUx-s8-pgG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQc-e1-Fec" secondAttribute="trailing" constant="50" id="xmn-tz-DZ4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PV0-bn-aek"/>
                     <connections>
+                        <outlet property="appleLoginButton" destination="mq4-7W-iNr" id="4iS-uG-LZ5"/>
                         <outlet property="loginButton" destination="MQc-e1-Fec" id="cV4-Rx-836"/>
                     </connections>
                 </viewController>
@@ -1488,7 +1528,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Login" width="314" height="70"/>
         <image name="backButton2" width="12" height="21"/>
         <image name="backButton2-1" width="12" height="21"/>
         <image name="calanderButton" width="72" height="72"/>
