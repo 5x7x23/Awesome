@@ -5,12 +5,12 @@ import Foundation
 struct Constants {
     
     // MARK: - BASE URL
-    static let baseURL = "http://api.wouldyou.in"
+    static let baseURL = "https://api.wouldyou.in"
     
     // MARK: - Feature URL
     
     /// 1.로그인 리스트 URL
-    static var LoginURL = baseURL + "/user/kakao/login" 
+    static var LoginURL = baseURL + "/user/kakao/login/" 
     
 
 }

@@ -49,7 +49,7 @@ class KakaoLoginViewController: UIViewController {
             case .pathErr :
                 print("pathERR")
             case .serverErr:
-                print("serverERR")
+                print("하이serverERR")
             case .networkFail:
                 print("networkFail")
             }
@@ -58,13 +58,42 @@ class KakaoLoginViewController: UIViewController {
     
 }
 extension KakaoLoginViewController: WKNavigationDelegate{
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("page finished load")
-        loginURL = webView.url?.absoluteString ?? ""
-        Constants.LoginURL = loginURL
-        ifLoginSuccess()
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        print("page finished load")
+//        loginURL = webView.url?.absoluteString ?? ""
+//        Constants.LoginURL = loginURL
+//        ifLoginSuccess()
+//    }
+//    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+//        print("page start load")
+//    }
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        let urlString = webView.url!.absoluteString
+        Constants.LoginURL = urlString
+        
+        if Constants.LoginURL != "https://api.wouldyou.in/user/kakao/login/"{
+            webView.stopLoading()
+            self.dismiss(animated: true, completion: nil)
+            GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
+                switch(response)
+                {
+                case .success(let loginData):
+                    print(loginData)
+                case .requestErr(let message) :
+                    print("requestERR",message)
+                case .pathErr :
+                    print("호출한 주소", urlString)
+                    print("pathERR")
+                case .serverErr:
+                    print("하이serverERR")
+                case .networkFail:
+                    print("networkFail")
+                }
+            }
+        }
+        
+        print(urlString)
+        
     }
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print("page start load")
-    }
+    
 }
