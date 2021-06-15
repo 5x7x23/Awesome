@@ -14,6 +14,7 @@ class KakaoLoginViewController: UIViewController {
     var webView: WKWebView!
     var loginURL : String = ""
     var delegate : loginURLProtocol?
+    var count : Int = 0
 
         override func loadView() {
             super.loadView()
@@ -36,6 +37,10 @@ class KakaoLoginViewController: UIViewController {
         self.webView.navigationDelegate = self
 
     }
+    func notRedirect(){
+        print(Constants.LoginURL)
+    }
+    
     func ifLoginSuccess() {
         GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
             switch(response)
@@ -60,40 +65,36 @@ class KakaoLoginViewController: UIViewController {
 extension KakaoLoginViewController: WKNavigationDelegate{
 //    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 //        print("page finished load")
-//        loginURL = webView.url?.absoluteString ?? ""
-//        Constants.LoginURL = loginURL
-//        ifLoginSuccess()
+//        print(webView.url?.absoluteString)
+//
 //    }
 //    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
 //        print("page start load")
+//        print(webView.url?.absoluteString)
+//
 //    }
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-        let urlString = webView.url!.absoluteString
-        Constants.LoginURL = urlString
-        
-        if Constants.LoginURL != "https://api.wouldyou.in/user/kakao/login/"{
-            webView.stopLoading()
-            self.dismiss(animated: true, completion: nil)
-            GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
-                switch(response)
-                {
-                case .success(let loginData):
-                    print(loginData)
-                case .requestErr(let message) :
-                    print("requestERR",message)
-                case .pathErr :
-                    print("호출한 주소", urlString)
-                    print("pathERR")
-                case .serverErr:
-                    print("하이serverERR")
-                case .networkFail:
-                    print("networkFail")
-                }
+        let urlString = webView.url?.absoluteString
+        Constants.LoginURL = urlString!
+        print("리다이렉트", urlString)
+        GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData):
+                print("로그인데이타 : ",loginData)
+            case .requestErr(let message) :
+                print("requestERR",message)
+            case .pathErr :
+                print("패쓰에러시 주소",Constants.LoginURL)
+                print("pathERR")
+            case .serverErr:
+                print("하이serverERR")
+            case .networkFail:
+                print("networkFail")
             }
         }
-        
-        print(urlString)
+    }
         
     }
     
-}
+

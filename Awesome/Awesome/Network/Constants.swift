@@ -10,7 +10,7 @@ struct Constants {
     // MARK: - Feature URL
     
     /// 1.로그인 리스트 URL
-    static var LoginURL = baseURL + "/user/kakao/login/" 
+    static var LoginURL = baseURL + "user/login/kakao/"
     
 
 }
