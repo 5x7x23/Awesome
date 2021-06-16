@@ -6,15 +6,17 @@ import WebKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var appleLoginButton: UIButton!
+    @IBOutlet weak var appleLoginView: UIView!
     var webView: WKWebView!
+    @IBOutlet weak var appleLoginButton: UIButton!
+
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
         
         setRound()
-        
+
         webView = WKWebView(frame: self.view.frame)
         
         guard let loginSecond = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
@@ -40,10 +42,11 @@ class LoginViewController: UIViewController {
 
     }
     func setRound(){
-        loginButton.clipsToBounds = true
-        loginButton.layer.cornerRadius = 20
         appleLoginButton.clipsToBounds = true
         appleLoginButton.layer.cornerRadius = 20
+        loginButton.clipsToBounds = true
+        loginButton.layer.cornerRadius = 20
+        
     }
     
     
@@ -65,17 +68,44 @@ class LoginViewController: UIViewController {
             self.present(allertVC, animated: true, completion: nil)
         }
             }
-    
-    @IBAction func appleLoginButtonClicked(_ sender: Any) {
-        
+   
+    @IBAction func AppleLoginButtonClicked(_ sender: Any) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self as? ASAuthorizationControllerDelegate
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
     }
     
-
-
-
-
-
 }
 
-    
+extension LoginViewController: ASAuthorizationControllerDelegate {
+    // 성공 후 동작
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        
+        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
+            navigationController?.pushViewController(LoginCompletVC, animated: true)
 
+            let idToken = credential.identityToken!
+            let tokeStr = String(data: idToken, encoding: .utf8)
+            print("호호",tokeStr)
+
+            guard let code = credential.authorizationCode else { return }
+            let codeStr = String(data: code, encoding: .utf8)
+            print("호호", codeStr)
+
+            let user = credential.user
+            print("중요",String(user))
+
+        }
+    }
+
+    // 실패 후 동작
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("error")
+    }
+}

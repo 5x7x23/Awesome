@@ -308,11 +308,11 @@
                                     <constraint firstAttribute="height" constant="50" id="u1s-FM-sjd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
-                                <state key="normal" title="애플계정으로 시작하기">
+                                <state key="normal" title="Apple로 로그인">
                                     <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="appleLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dg1-ji-dEl"/>
+                                    <action selector="AppleLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AKZ-ix-UrK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,7 +333,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PV0-bn-aek"/>
                     <connections>
-                        <outlet property="appleLoginButton" destination="mq4-7W-iNr" id="4iS-uG-LZ5"/>
+                        <outlet property="appleLoginButton" destination="mq4-7W-iNr" id="GLj-TE-M4h"/>
                         <outlet property="loginButton" destination="MQc-e1-Fec" id="cV4-Rx-836"/>
                     </connections>
                 </viewController>
@@ -457,7 +457,7 @@
                                     <constraint firstItem="Mnx-9C-dCZ" firstAttribute="top" secondItem="uyv-ih-3b5" secondAttribute="top" constant="60" id="dOi-o6-uxZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-TR-pzl" customClass="FSCalendar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-TR-pzl" customClass="FSCalendar" customModule="Awesome">
                                 <rect key="frame" x="0.0" y="100" width="320" height="299"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6T-l0-XTS">
