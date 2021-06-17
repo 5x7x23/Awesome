@@ -13,7 +13,6 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var linkshareButton: UIButton!
     @IBOutlet weak var notificationView: UIView!
     
-    @IBOutlet weak var callendarView: UIView!
     
     @IBOutlet weak var withdrawView: UIView!
     @IBOutlet weak var logoutView: UIView!
@@ -35,8 +34,6 @@ class SettingViewController: UIViewController {
         linkshareButton.layer.cornerRadius = 15
         notificationView.clipsToBounds = true
         notificationView.layer.cornerRadius = 15
-        callendarView.clipsToBounds = true
-        callendarView.layer.cornerRadius = 15
         logoutView.clipsToBounds = true
         logoutView.layer.cornerRadius = 15
         withdrawView.clipsToBounds = true

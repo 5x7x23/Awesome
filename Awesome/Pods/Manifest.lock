@@ -1,41 +1,38 @@
 PODS:
   - Alamofire (5.4.3)
   - FSCalendar (2.8.2)
-  - KakaoSDK (2.4.1):
-    - KakaoSDKAuth (= 2.4.1)
-    - KakaoSDKCommon (= 2.4.1)
-    - KakaoSDKLink (= 2.4.1)
-    - KakaoSDKNavi (= 2.4.1)
-    - KakaoSDKStory (= 2.4.1)
-    - KakaoSDKTalk (= 2.4.1)
-    - KakaoSDKTemplate (= 2.4.1)
-    - KakaoSDKUser (= 2.4.1)
-  - KakaoSDKAuth (2.4.1):
-    - KakaoSDKCommon (= 2.4.1)
-  - KakaoSDKCommon (2.4.1):
-    - KakaoSDKCommon/Common (= 2.4.1)
-    - KakaoSDKCommon/Network (= 2.4.1)
-  - KakaoSDKCommon/Common (2.4.1)
-  - KakaoSDKCommon/Network (2.4.1):
+  - KakaoSDK (2.5.3):
+    - KakaoSDKAuth (= 2.5.3)
+    - KakaoSDKCommon (= 2.5.3)
+    - KakaoSDKLink (= 2.5.3)
+    - KakaoSDKNavi (= 2.5.3)
+    - KakaoSDKStory (= 2.5.3)
+    - KakaoSDKTalk (= 2.5.3)
+    - KakaoSDKTemplate (= 2.5.3)
+    - KakaoSDKUser (= 2.5.3)
+  - KakaoSDKAuth (2.5.3):
+    - KakaoSDKCommon (= 2.5.3)
+  - KakaoSDKCommon (2.5.3):
+    - KakaoSDKCommon/Common (= 2.5.3)
+    - KakaoSDKCommon/Network (= 2.5.3)
+  - KakaoSDKCommon/Common (2.5.3)
+  - KakaoSDKCommon/Network (2.5.3):
     - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.4.1)
-  - KakaoSDKLink (2.4.1):
-    - KakaoSDKCommon (= 2.4.1)
-    - KakaoSDKTemplate (= 2.4.1)
-  - KakaoSDKNavi (2.4.1):
-    - KakaoSDKCommon/Common (= 2.4.1)
-  - KakaoSDKStory (2.4.1):
-    - KakaoSDKAuth (= 2.4.1)
-    - KakaoSDKCommon (= 2.4.1)
-  - KakaoSDKTalk (2.4.1):
-    - KakaoSDKAuth (= 2.4.1)
-    - KakaoSDKCommon (= 2.4.1)
-    - KakaoSDKTemplate (= 2.4.1)
-  - KakaoSDKTemplate (2.4.1):
-    - KakaoSDKCommon/Common (= 2.4.1)
-  - KakaoSDKUser (2.4.1):
-    - KakaoSDKAuth (= 2.4.1)
-    - KakaoSDKCommon (= 2.4.1)
+    - KakaoSDKCommon/Common (= 2.5.3)
+  - KakaoSDKLink (2.5.3):
+    - KakaoSDKCommon (= 2.5.3)
+    - KakaoSDKTemplate (= 2.5.3)
+  - KakaoSDKNavi (2.5.3):
+    - KakaoSDKCommon/Common (= 2.5.3)
+  - KakaoSDKStory (2.5.3):
+    - KakaoSDKUser (= 2.5.3)
+  - KakaoSDKTalk (2.5.3):
+    - KakaoSDKTemplate (= 2.5.3)
+    - KakaoSDKUser (= 2.5.3)
+  - KakaoSDKTemplate (2.5.3):
+    - KakaoSDKCommon/Common (= 2.5.3)
+  - KakaoSDKUser (2.5.3):
+    - KakaoSDKAuth (= 2.5.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -59,15 +56,15 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
-  KakaoSDK: 1e80d6877c0eac6a310f93c73fb15ca56c05f2bd
-  KakaoSDKAuth: fcba1c9ede431683f5bdd84c835a96981cb115a5
-  KakaoSDKCommon: 0912aa0c7db051ae8dc07a35395cf644f7728f95
-  KakaoSDKLink: fe6f2ca19092836f8af2a9d7fabe60fd67740104
-  KakaoSDKNavi: c138bce799ebdac6811b56453de5326e49ca5925
-  KakaoSDKStory: cb33db9a04c7c44746b3662991234f52ab61961a
-  KakaoSDKTalk: 749828662e4ac7a9f17bb1664b58526da289d18c
-  KakaoSDKTemplate: 8bb288765bfc0195631da809b2d707f09495acdf
-  KakaoSDKUser: 11955811d99d1ff1f1dfd5428afe69937e31ccef
+  KakaoSDK: 61f5d72d4c90188bf3d6567ffeef42d2827e9f77
+  KakaoSDKAuth: b1a0b9a84c21c967c4139d221edce83a7f15cdfe
+  KakaoSDKCommon: 08548932f6f570215ea038241a98157c0b3f7a8b
+  KakaoSDKLink: 4d35879b0abd90fbd0bc0de56dbb06097e9b31d3
+  KakaoSDKNavi: 31fd6ad030cf7200d546202cbe22f7a8b38eb983
+  KakaoSDKStory: 6d666f665fbe4b8453ce19959b9bb9e3bf38a5df
+  KakaoSDKTalk: 58cf9c530cc8024ae2ed3839d40acd992ecaf909
+  KakaoSDKTemplate: 5939681de6c24fd81e93bf824982e979e794f87e
+  KakaoSDKUser: 5d2de71fe070455bbaaad6a37af3eb500fbc8972
 
 PODFILE CHECKSUM: 68bdc181ba77d510dd7a0b242680828ff51c94eb
 

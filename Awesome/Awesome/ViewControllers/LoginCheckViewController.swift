@@ -20,7 +20,8 @@ class LoginCheckViewController: UIViewController , data {
     @IBOutlet weak var awesomeLabel2: UILabel!
     @IBOutlet weak var profileImageButton: UIButton!
     @IBOutlet weak var userName: UILabel!
-    
+
+    var loginApple : Bool = false
     var userNameText : String = ""
     var urlProfile : String = ""
     let screenWith = UIScreen.main.bounds.width
@@ -101,6 +102,8 @@ class LoginCheckViewController: UIViewController , data {
     }
     
     func uppdateProfile(){
+        print(loginApple, userNameText)
+        if loginApple == false{
         UserApi.shared.me() {(user, error) in
             if let error = error {
                 print(error)
@@ -119,28 +122,27 @@ class LoginCheckViewController: UIViewController , data {
             }
                
     }
+        }
+        else{
+            userName.text = userNameText
+        }
     }
 
     
     @IBAction func calendarButtonClicked(_ sender: Any) {
         guard let calendarVC = storyboard?.instantiateViewController(identifier: "CallendarViewController") as? CallendarViewController else {return}
-        
         self.navigationController?.pushViewController(calendarVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         mainTableView.deselectRow(at: indexPath, animated: true)
         guard let promiseVC = storyboard?.instantiateViewController(identifier: "PromiseAlertViewController") as? PromiseAlertViewController else {return}
-        guard let commentVC = storyboard?.instantiateViewController(identifier: "CommentAlertViewController") as? CommentAlertViewController else {return}
+      
         
         if dummyData[indexPath.row].informationImage == "calendar"{
             self.present(promiseVC, animated: true, completion: nil)
             promiseVC.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, person: dummyData[indexPath.row].person)
             promiseVC.deleteDelegate = self
-        }
-        else{
-            self.present(commentVC, animated: true, completion: nil)
-            commentVC.deleteDelegate = self
         }
         
     }

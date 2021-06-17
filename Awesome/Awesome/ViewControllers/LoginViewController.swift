@@ -4,6 +4,11 @@ import KakaoSDKUser
 import AuthenticationServices
 import WebKit
 
+struct userDatamodel : Decodable
+{
+    var userName : String
+}
+
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var appleLoginView: UIView!
@@ -26,19 +31,19 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(true)
     }
     @IBAction func loginButtonClicked(_ sender: Any) {
-//        UserApi.shared.loginWithKakaoAccount{(oauthToken, error) in
-//           if let error = error {
-//             print(error)
-//           }
-//           else {
-//            print("loginWithKakaoAccount() success.")
-//            self.presentToAlert()
-//            //do something
-//            _ = oauthToken
-//           }
-//        }
-        guard let kakaoVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-        self.present(kakaoVC, animated: true, completion: nil)
+        UserApi.shared.loginWithKakaoAccount{(oauthToken, error) in
+           if let error = error {
+             print(error)
+           }
+           else {
+            print("loginWithKakaoAccount() success.")
+            self.presentToAlert()
+            //do something
+            _ = oauthToken
+           }
+        }
+//        guard let kakaoVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
+//        self.present(kakaoVC, animated: true, completion: nil)
 
     }
     func setRound(){
@@ -89,6 +94,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
             navigationController?.pushViewController(LoginCompletVC, animated: true)
+            
 
             let idToken = credential.identityToken!
             let tokeStr = String(data: idToken, encoding: .utf8)
@@ -98,8 +104,11 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             let codeStr = String(data: code, encoding: .utf8)
             print("호호", codeStr)
 
-            let user = credential.user
-            print("중요",String(user))
+            let user = credential.fullName
+            print(user?.givenName)
+            LoginCompletVC.loginApple = true
+            LoginCompletVC.userNameText = user?.givenName ?? ""
+            
 
         }
     }
