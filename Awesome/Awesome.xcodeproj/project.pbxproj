@@ -34,18 +34,20 @@
 		3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */; };
 		3681BC442675CFAF00896A9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC432675CFAF00896A9A /* Constants.swift */; };
 		3681BC462675D0DE00896A9A /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3681BC452675D0DE00896A9A /* NetworkResult.swift */; };
-		368A019B263FE4A300100B01 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		368A019B263FE4A300100B01 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */; };
 		3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A9372637173C0082B4AB /* LoginCheckViewController.swift */; };
 		36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AA7C24263A97080084DD9C /* AlertViewController.swift */; };
 		36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD5CC42642654A00161EAE /* PlusViewController.swift */; };
 		36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */; };
-		36EDFD8F264043250088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		36EDFD92264043280088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		36EDFD952640432B0088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		36EDFD982640432D0088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		36EDFD9B264043300088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		36EDFD9C264043320088A538 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		36EDFD8F264043250088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		36EDFD92264043280088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		36EDFD952640432B0088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		36EDFD982640432D0088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		36EDFD9B264043300088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		36EDFD9C264043320088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */; };
+		36F0164A267C91A1004FE85B /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F01649267C91A1004FE85B /* LoginNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				368A019B263FE4A300100B01 /* BuildFile in Embed Frameworks */,
+				368A019B263FE4A300100B01 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,12 +95,14 @@
 		3681BC432675CFAF00896A9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3681BC452675D0DE00896A9A /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		368A017F263FE43F00100B01 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentViewController.swift; sourceTree = "<group>"; };
 		368F135E2678D87E00143279 /* Awesome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awesome.entitlements; sourceTree = "<group>"; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
 		36AA7C24263A97080084DD9C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		36DD5CC42642654A00161EAE /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		36F01649267C91A1004FE85B /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		58C5C865E1A60B6024510B29 /* Pods-Awesome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awesome.release.xcconfig"; path = "Target Support Files/Pods-Awesome/Pods-Awesome.release.xcconfig"; sourceTree = "<group>"; };
 		E8302F9A49EF3264E52D9BAB /* Pods_Awesome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awesome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				36419D9A2636E4630067C89D /* Awesome */,
-				36419D992636E4630067C89D /* Products */,
 				764DE9A4A469E22B2855F311 /* Frameworks */,
 				A6EC8831195C19B0E07F4194 /* Pods */,
 			);
@@ -132,6 +135,7 @@
 				36419D982636E4630067C89D /* Awesome.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		36419D9A2636E4630067C89D /* Awesome */ = {
@@ -150,6 +154,7 @@
 				36419DA92636E4630067C89D /* Info.plist */,
 				3647FB05263864140079ECB4 /* font */,
 				3628EE4B263EB59F0042A9B5 /* dummy.swift */,
+				36419D992636E4630067C89D /* Products */,
 			);
 			path = Awesome;
 			sourceTree = "<group>";
@@ -229,10 +234,11 @@
 			isa = PBXGroup;
 			children = (
 				36419D9F2636E4630067C89D /* ViewController.swift */,
+				368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */,
+				36419DEC2636ECBC0067C89D /* LoginViewController.swift */,
 				3698A9372637173C0082B4AB /* LoginCheckViewController.swift */,
 				36AA7C24263A97080084DD9C /* AlertViewController.swift */,
 				36174C7C26382F0C00E8A0CD /* SettingViewController.swift */,
-				36419DEC2636ECBC0067C89D /* LoginViewController.swift */,
 				36DD5CC42642654A00161EAE /* PlusViewController.swift */,
 				367F9C0026426DFC005324A2 /* DatepickerViewController.swift */,
 				367F9C1426427AB2005324A2 /* FinishDatePickerViewController.swift */,
@@ -242,6 +248,7 @@
 				361262142663F11E00E1475E /* StartDateViewController.swift */,
 				361262162663F12E00E1475E /* FinishDataViewController.swift */,
 				3681BC3B2675CA6100896A9A /* KakaoLoginViewController.swift */,
+				36F01649267C91A1004FE85B /* LoginNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -333,18 +340,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36EDFD9C264043320088A538 /* BuildFile in Resources */,
-				36EDFD982640432D0088A538 /* BuildFile in Resources */,
+				36EDFD9C264043320088A538 /* (null) in Resources */,
+				36EDFD982640432D0088A538 /* (null) in Resources */,
 				362AF576265181A6005B6E96 /* GmarketSansTTFLight.ttf in Resources */,
 				362AF577265181A6005B6E96 /* GmarketSansTTFMedium.ttf in Resources */,
 				36419DA82636E4630067C89D /* LaunchScreen.storyboard in Resources */,
 				36419DA52636E4630067C89D /* Assets.xcassets in Resources */,
-				36EDFD952640432B0088A538 /* BuildFile in Resources */,
-				36EDFD9B264043300088A538 /* BuildFile in Resources */,
+				36EDFD952640432B0088A538 /* (null) in Resources */,
+				36EDFD9B264043300088A538 /* (null) in Resources */,
 				36419DA32636E4630067C89D /* Main.storyboard in Resources */,
-				36EDFD92264043280088A538 /* BuildFile in Resources */,
+				36EDFD92264043280088A538 /* (null) in Resources */,
 				362AF578265181A6005B6E96 /* GmarketSansTTFBold.ttf in Resources */,
-				36EDFD8F264043250088A538 /* BuildFile in Resources */,
+				36EDFD8F264043250088A538 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +405,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				36419DED2636ECBC0067C89D /* LoginViewController.swift in Sources */,
+				36F0164A267C91A1004FE85B /* LoginNavigationController.swift in Sources */,
 				36340BF0263FC5AA0089BC15 /* CallendarViewController.swift in Sources */,
 				361262152663F11E00E1475E /* StartDateViewController.swift in Sources */,
 				367F9C0126426DFC005324A2 /* DatepickerViewController.swift in Sources */,
 				36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */,
 				36369F63264291AB00115867 /* PromiseAlertViewController.swift in Sources */,
+				368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */,
 				36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */,
 				36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */,
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,

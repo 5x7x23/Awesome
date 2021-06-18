@@ -1,120 +1,66 @@
+
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
-import AuthenticationServices
-import WebKit
 
-struct userDatamodel : Decodable
-{
-    var userName : String
+protocol isLogin {
+    func isLogin(data : Bool)
 }
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var appleLoginView: UIView!
-    var webView: WKWebView!
-    @IBOutlet weak var appleLoginButton: UIButton!
-
+class LoginViewController: UIViewController, isLogin{
     
+    func isLogin(data: Bool) {
+        ifLoginFirst = data
+        ifHasToken()
+        print("딜리게이트 실행됨 ㅋ", ifLoginFirst)
+    }
+    
+
+    @IBOutlet weak var startButton: UIButton!
+    var ifLoginFirst : Bool = false
+    
+    func setRadius(){
+        startButton.clipsToBounds = true
+        startButton.layer.cornerRadius = 20
+    }
     override func viewDidLoad() {
-    
         super.viewDidLoad()
-        
-        setRound()
-
-        webView = WKWebView(frame: self.view.frame)
-        
-        guard let loginSecond = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
-        if AuthApi.hasToken() == true{ //로그인 체크함
-            self.navigationController?.pushViewController(loginSecond, animated: true)
-        }
+        setRadius()
+        ifHasToken()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        ifHasToken()
     }
-    @IBAction func loginButtonClicked(_ sender: Any) {
-        UserApi.shared.loginWithKakaoAccount{(oauthToken, error) in
-           if let error = error {
-             print(error)
-           }
-           else {
-            print("loginWithKakaoAccount() success.")
-            self.presentToAlert()
-            //do something
-            _ = oauthToken
-           }
-        }
-//        guard let kakaoVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-//        self.present(kakaoVC, animated: true, completion: nil)
-
-    }
-    func setRound(){
-        appleLoginButton.clipsToBounds = true
-        appleLoginButton.layer.cornerRadius = 20
-        loginButton.clipsToBounds = true
-        loginButton.layer.cornerRadius = 20
+    
+    func ifHasToken(){
+        guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
+        guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
         
-    }
-    
-    
-    func presentToAlert() {
-        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else{return}
-        guard let allertVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else{return}
-            UserApi.shared.me() {(user, error) in
-                if let error = error {
-                    print(error)
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+                        }
+            else {
+                print("me() success.")
+                //do something
+                _ = user
                 }
-                else {
-                    print("me() success.")
-                    //do something
-                    _ = user
-                                    }
-                }
-        if AuthApi.hasToken() == true{
-            self.navigationController?.pushViewController(loginVC, animated: true)
-            self.present(allertVC, animated: true, completion: nil)
         }
-            }
-   
-    @IBAction func AppleLoginButtonClicked(_ sender: Any) {
-        let request = ASAuthorizationAppleIDProvider().createRequest()
-        request.requestedScopes = [.fullName, .email]
-
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self as? ASAuthorizationControllerDelegate
-        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
-        controller.performRequests()
+                if AuthApi.hasToken() == true{
+                    self.navigationController?.pushViewController(mainVC, animated: true)
+                    print("호잇", ifLoginFirst)
+                    if ifLoginFirst == true{
+                    self.present(alrerVC, animated: true, completion: nil)
+                    }
+                    }
     }
     
-}
-
-extension LoginViewController: ASAuthorizationControllerDelegate {
-    // 성공 후 동작
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    @IBAction func startButtonClicked(_ sender: Any) {
+        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginPresentViewController") as? LoginPresentViewController else {return}
         
-        
-        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
-            navigationController?.pushViewController(LoginCompletVC, animated: true)
-            
-
-            let idToken = credential.identityToken!
-            let tokeStr = String(data: idToken, encoding: .utf8)
-            print("호호",tokeStr)
-
-            guard let code = credential.authorizationCode else { return }
-            let codeStr = String(data: code, encoding: .utf8)
-            print("호호", codeStr)
-
-            let user = credential.fullName
-            print(user?.givenName)
-            LoginCompletVC.loginApple = true
-            LoginCompletVC.userNameText = user?.givenName ?? ""
-            
-
-        }
+        self.present(loginVC, animated: true, completion: nil)
+        loginVC.delegate = self
     }
-
-    // 실패 후 동작
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("error")
-    }
+    
 }

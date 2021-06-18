@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zxl-75-IZt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08P-0F-OZN">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -217,59 +217,116 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.94901961089999998" green="0.65098041299999998" blue="0.050980389119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQc-e1-Fec">
-                                <rect key="frame" x="35" y="428" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-J1-rFn">
+                                <rect key="frame" x="35" y="488" width="250" height="60"/>
                                 <color key="backgroundColor" red="0.99989503619999998" green="1" blue="0.999871552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xFf-iT-dfC"/>
+                                    <constraint firstAttribute="height" constant="60" id="7IY-e3-HEx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
-                                <state key="normal" title="카카오계정으로 시작하기">
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="18"/>
+                                <state key="normal" title="어떰 시작하기">
                                     <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAN-1K-hRQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq4-7W-iNr">
-                                <rect key="frame" x="35" y="498" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.99989503619999998" green="1" blue="0.999871552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="u1s-FM-sjd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
-                                <state key="normal" title="Apple로 로그인">
-                                    <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="AppleLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AKZ-ix-UrK"/>
+                                    <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ng4-uO-8QZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mq4-7W-iNr" secondAttribute="bottom" constant="20" id="99w-gV-Bi6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2nP-J1-rFn" secondAttribute="trailing" constant="35" id="5ru-Ht-Vcj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2nP-J1-rFn" secondAttribute="bottom" constant="20" id="AXD-RY-APz"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eki-fo-c4q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQc-e1-Fec" secondAttribute="trailing" constant="35" id="NuH-bd-jFq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mq4-7W-iNr" secondAttribute="trailing" constant="35" id="Q14-Ch-JzA"/>
-                            <constraint firstItem="mq4-7W-iNr" firstAttribute="top" secondItem="MQc-e1-Fec" secondAttribute="bottom" constant="20" id="XHS-Sd-Uz5"/>
+                            <constraint firstItem="2nP-J1-rFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Ez6-o7-oOh"/>
                             <constraint firstAttribute="trailing" secondItem="6F3-G4-e9a" secondAttribute="trailing" id="h6z-de-qll"/>
-                            <constraint firstItem="MQc-e1-Fec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="m8t-1D-eVI"/>
                             <constraint firstAttribute="bottom" secondItem="6F3-G4-e9a" secondAttribute="bottom" id="nbn-Vc-auR"/>
-                            <constraint firstItem="mq4-7W-iNr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="pOK-dB-v6Y"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rUx-s8-pgG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PV0-bn-aek"/>
                     <connections>
-                        <outlet property="appleLoginButton" destination="mq4-7W-iNr" id="GLj-TE-M4h"/>
-                        <outlet property="loginButton" destination="MQc-e1-Fec" id="cV4-Rx-836"/>
+                        <outlet property="startButton" destination="2nP-J1-rFn" id="Vhc-8f-gbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="93.75"/>
+            <point key="canvasLocation" x="836" y="75"/>
+        </scene>
+        <!--Login Present View Controller-->
+        <scene sceneID="4Kj-M7-m3Z">
+            <objects>
+                <viewController storyboardIdentifier="LoginPresentViewController" id="A5F-VX-Q0a" customClass="LoginPresentViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NcE-jw-Wqg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrM-z6-WT5">
+                                <rect key="frame" x="0.0" y="354.5" width="320" height="213.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hi-Ff-JHH">
+                                        <rect key="frame" x="10" y="134" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3Hi-Ff-JHH" secondAttribute="height" multiplier="6:1" id="QV8-JU-wws"/>
+                                            <constraint firstAttribute="height" constant="50" id="z2Z-V3-ZW2"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="appleLoginButton"/>
+                                        <connections>
+                                            <action selector="AppleLoginButtonClicked:" destination="A5F-VX-Q0a" eventType="touchUpInside" id="KCM-58-8Z1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 방식 선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIl-hl-GC8">
+                                        <rect key="frame" x="10" y="20" width="300" height="24"/>
+                                        <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-D3-kb8">
+                                        <rect key="frame" x="10" y="64" width="300" height="50"/>
+                                        <color key="backgroundColor" red="0.99607843159999998" green="0.89803922179999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3ht-RM-IPv"/>
+                                            <constraint firstAttribute="width" secondItem="DLp-D3-kb8" secondAttribute="height" multiplier="6:1" id="4Mp-Yk-xI8"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="kakaoTalkLoginButton">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="kakaoLoginButtonClicked:" destination="A5F-VX-Q0a" eventType="touchUpInside" id="1YH-8V-WNh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="DLp-D3-kb8" firstAttribute="centerX" secondItem="lrM-z6-WT5" secondAttribute="centerX" id="3hd-dL-223"/>
+                                    <constraint firstItem="3Hi-Ff-JHH" firstAttribute="centerX" secondItem="lrM-z6-WT5" secondAttribute="centerX" id="DC4-9L-8gg"/>
+                                    <constraint firstAttribute="trailing" secondItem="fIl-hl-GC8" secondAttribute="trailing" constant="10" id="KrD-v1-9hw"/>
+                                    <constraint firstItem="3Hi-Ff-JHH" firstAttribute="top" secondItem="DLp-D3-kb8" secondAttribute="bottom" constant="20" id="dRH-iK-34n"/>
+                                    <constraint firstAttribute="width" secondItem="lrM-z6-WT5" secondAttribute="height" multiplier="1.5:1" id="gLi-64-liI"/>
+                                    <constraint firstItem="fIl-hl-GC8" firstAttribute="top" secondItem="lrM-z6-WT5" secondAttribute="top" constant="20" id="orA-jt-B8Z"/>
+                                    <constraint firstItem="fIl-hl-GC8" firstAttribute="leading" secondItem="lrM-z6-WT5" secondAttribute="leading" constant="10" id="z78-p7-Rtq"/>
+                                    <constraint firstItem="DLp-D3-kb8" firstAttribute="top" secondItem="fIl-hl-GC8" secondAttribute="bottom" constant="20" id="zEA-yJ-vrv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5f7-GB-FQT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5f7-GB-FQT" firstAttribute="trailing" secondItem="lrM-z6-WT5" secondAttribute="trailing" id="24J-4o-lrl"/>
+                            <constraint firstItem="lrM-z6-WT5" firstAttribute="leading" secondItem="5f7-GB-FQT" secondAttribute="leading" id="5cs-XQ-Gpi"/>
+                            <constraint firstItem="lrM-z6-WT5" firstAttribute="bottom" secondItem="NcE-jw-Wqg" secondAttribute="bottom" id="eHM-HK-wjf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xdx-lo-NoI"/>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="3Hi-Ff-JHH" id="gPP-PA-yAn"/>
+                        <outlet property="backgroundView" destination="lrM-z6-WT5" id="aAf-bE-hcv"/>
+                        <outlet property="kakaoLoginButton" destination="DLp-D3-kb8" id="YM6-Jo-KvA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsb-Nk-BXR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="75"/>
         </scene>
         <!--Alert View Controller-->
         <scene sceneID="y8X-yp-syx">
@@ -1116,7 +1173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaM-Lw-EFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368.75" y="92.957746478873247"/>
+            <point key="canvasLocation" x="3363.75" y="92.957746478873247"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="RNp-Ub-Klh">
@@ -1342,24 +1399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoS-EZ-amW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036.25" y="92.957746478873247"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qiH-vJ-ZnC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Zxl-75-IZt" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z1r-Uv-jW0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zBI-bC-us8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vsQ-le-ykL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-210.1449275362319" y="93.75"/>
+            <point key="canvasLocation" x="4031.25" y="92.957746478873247"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U3T-4r-1ku">
@@ -1419,13 +1459,32 @@
             </objects>
             <point key="canvasLocation" x="3313" y="1475"/>
         </scene>
+        <!--Login Navigation Controller-->
+        <scene sceneID="MIa-Gc-mH4">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="08P-0F-OZN" customClass="LoginNavigationController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y0M-rE-3wE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fQg-8Q-SZ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZc-q5-fNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="75"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="appleLoginButton" width="299.5" height="50"/>
         <image name="backButton2" width="12" height="21"/>
         <image name="backButton2-1" width="12" height="21"/>
         <image name="calanderButton" width="72" height="72"/>
         <image name="calendar" width="24" height="24"/>
         <image name="callendarImage" width="150" height="150"/>
+        <image name="kakaoTalkLoginButton" width="299.5" height="50"/>
         <image name="later" width="300" height="50"/>
         <image name="linkShareButton" width="48" height="48"/>
         <image name="linkSharebackground" width="96" height="48"/>
@@ -1439,6 +1498,9 @@
         <image name="plusSchedule" width="72" height="72"/>
         <image name="plusScheduleImage" width="280.5" height="150"/>
         <image name="schesuleButton" width="72" height="72"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
