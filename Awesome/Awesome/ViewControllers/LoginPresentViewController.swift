@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKUser
 import KakaoSDKAuth
+import AuthenticationServices
 
 
 class LoginPresentViewController: UIViewController{
@@ -58,11 +59,18 @@ class LoginPresentViewController: UIViewController{
     
     
     @IBAction func AppleLoginButtonClicked(_ sender: Any) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+               request.requestedScopes = [.fullName, .email]
+
+               let controller = ASAuthorizationController(authorizationRequests: [request])
+               controller.delegate = self as? ASAuthorizationControllerDelegate
+               controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+               controller.performRequests()
+           
     }
     
     
     func presentToAlert(){
-        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         UserApi.shared.me() {(user, error) in
             
             if let error = error {
@@ -77,8 +85,6 @@ class LoginPresentViewController: UIViewController{
                 if AuthApi.hasToken() == true{
                     self.dismiss(animated: true, completion: nil)
                     delegate?.isLogin(data: true)
-                    print("여기는 잘 됨")
-                    
                 }
     }
     
@@ -94,9 +100,44 @@ class LoginPresentViewController: UIViewController{
                     self.presentToAlert()
                 }
             }
-    }
     
     
 
 }
 
+}
+
+extension LoginPresentViewController : ASAuthorizationControllerDelegate{
+    // 성공 후 동작
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+            
+            
+            if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+                navigationController?.pushViewController(LoginCompletVC, animated: true)
+                
+
+                let idToken = credential.identityToken!
+                let tokeStr = String(data: idToken, encoding: .utf8)
+                print("호호",tokeStr)
+
+                guard let code = credential.authorizationCode else { return }
+                let codeStr = String(data: code, encoding: .utf8)
+                print("호호", codeStr)
+
+                let user = credential.fullName
+                print(user?.givenName)
+                self.dismiss(animated: true, completion: nil)
+                delegate?.isAppleLogin(data: true, name: user?.givenName ?? "")
+                
+                
+                
+
+            }
+        }
+
+        // 실패 후 동작
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+            print("error")
+        }
+}

@@ -5,9 +5,16 @@ import KakaoSDKUser
 
 protocol isLogin {
     func isLogin(data : Bool)
+    func isAppleLogin(data : Bool, name : String)
 }
 
 class LoginViewController: UIViewController, isLogin{
+    func isAppleLogin(data: Bool, name: String) {
+        ifAppleLoginFirst = data
+        userName = name
+        appleLogin()
+    }
+    
     
     func isLogin(data: Bool) {
         ifLoginFirst = data
@@ -18,11 +25,23 @@ class LoginViewController: UIViewController, isLogin{
 
     @IBOutlet weak var startButton: UIButton!
     var ifLoginFirst : Bool = false
+    var ifAppleLoginFirst : Bool = false
+    var userName :String = ""
     
     func setRadius(){
         startButton.clipsToBounds = true
         startButton.layer.cornerRadius = 20
     }
+    
+    func appleLogin(){
+        guard let LoginVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
+        guard let alertVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
+        LoginVC.loginApple = true
+        LoginVC.userNameText = userName
+        self.navigationController?.pushViewController(LoginVC, animated: true)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setRadius()
