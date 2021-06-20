@@ -86,12 +86,10 @@ class LoginCheckViewController: UIViewController , data {
     }
 
     func setDummydata(){
-        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 6월 7일", information: "IKK 안녕하세요. ethan입니다~ 팀원분들과 점심식사 하시고, 타운홀에서 커피한잔 어떠신가요?", time: "10mAgo", person: "ethan"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 8일", information: "익범 난데 이따 사회적 거리두기 준수하에 간술 어때", time: "10mAgo",person: "이민규"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 5일", information: "피시방 가서 게임하다가 BHC가서 치킨먹고 할리스가서 커피 한잔 하고 장암동에서 빠이빠이 하자. 내 전화번호는 010-5555-5555", time: "1mAgo",person: "이민규")
+        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 6월 21일", information: "HEY 억만, 내가 분위기 좋은 카페를 찾아놨어 월요일에 시간 괜찮다면 나랑 해방촌에 있는 카페 가지 않겠어? 연락은 집사에게 부탁한다구 010-1234-1234", time: "1mAgo", person: "박순대"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 24일", information: "억만짱,, 바쁘지 않다면,, 이 나랑,, 한잔 하지 않겠,,,어? 나는 마치 29개 짜리 계란 한판 같지,, 한-계란 없그든,,킄", time: "30mAgo",person: "구방장")
         ])
         
     }
-    
-    
     
     @IBAction func settingButtonClicked(_ sender: Any) {
         guard let settingVC = storyboard?.instantiateViewController(identifier: "SettingViewController") as? SettingViewController else {return}
