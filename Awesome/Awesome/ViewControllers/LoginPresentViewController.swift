@@ -14,6 +14,7 @@ import AuthenticationServices
 class LoginPresentViewController: UIViewController{
     
     var delegate : isLogin?
+    
    
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var kakaoLoginButton: UIButton!
@@ -38,23 +39,28 @@ class LoginPresentViewController: UIViewController{
         
     }
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-                    //do something
-                    _ = oauthToken
+        guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
+        guard let pvc = self.presentingViewController else {return}
+        self.dismiss(animated: true){
+            pvc.present(loginPresentVC, animated: true, completion: nil)
+        }
+//        if (UserApi.isKakaoTalkLoginAvailable()) {
+//            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//                else {
+//                    print("loginWithKakaoTalk() success.")
+//                    //do something
+//                    _ = oauthToken
 //                    self.dismiss(animated: true, completion: nil)
-                    self.presentToAlert()
-                }
-            }
-        }
-        else{
-            kakaoLogin()
-        }
+//                    self.presentToAlert()
+//                }
+//            }
+//        }
+//        else{
+//            kakaoLogin()
+//        }
     }
     
     
@@ -100,9 +106,6 @@ class LoginPresentViewController: UIViewController{
                     self.presentToAlert()
                 }
             }
-    
-    
-
 }
 
 }

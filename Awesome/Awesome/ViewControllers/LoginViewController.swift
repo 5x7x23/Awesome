@@ -55,31 +55,16 @@ class LoginViewController: UIViewController, isLogin{
     func ifHasToken(){
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
-        
-        UserApi.shared.me() {(user, error) in
-            if let error = error {
-                print(error)
-                        }
-            else {
-                print("me() success.")
-                //do something
-                _ = user
-                }
+        if ifLoginFirst == true{
+            self.navigationController?.pushViewController(mainVC, animated: true)
         }
-                if AuthApi.hasToken() == true{
-                    self.navigationController?.pushViewController(mainVC, animated: true)
-                    print("호잇", ifLoginFirst)
-                    if ifLoginFirst == true{
-                    self.present(alrerVC, animated: true, completion: nil)
-                    }
-                    }
     }
     
     @IBAction func startButtonClicked(_ sender: Any) {
         guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginPresentViewController") as? LoginPresentViewController else {return}
-        
+        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         self.present(loginVC, animated: true, completion: nil)
-        loginVC.delegate = self
+        kakaoLoginVC.delegate = self
     }
     
 }

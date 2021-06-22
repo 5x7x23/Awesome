@@ -9,11 +9,5 @@ struct LoginModel: Codable {
 
 // MARK: - DataModel
 struct KakaoLoginDataModel: Codable {
-    let accesstoken: String
-    let refreshtoken: String
-
-    enum CodingKeys: String, CodingKey {
-        case accesstoken = "access_token"
-        case refreshtoken = "refresh_token"
-    }
+    let code: String
 }
