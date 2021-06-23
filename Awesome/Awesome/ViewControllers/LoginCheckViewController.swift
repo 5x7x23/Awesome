@@ -15,6 +15,7 @@ class LoginCheckViewController: UIViewController , data {
         mainTableView.reloadData()
         noSchedule()
     }
+    
     @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var HiLabel: UILabel!
     @IBOutlet weak var awesomeLabel2: UILabel!

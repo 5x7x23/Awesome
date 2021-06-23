@@ -14,15 +14,11 @@ class LoginViewController: UIViewController, isLogin{
         userName = name
         appleLogin()
     }
-    
-    
     func isLogin(data: Bool) {
         ifLoginFirst = data
         ifHasToken()
-        print("딜리게이트 실행됨 ㅋ", ifLoginFirst)
+        print("딜리게이트 실행됨 ㅋ 끼익", ifLoginFirst)
     }
-    
-
     @IBOutlet weak var startButton: UIButton!
     var ifLoginFirst : Bool = false
     var ifAppleLoginFirst : Bool = false
@@ -55,8 +51,12 @@ class LoginViewController: UIViewController, isLogin{
     func ifHasToken(){
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
+        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
+        print(ifLoginFirst , "1231241")
         if ifLoginFirst == true{
+            print(navigationController)
             self.navigationController?.pushViewController(mainVC, animated: true)
+            self.present(alrerVC, animated: true, completion: nil)
         }
     }
     
@@ -64,7 +64,20 @@ class LoginViewController: UIViewController, isLogin{
         guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginPresentViewController") as? LoginPresentViewController else {return}
         guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         self.present(loginVC, animated: true, completion: nil)
-        kakaoLoginVC.delegate = self
+        loginVC.delegate = self
+        ifHasToken()
+        print(ifLoginFirst)
     }
+    
+}
+extension LoginViewController : kakaoLogin {
+    func kakaoLoginOn(data: Bool) {
+        ifLoginFirst = data
+        print(ifLoginFirst)
+        if ifLoginFirst == true {
+       ifHasToken()
+        }
+    }
+    
     
 }

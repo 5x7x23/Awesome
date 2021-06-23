@@ -7,10 +7,15 @@
 import UIKit
 import WebKit
 
+protocol kakaoLogin {
+    func kakaoLoginOn(data : Bool)
+}
+
+
 class KakaoLoginViewController: UIViewController {
     var webView: WKWebView!
     var loginURL : String = ""
-    var delegate : isLogin?
+    var delegate : kakaoLogin?
 
         override func loadView() {
             super.loadView()
@@ -30,19 +35,12 @@ class KakaoLoginViewController: UIViewController {
         self.webView.navigationDelegate = self
 
     }
-    func notRedirect(){
-        print(Constants.LoginURL)
-    }
     
     func ifLoginSuccess() {
-        delegate?.isLogin(data: true)
-        self.dismiss(animated: true, completion: nil
-        )
-        
+        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+        self.dismiss(animated: true, completion: nil)
+        loginVC.kakaoLoginOn(data: true)
     }
-    
-    
-    
 }
 extension KakaoLoginViewController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
@@ -64,8 +62,4 @@ extension KakaoLoginViewController: WKNavigationDelegate{
             }
         }
     }
-        
-    }
-
-    
-
+}

@@ -12,9 +12,9 @@ import AuthenticationServices
 
 
 class LoginPresentViewController: UIViewController{
+   
     
     var delegate : isLogin?
-    
    
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var kakaoLoginButton: UIButton!
@@ -23,7 +23,6 @@ class LoginPresentViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewWillAppear(true)
         setRadius()
 
     }
@@ -41,9 +40,9 @@ class LoginPresentViewController: UIViewController{
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         guard let pvc = self.presentingViewController else {return}
-        self.dismiss(animated: true){
-            pvc.present(loginPresentVC, animated: true, completion: nil)
-        }
+                self.dismiss(animated: true){
+                    pvc.present(loginPresentVC, animated: true, completion: nil)
+                }
 //        if (UserApi.isKakaoTalkLoginAvailable()) {
 //            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
 //                if let error = error {
@@ -64,10 +63,11 @@ class LoginPresentViewController: UIViewController{
     }
     
     
+    
     @IBAction func AppleLoginButtonClicked(_ sender: Any) {
         let request = ASAuthorizationAppleIDProvider().createRequest()
                request.requestedScopes = [.fullName, .email]
-
+        
                let controller = ASAuthorizationController(authorizationRequests: [request])
                controller.delegate = self as? ASAuthorizationControllerDelegate
                controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
@@ -77,36 +77,36 @@ class LoginPresentViewController: UIViewController{
     
     
     func presentToAlert(){
-        UserApi.shared.me() {(user, error) in
-            
-            if let error = error {
-                print(error)
-                        }
-            else {
-                print("me() success.")
-                //do something
-                _ = user
-                }
-        }
-                if AuthApi.hasToken() == true{
-                    self.dismiss(animated: true, completion: nil)
-                    delegate?.isLogin(data: true)
-                }
+//        UserApi.shared.me() {(user, error) in
+//
+//            if let error = error {
+//                print(error)
+//                        }
+//            else {
+//                print("me() success.")
+//                //do something
+//                _ = user
+//                }
+//        }
+//                if AuthApi.hasToken() == true{
+//                    self.dismiss(animated: true, completion: nil)
+//                    delegate?.isLogin(data: true)
+//                }
     }
     
-    func kakaoLogin(){
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoAccount() success.")
-                    //do something
-                    _ = oauthToken
-                    self.presentToAlert()
-                }
-            }
-}
+//    func kakaoLogin(){
+//        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//                else {
+//                    print("loginWithKakaoAccount() success.")
+//                    //do something
+//                    _ = oauthToken
+//                    self.presentToAlert()
+//                }
+//            }
+//}
 
 }
 
@@ -118,8 +118,7 @@ extension LoginPresentViewController : ASAuthorizationControllerDelegate{
             if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
                 guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
                 navigationController?.pushViewController(LoginCompletVC, animated: true)
-                
-
+        
                 let idToken = credential.identityToken!
                 let tokeStr = String(data: idToken, encoding: .utf8)
                 print("호호",tokeStr)
@@ -131,10 +130,7 @@ extension LoginPresentViewController : ASAuthorizationControllerDelegate{
                 let user = credential.fullName
                 print(user?.givenName)
                 self.dismiss(animated: true, completion: nil)
-                delegate?.isAppleLogin(data: true, name: user?.givenName ?? "")
-                
-                
-                
+//              delegate?.isAppleLogin(data: true, name: user?.givenName ?? "")
 
             }
         }

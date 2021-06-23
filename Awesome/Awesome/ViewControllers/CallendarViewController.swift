@@ -75,9 +75,6 @@ class CallendarViewController: UIViewController {
         default:
             calendarHeaderViewConstraints.constant = 80
         }
-
-        
-        
     }
 //MARK: - ViewDidLoad
     override func viewDidLoad() {
