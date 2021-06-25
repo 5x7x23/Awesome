@@ -54,8 +54,6 @@ class LoginCheckViewController: UIViewController , data {
     func refresh(){
         refreshControl.endRefreshing()
         mainTableView.refreshControl = refreshControl
-
-
     }
     
     func noSchedule(){

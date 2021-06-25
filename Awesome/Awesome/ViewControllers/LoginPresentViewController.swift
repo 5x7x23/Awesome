@@ -39,10 +39,8 @@ class LoginPresentViewController: UIViewController{
     }
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-        guard let pvc = self.presentingViewController else {return}
-                self.dismiss(animated: true){
-                    pvc.present(loginPresentVC, animated: true, completion: nil)
-                }
+        LoginViewController.topViewController()
+        self.present(loginPresentVC, animated: true, completion: nil)
 //        if (UserApi.isKakaoTalkLoginAvailable()) {
 //            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
 //                if let error = error {
@@ -72,7 +70,6 @@ class LoginPresentViewController: UIViewController{
                controller.delegate = self as? ASAuthorizationControllerDelegate
                controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
                controller.performRequests()
-           
     }
     
     

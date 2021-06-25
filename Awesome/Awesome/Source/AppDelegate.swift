@@ -13,10 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
     
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         KakaoSDKCommon.initSDK(appKey: "be9d4fe6ccdd786bc8336ca55c1d2ffd")
         // Override point for customization after application launch.
+        
+        // Override point for customization after application launch. if #available(iOS 13, *) { print("set in SceneDelegate") } else { let window = UIWindow(frame: UIScreen.main.bounds) window.rootViewController = RootTabBarViewController() self.window = window window.makeKeyAndVisible() } return true
+
+
         return true
     }
 
@@ -30,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        
+        
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.

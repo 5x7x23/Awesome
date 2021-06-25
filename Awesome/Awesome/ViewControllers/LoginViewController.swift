@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, isLogin{
     }
     func isLogin(data: Bool) {
         ifLoginFirst = data
+        LoginViewController.topViewController()
         ifHasToken()
         print("딜리게이트 실행됨 ㅋ 끼익", ifLoginFirst)
     }
@@ -37,24 +38,33 @@ class LoginViewController: UIViewController, isLogin{
         self.navigationController?.pushViewController(LoginVC, animated: true)
         self.present(alertVC, animated: true, completion: nil)
     }
-    
+//MARK: viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.viewDidAppear(true)
+        super.viewWillAppear(true)
         setRadius()
         ifHasToken()
+        
     }
+//MARK: viewWillappear
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         ifHasToken()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        ifHasToken()
+    }
     func ifHasToken(){
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
-        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
+        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         print(ifLoginFirst , "1231241")
+        print("디스미스 다 됨")
+        
+        
+        LoginViewController.topViewController()
         if ifLoginFirst == true{
-            print(navigationController)
+            LoginViewController.topViewController()
             self.navigationController?.pushViewController(mainVC, animated: true)
             self.present(alrerVC, animated: true, completion: nil)
         }
@@ -69,6 +79,21 @@ class LoginViewController: UIViewController, isLogin{
         print(ifLoginFirst)
     }
     
+    
+    class func topViewController() -> UIViewController? {
+        if let keyWindow = UIApplication.shared.keyWindow {
+            if var viewController = keyWindow.rootViewController {
+                while viewController.presentedViewController != nil {
+                    viewController = viewController.presentedViewController!
+                }
+                print("topViewController -> \(String(describing: viewController))")
+                return viewController
+            }
+        }
+        return nil
+    }
+
+
 }
 extension LoginViewController : kakaoLogin {
     func kakaoLoginOn(data: Bool) {

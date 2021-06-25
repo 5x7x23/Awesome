@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08P-0F-OZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tzg-o5-SCB">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -22,7 +22,6 @@
         <!--Kakao Login View Controller-->
         <scene sceneID="f20-qW-WpO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QNI-Oe-Q90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="KakaoLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="waM-pt-O43" customClass="KakaoLoginViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhk-dy-eHs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -32,8 +31,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="5VK-h3-UKT"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNI-Oe-Q90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="-615"/>
+            <point key="canvasLocation" x="1468" y="-617"/>
         </scene>
         <!--Promise Alert View Controller-->
         <scene sceneID="hGh-m3-TTz">
@@ -145,7 +145,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Gyw-Jv-YIA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="18"/>
-                                        <state key="normal" title="약속거절">
+                                        <state key="normal" title="거절">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8O-q4-9re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023.75" y="-630.63380281690138"/>
+            <point key="canvasLocation" x="5021.25" y="-630.63380281690138"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -424,7 +424,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-9C-dCZ">
-                                        <rect key="frame" x="265.5" y="60" width="34.5" height="16.5"/>
+                                        <rect key="frame" x="257.5" y="60" width="42.5" height="14.5"/>
                                         <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="14"/>
                                         <color key="textColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -503,14 +503,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoScheduleTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoScheduleTableViewCell" id="9Lg-Tr-egv" customClass="NoScheduleTableViewCell" customModule="Awesome" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84.5" width="320" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="320" height="58.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Lg-Tr-egv" id="L5R-RO-uAQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙄 특별히 약속이 없네요 🙄️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU1-Sl-jZT">
-                                                    <rect key="frame" x="31" y="21" width="258" height="19.5"/>
+                                                    <rect key="frame" x="31" y="21" width="258" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -533,7 +533,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG1-n5-b6c">
-                                                <rect key="frame" x="226.5" y="-25" width="73.5" height="35"/>
+                                                <rect key="frame" x="205.5" y="-25" width="94.5" height="30"/>
                                                 <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="30"/>
                                                 <color key="textColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -1443,23 +1443,6 @@
             </objects>
             <point key="canvasLocation" x="3313" y="1475"/>
         </scene>
-        <!--Login Navigation Controller-->
-        <scene sceneID="MIa-Gc-mH4">
-            <objects>
-                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="08P-0F-OZN" customClass="LoginNavigationController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y0M-rE-3wE">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fQg-8Q-SZ5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pZc-q5-fNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="34" y="75"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8I-ms-Oil">
             <objects>
@@ -1477,6 +1460,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14p-mm-tL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832.5" y="748.94366197183103"/>
+        </scene>
+        <!--Login Navigation Controller-->
+        <scene sceneID="Zu7-nX-Ud5">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Tzg-o5-SCB" customClass="LoginNavigationController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wlt-Ub-RzV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jKQ-XZ-y5G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzX-6W-wHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="75"/>
         </scene>
     </scenes>
     <resources>

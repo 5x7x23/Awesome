@@ -28,7 +28,6 @@ class StartDateViewController: UIViewController {
         dateformatter.dateStyle = .short
            dateformatter.timeStyle = .none
         chooseDate = dateformatter.string(from: pickerView.date)
-           
     }
 
     @IBAction func okButtonClicked(_ sender: Any) {
