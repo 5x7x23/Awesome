@@ -26,6 +26,15 @@ class LoginPresentViewController: UIViewController{
         setRadius()
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("프레젠트 뷰 생성")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("프레젠트 뷰 사라짐")
+  
+    }
     
     func setRadius(){
         kakaoLoginButton.clipsToBounds = true
@@ -41,6 +50,13 @@ class LoginPresentViewController: UIViewController{
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         LoginViewController.topViewController()
         self.present(loginPresentVC, animated: true, completion: nil)
+        
+        
+//        guard let pvc = self.presentingViewController else { return }
+//        self.dismiss(animated: true) {
+//          pvc.present(KakaoLoginViewController(), animated: true, completion: nil)
+//        }
+        
 //        if (UserApi.isKakaoTalkLoginAvailable()) {
 //            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
 //                if let error = error {

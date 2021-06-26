@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tzg-o5-SCB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -216,7 +216,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-G4-e9a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.94901961089999998" green="0.65098041299999998" blue="0.050980389119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-J1-rFn">
                                 <rect key="frame" x="35" y="488" width="250" height="60"/>
@@ -257,7 +256,7 @@
         <!--Login Present View Controller-->
         <scene sceneID="4Kj-M7-m3Z">
             <objects>
-                <viewController storyboardIdentifier="LoginPresentViewController" id="A5F-VX-Q0a" customClass="LoginPresentViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPresentViewController" wantsFullScreenLayout="YES" modalPresentationStyle="overFullScreen" id="A5F-VX-Q0a" customClass="LoginPresentViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NcE-jw-Wqg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4a-SC-Zyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="748.94366197183103"/>
+            <point key="canvasLocation" x="1611" y="749"/>
         </scene>
         <!--Callendar View Controller-->
         <scene sceneID="pZb-bX-lrb">
@@ -1446,10 +1445,9 @@
         <!--Navigation Controller-->
         <scene sceneID="h8I-ms-Oil">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcK-Vn-FSS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tcK-Vn-FSS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hc-Ll-Wzk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

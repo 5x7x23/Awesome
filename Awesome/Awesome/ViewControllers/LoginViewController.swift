@@ -16,8 +16,6 @@ class LoginViewController: UIViewController, isLogin{
     }
     func isLogin(data: Bool) {
         ifLoginFirst = data
-        LoginViewController.topViewController()
-        ifHasToken()
         print("딜리게이트 실행됨 ㅋ 끼익", ifLoginFirst)
     }
     @IBOutlet weak var startButton: UIButton!
@@ -41,45 +39,46 @@ class LoginViewController: UIViewController, isLogin{
 //MARK: viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidAppear(true)
-        super.viewWillAppear(true)
+        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
+        kakaoLoginVC.delegate = self
         setRadius()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("뷰 사라짐")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         ifHasToken()
-        
+        print("뷰 나타날 예정")
     }
 //MARK: viewWillappear
-    override func viewWillAppear(_ animated: Bool) {
-        ifHasToken()
-    }
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("뷰가 나타남")
         ifHasToken()
     }
+    
     func ifHasToken(){
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
-        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
-        print(ifLoginFirst , "1231241")
-        print("디스미스 다 됨")
-        
-        
-        LoginViewController.topViewController()
         if ifLoginFirst == true{
             LoginViewController.topViewController()
             self.navigationController?.pushViewController(mainVC, animated: true)
             self.present(alrerVC, animated: true, completion: nil)
+            
+            
         }
     }
     
     @IBAction func startButtonClicked(_ sender: Any) {
         guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginPresentViewController") as? LoginPresentViewController else {return}
-        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         self.present(loginVC, animated: true, completion: nil)
-        loginVC.delegate = self
+        self.modalPresentationStyle = .fullScreen
         ifHasToken()
         print(ifLoginFirst)
+        
     }
-    
-    
     class func topViewController() -> UIViewController? {
         if let keyWindow = UIApplication.shared.keyWindow {
             if var viewController = keyWindow.rootViewController {
@@ -92,8 +91,6 @@ class LoginViewController: UIViewController, isLogin{
         }
         return nil
     }
-
-
 }
 extension LoginViewController : kakaoLogin {
     func kakaoLoginOn(data: Bool) {

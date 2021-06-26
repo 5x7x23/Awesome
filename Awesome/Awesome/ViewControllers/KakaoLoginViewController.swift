@@ -17,8 +17,7 @@ class KakaoLoginViewController: UIViewController {
     var loginURL : String = ""
     var delegate : kakaoLogin?
     var stopLoading : Bool = false
-    
-    
+
         override func loadView() {
             super.loadView()
             webView = WKWebView(frame: self.view.frame)
@@ -32,6 +31,7 @@ class KakaoLoginViewController: UIViewController {
             webview()
         }
     override func viewWillDisappear(_ animated: Bool) {
+        print("카카오 뷰 사라짐")
         guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         loginVC.isLogin(data: true)
     }
@@ -48,7 +48,6 @@ class KakaoLoginViewController: UIViewController {
     }
     func ifLoginSuccess() {
         stopLoading = true
-        
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         LoginViewController.topViewController()
     }
