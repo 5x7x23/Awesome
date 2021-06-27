@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tzg-o5-SCB">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -217,36 +217,45 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-G4-e9a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-J1-rFn">
-                                <rect key="frame" x="35" y="488" width="250" height="60"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-J1-rFn">
+                                <rect key="frame" x="9.5" y="498" width="301" height="50"/>
                                 <color key="backgroundColor" red="0.99989503619999998" green="1" blue="0.999871552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7IY-e3-HEx"/>
+                                    <constraint firstAttribute="width" secondItem="2nP-J1-rFn" secondAttribute="height" multiplier="6:1" constant="1" id="0XB-PM-VTf"/>
+                                    <constraint firstAttribute="height" constant="50" id="p3P-Is-WLa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="18"/>
-                                <state key="normal" title="어떰 시작하기">
+                                <state key="normal" backgroundImage="appleLoginButton">
                                     <color key="titleColor" red="0.84099048379999997" green="0.24852341410000001" blue="0.8177855611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2G-kH-Qe3">
+                                <rect key="frame" x="10" y="428" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4s3-19-G2u"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="kakaoTalkLoginButton"/>
                                 <connections>
-                                    <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ng4-uO-8QZ"/>
+                                    <action selector="kakaoLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2q-wa-iih"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2nP-J1-rFn" secondAttribute="trailing" constant="35" id="5ru-Ht-Vcj"/>
+                            <constraint firstItem="g2G-kH-Qe3" firstAttribute="centerX" secondItem="6F3-G4-e9a" secondAttribute="centerX" id="8mT-pk-QyZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2nP-J1-rFn" secondAttribute="bottom" constant="20" id="AXD-RY-APz"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eki-fo-c4q"/>
-                            <constraint firstItem="2nP-J1-rFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Ez6-o7-oOh"/>
+                            <constraint firstItem="2nP-J1-rFn" firstAttribute="top" secondItem="g2G-kH-Qe3" secondAttribute="bottom" constant="20" id="FaV-hO-KPE"/>
                             <constraint firstAttribute="trailing" secondItem="6F3-G4-e9a" secondAttribute="trailing" id="h6z-de-qll"/>
+                            <constraint firstItem="2nP-J1-rFn" firstAttribute="centerX" secondItem="6F3-G4-e9a" secondAttribute="centerX" id="me5-7y-elz"/>
                             <constraint firstAttribute="bottom" secondItem="6F3-G4-e9a" secondAttribute="bottom" id="nbn-Vc-auR"/>
                             <constraint firstItem="6F3-G4-e9a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rUx-s8-pgG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PV0-bn-aek"/>
                     <connections>
-                        <outlet property="startButton" destination="2nP-J1-rFn" id="Vhc-8f-gbP"/>
+                        <outlet property="startButton" destination="g2G-kH-Qe3" id="zsR-u7-B9T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -256,7 +265,7 @@
         <!--Login Present View Controller-->
         <scene sceneID="4Kj-M7-m3Z">
             <objects>
-                <viewController storyboardIdentifier="LoginPresentViewController" wantsFullScreenLayout="YES" modalPresentationStyle="overFullScreen" id="A5F-VX-Q0a" customClass="LoginPresentViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPresentViewController" wantsFullScreenLayout="YES" id="A5F-VX-Q0a" customClass="LoginPresentViewController" customModule="Awesome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NcE-jw-Wqg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

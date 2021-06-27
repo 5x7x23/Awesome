@@ -11,7 +11,17 @@ import KakaoSDKAuth
 import AuthenticationServices
 
 
-class LoginPresentViewController: UIViewController{
+class LoginPresentViewController: UIViewController, kakaoLogin{
+    
+    func kakaoLoginOn(data: Bool) {
+        print("dasf" , data)
+        viewDidAppear(true)
+        if data == true{
+            self.dismiss(animated: true, completion: nil)
+            print("daf")
+        }
+    }
+    
    
     
     var delegate : isLogin?
@@ -30,8 +40,11 @@ class LoginPresentViewController: UIViewController{
         super.viewWillAppear(animated)
         print("프레젠트 뷰 생성")
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        guard let loginView = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+        loginView.ifHasToken()
+        loginView.isLogin(data: true)
         print("프레젠트 뷰 사라짐")
   
     }
@@ -49,6 +62,7 @@ class LoginPresentViewController: UIViewController{
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
         LoginViewController.topViewController()
+        loginPresentVC.delegate = self
         self.present(loginPresentVC, animated: true, completion: nil)
         
         

@@ -10,6 +10,7 @@ import WebKit
 protocol kakaoLogin {
     func kakaoLoginOn(data : Bool)
 }
+
 class KakaoLoginViewController: UIViewController {
   
     
@@ -31,9 +32,16 @@ class KakaoLoginViewController: UIViewController {
             webview()
         }
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print("카카오 뷰 사라짐")
-        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
-        loginVC.isLogin(data: true)
+//        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+//        loginVC.isLogin(data: true)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("카카오 뷰 완전 사라짐")
+        guard let presentVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+        presentVC.isLogin(data: true)
     }
     func webview(){
         let sURL = Constants.LoginURL
@@ -48,8 +56,7 @@ class KakaoLoginViewController: UIViewController {
     }
     func ifLoginSuccess() {
         stopLoading = true
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        LoginViewController.topViewController()
+        self.dismiss(animated: true, completion: nil)
     }
     func setData(){
         GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
