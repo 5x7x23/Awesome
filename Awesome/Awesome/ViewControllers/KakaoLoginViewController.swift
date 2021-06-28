@@ -17,53 +17,50 @@ class KakaoLoginViewController: UIViewController {
     var webView: WKWebView!
     var loginURL : String = ""
     var delegate : kakaoLogin?
-    var stopLoading : Bool = false
 
         override func loadView() {
             super.loadView()
             webView = WKWebView(frame: self.view.frame)
             self.view = self.webView!
-            if stopLoading == true{
-                return
-            }
         }
         override func viewDidLoad() {
             super.viewDidLoad()
             webview()
         }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("카카오 뷰 사라짐")
-//        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
-//        loginVC.isLogin(data: true)
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("카카오 뷰 완전 사라짐")
         guard let presentVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         presentVC.isLogin(data: true)
     }
+    
     func webview(){
         let sURL = Constants.LoginURL
         let uURL = URL(string: sURL)
         let request = URLRequest(url: uURL!)
         webView.load(request)
         self.webView.navigationDelegate = self
-        if stopLoading == true{
-            webView.stopLoading()
-            print("stop")
-        }
     }
+    
     func ifLoginSuccess() {
-        stopLoading = true
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        delegate?.kakaoLoginOn(data: true)
     }
+    
     func setData(){
         GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
             switch(response)
             {
             case .success(let loginData) :
                 self.ifLoginSuccess()
+                let defaults = UserDefaults.standard
+                defaults.set(true, forKey: "loginSecond")
             case .requestErr(let message) :
                 print("requestERR")
             case .pathErr :

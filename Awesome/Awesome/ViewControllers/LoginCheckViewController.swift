@@ -99,30 +99,7 @@ class LoginCheckViewController: UIViewController , data {
     }
     
     func uppdateProfile(){
-        print(loginApple, userNameText)
-        if loginApple == false{
-        UserApi.shared.me() {(user, error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                self.userName.text = user?.kakaoAccount?.profile?.nickname ?? ""
-                print("me() success.")
-                //do something
-                _ = user
-                if let url = user?.kakaoAccount?.profile?.profileImageUrl,
-                    let data = try? Data(contentsOf: url) {
-                    let profileimage = UIImage(data: data)
-                    self.profileImageButton?.setBackgroundImage(profileimage, for: .normal)
-                    
-                }
-            }
-               
-    }
-        }
-        else{
-            userName.text = userNameText
-        }
+
     }
 
     

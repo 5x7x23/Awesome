@@ -1,7 +1,6 @@
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKUser
+import AuthenticationServices
 
 protocol isLogin {
     func isLogin(data : Bool)
@@ -14,19 +13,26 @@ class LoginViewController: UIViewController, isLogin{
         userName = name
         appleLogin()
     }
-    func isLogin(data: Bool) {
-        ifLoginFirst = data
-        print("딜리게이트 실행됨 ㅋ 끼익", ifLoginFirst)
-        ifHasToken()
-    }
+ 
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var appleLoginButton: UIButton!
     var ifLoginFirst : Bool = false
     var ifAppleLoginFirst : Bool = false
     var userName :String = ""
     
+    func isLogin(data: Bool) {
+        ifLoginFirst = data
+        if ifLoginFirst == true{
+        }
+        print("딜리게이트 실행")
+    }
+    
+    
     func setRadius(){
         startButton.clipsToBounds = true
         startButton.layer.cornerRadius = 20
+        appleLoginButton.clipsToBounds = true
+        appleLoginButton.layer.cornerRadius = 20
     }
     
     func appleLogin(){
@@ -37,77 +43,96 @@ class LoginViewController: UIViewController, isLogin{
         self.navigationController?.pushViewController(LoginVC, animated: true)
         self.present(alertVC, animated: true, completion: nil)
     }
+    
 //MARK: viewdidload
     override func viewDidLoad() {
+        print("viewdidload")
         super.viewDidLoad()
-        guard let kakaoLoginVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-        kakaoLoginVC.delegate = self
         setRadius()
+        ifSecondLogin()
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("뷰 사라짐")
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("뷰 아예 사라짐")
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("뷰 나타날 예정")
-    }
+    
 //MARK: viewWillappear
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("뷰가 나타남")
     }
+//MARK: 자동로그인
+    func ifSecondLogin(){
+        let userToken = UserDefaults.standard
+        let loginCode = userToken.object(forKey: "loginSecond")
+        guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
+        if (loginCode != nil) == true{
+            self.navigationController?.pushViewController(mainVC, animated: true)
+        }
+    }
+    
     
     func ifHasToken(){
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         guard let alrerVC = storyboard?.instantiateViewController(identifier: "AlertViewController") as? AlertViewController else {return}
-        print(ifLoginFirst, "실행됨" )
+        print(ifLoginFirst, "실행됨")
+        
+        
         if ifLoginFirst == true{
             print(ifLoginFirst, "호~잇" )
-            LoginViewController.topViewController()
             self.present(alrerVC, animated: true, completion: nil)
             self.navigationController?.pushViewController(mainVC, animated: true)
-           
-            
-            
         }
     }
     
-    @IBAction func startButtonClicked(_ sender: Any) {
-        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginPresentViewController") as? LoginPresentViewController else {return}
-        self.present(loginVC, animated: true, completion: nil)
-        self.modalPresentationStyle = .fullScreen
-        loginVC.delegate = self
-        ifHasToken()
-        print(ifLoginFirst)
-        
-    }
     
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-        LoginViewController.topViewController()
+        self.navigationController?.pushViewController(loginPresentVC, animated: true)
         loginPresentVC.delegate = self
-        self.present(loginPresentVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func AppleLoginButtonClicked(_ sender: Any) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+               request.requestedScopes = [.fullName, .email]
+        
+               let controller = ASAuthorizationController(authorizationRequests: [request])
+               controller.delegate = self as? ASAuthorizationControllerDelegate
+               controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+               controller.performRequests()
     }
     
     
-    class func topViewController() -> UIViewController? {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            if var viewController = keyWindow.rootViewController {
-                while viewController.presentedViewController != nil {
-                    viewController = viewController.presentedViewController!
-                }
-                print("topViewController -> \(String(describing: viewController))")
-                return viewController
+}
+
+
+extension LoginViewController : ASAuthorizationControllerDelegate{
+    // 성공 후 동작
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+            
+            
+            if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                guard let LoginCompletVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+                navigationController?.pushViewController(LoginCompletVC, animated: true)
+        
+                let idToken = credential.identityToken!
+                let tokeStr = String(data: idToken, encoding: .utf8)
+                print("호호",tokeStr)
+
+                guard let code = credential.authorizationCode else { return }
+                let codeStr = String(data: code, encoding: .utf8)
+                print("호호", codeStr)
+
+                let user = credential.fullName
+                print(user?.givenName)
+                self.dismiss(animated: true, completion: nil)
+//              delegate?.isAppleLogin(data: true, name: user?.givenName ?? "")
+
             }
         }
-        return nil
-    }
+
+        // 실패 후 동작
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+            print("error")
+        }
 }
+
+
 extension LoginViewController : kakaoLogin {
     func kakaoLoginOn(data: Bool) {
         ifLoginFirst = data

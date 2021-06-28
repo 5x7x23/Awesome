@@ -255,6 +255,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PV0-bn-aek"/>
                     <connections>
+                        <outlet property="appleLoginButton" destination="2nP-J1-rFn" id="dRi-ug-yfJ"/>
                         <outlet property="startButton" destination="g2G-kH-Qe3" id="zsR-u7-B9T"/>
                     </connections>
                 </viewController>

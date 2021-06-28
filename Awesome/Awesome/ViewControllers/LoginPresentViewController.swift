@@ -61,8 +61,6 @@ class LoginPresentViewController: UIViewController, kakaoLogin{
     }
     @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         guard let loginPresentVC = storyboard?.instantiateViewController(identifier: "KakaoLoginViewController") as? KakaoLoginViewController else {return}
-        LoginViewController.topViewController()
-        loginPresentVC.delegate = self
         self.present(loginPresentVC, animated: true, completion: nil)
         
         
