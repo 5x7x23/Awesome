@@ -11,6 +11,8 @@ struct Constants {
     
     /// 1.로그인 리스트 URL
     static var LoginURL = baseURL + "/user/kakao/login"
+    /// 2.프로필 리스트 URL
+    static var profileDataURL = baseURL + "/user/me"
     
 
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import KakaoSDKUser
 
 
 class LoginCheckViewController: UIViewController , data {
@@ -29,14 +28,17 @@ class LoginCheckViewController: UIViewController , data {
     
     var ifPromise : Bool = false
     
+    let userToken : Any = UserDefaults.standard.object(forKey: "userToken")
+    
     @IBOutlet weak var mainTableView: UITableView!
     let refreshControl = UIRefreshControl()
     
     var dummyData : [mainViewDummy] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        setProfile()
         uppdateProfile()
+        super.viewDidLoad()
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
@@ -63,10 +65,9 @@ class LoginCheckViewController: UIViewController , data {
         }
     }
     override func viewDidAppear(_ animated: Bool) {
-        uppdateProfile()
         }
     override func viewWillAppear(_ animated: Bool) {
-        uppdateProfile()
+        
     }
     
     func profileImageRound(){
@@ -94,12 +95,32 @@ class LoginCheckViewController: UIViewController , data {
         guard let settingVC = storyboard?.instantiateViewController(identifier: "SettingViewController") as? SettingViewController else {return}
         self.navigationController?.pushViewController(settingVC, animated: true)
     }
-    func dataUrl(){
+    func setProfile(){
+        let defaults = UserDefaults.standard
+        userName.text = defaults.string(forKey: "name") ?? "none"
         
+        let url = URL(string: defaults.string(forKey: "profile") ?? "")
+            DispatchQueue.global().async { let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async { self.profileImageButton.setImage(UIImage(data: data!), for: .normal)}}
+
     }
     
     func uppdateProfile(){
-
+        GetProfileDataService.ProfileData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let ProfileData):
+                print("success")
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
 
     
@@ -142,4 +163,3 @@ extension LoginCheckViewController : UITableViewDataSource{
     
     
 }
-

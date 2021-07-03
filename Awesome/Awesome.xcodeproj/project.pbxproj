@@ -38,6 +38,8 @@
 		368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */; };
 		3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A9372637173C0082B4AB /* LoginCheckViewController.swift */; };
 		36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AA7C24263A97080084DD9C /* AlertViewController.swift */; };
+		36BB714926898DA900650E6E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB714826898DA900650E6E /* UserProfile.swift */; };
+		36BB714B2689A42200650E6E /* GetProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB714A2689A42200650E6E /* GetProfileData.swift */; };
 		36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD5CC42642654A00161EAE /* PlusViewController.swift */; };
 		36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */; };
 		36EDFD8F264043250088A538 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -99,6 +101,8 @@
 		368F135E2678D87E00143279 /* Awesome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awesome.entitlements; sourceTree = "<group>"; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
 		36AA7C24263A97080084DD9C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		36BB714826898DA900650E6E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		36BB714A2689A42200650E6E /* GetProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileData.swift; sourceTree = "<group>"; };
 		36DD5CC42642654A00161EAE /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		36DE494D263EA88E00AE02DA /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		36EDFDFF264160C10088A538 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */,
+				36BB714826898DA900650E6E /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */,
+				36BB714A2689A42200650E6E /* GetProfileData.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,8 +213,8 @@
 			children = (
 				3681BC432675CFAF00896A9A /* Constants.swift */,
 				3681BC452675D0DE00896A9A /* NetworkResult.swift */,
-				3681BC3E2675CDE000896A9A /* Service */,
 				3681BC3D2675CDD200896A9A /* Model */,
+				3681BC3E2675CDE000896A9A /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -418,9 +424,11 @@
 				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
 				36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */,
 				3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */,
+				36BB714B2689A42200650E6E /* GetProfileData.swift in Sources */,
 				36419DA02636E4630067C89D /* ViewController.swift in Sources */,
 				36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */,
 				36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */,
+				36BB714926898DA900650E6E /* UserProfile.swift in Sources */,
 				361262172663F12E00E1475E /* FinishDataViewController.swift in Sources */,
 				3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */,
 				3681BC402675CE0E00896A9A /* KakaoLoginDataModel.swift in Sources */,

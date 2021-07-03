@@ -11,6 +11,7 @@ class CallendarViewController: UIViewController {
     @IBOutlet weak var scheduleTableview: UITableView!
     var yearData : String = ""
     var monthData : String = ""
+    var dayData : String = ""
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var plusScheduleButton: UIButton!
     @IBOutlet weak var notScheduleButton: UIButton!
@@ -20,6 +21,12 @@ class CallendarViewController: UIViewController {
     
     lazy var scheduleButtons: [UIButton] = [self.plusScheduleButton, self.notScheduleButton]
     var isShowFloating: Bool = false
+    var isSchedule : Bool = false
+    var today = Date()
+    var checkDate : String = "2021-07-03"
+    let eventStore = EKEventStore()
+    var scheduleData : [scheduleDummy] = []
+    var Userevents : [Date] = []
     
 //MARK: - 플로팅버튼
     @IBAction func scheduleButtonClicked(_ sender: Any) {
@@ -89,9 +96,14 @@ class CallendarViewController: UIViewController {
         todayDate()
         setSizeView()
         calendarSet() // 날짜 및 디자인 세팅
+        setDummydata()
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     //MARK: funcSet
-    
     //초기 날짜설정
     func todayDate(){
         let today = Date()
@@ -101,6 +113,7 @@ class CallendarViewController: UIViewController {
         let monthformatter = DateFormatter()
         monthformatter.dateFormat = "MM"
         monthData = monthformatter.string(from: today)
+        
         labelChange(yearD: yearData, monthD: monthData)
     }
 
@@ -118,20 +131,27 @@ class CallendarViewController: UIViewController {
         }
     
     //날짜 선택시
-    public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-            let yearFormatter = DateFormatter()
-            yearFormatter.dateFormat = "YYYY"
-            yearData = yearFormatter.string(from: date)
-            
-        let monthFormatter = DateFormatter()
-            monthFormatter.dateFormat = "MM"
-            monthData = monthFormatter.string(from: date)
-        
-          }
+   
        
+    //라벨 변경 함수
     func labelChange(yearD : String, monthD:String) {
         yearLabel.text = yearD
         monthLabel.text = monthD
+    }
+    
+    //이벤트 관리 함수
+    func setDummydata(){
+        
+        if checkDate == "2021-07-02"{
+            isSchedule = true
+            scheduleData = []
+            scheduleData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon")
+            ])
+        }
+        else{
+            isSchedule = false
+        }
+       
     }
 }
 
@@ -140,16 +160,62 @@ class CallendarViewController: UIViewController {
 //MARK: - Extention
 extension CallendarViewController: FSCalendarDelegate, FSCalendarDataSource{
     
+    public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        scheduleTableview.reloadData()
+        setDummydata()
+        let yearFormatter = DateFormatter()
+            yearFormatter.dateFormat = "YYYY"
+            yearData = yearFormatter.string(from: date)
+            
+        let monthFormatter = DateFormatter()
+            monthFormatter.dateFormat = "MM"
+            monthData = monthFormatter.string(from: date)
+        let dayFormatter = DateFormatter()
+        dayFormatter.dateFormat = "dd"
+        dayData = dayFormatter.string(from: date)
+        
+        labelChange(yearD: yearData, monthD: monthData)
+        checkDate = yearData+"-"+monthData+"-"+dayData
+        print(checkDate)
+          }
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        if self.Userevents.contains(date){
+            print("꽥",Userevents)
+            return 1
+        }
+        return 0
+    }
+    
 }
 extension CallendarViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
+          return 60
+      }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if isSchedule == true{
+                  return scheduleData.count
+              }
+              else{
+                  return 1
+              }
+
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //약속셀
+            guard let dummyScheduleCell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as? ScheduleTableViewCell else {return UITableViewCell() }
+        //특별한 약속이 없네여~
+        guard let noScheduleCell = tableView.dequeueReusableCell(withIdentifier: NoScheduleTableViewCell.identifier) else {return UITableViewCell() }
+        //스케쥴이 있을때
+        if isSchedule == true{
+            dummyScheduleCell.setData(nameData: scheduleData[indexPath.row].name, timedata: scheduleData[indexPath.row].time, scIcon: scheduleData[indexPath.row].icon)
+            return dummyScheduleCell
+        }
+        if isSchedule == false{
+            return noScheduleCell
+        }
         return UITableViewCell()
     }
-    
-    
 }
-

@@ -61,6 +61,28 @@ class KakaoLoginViewController: UIViewController {
                 self.ifLoginSuccess()
                 let defaults = UserDefaults.standard
                 defaults.set(true, forKey: "loginSecond")
+                defaults.set(loginData, forKey: "userToken")
+                self.setAccessToken()
+            case .requestErr(let message) :
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func setAccessToken(){
+        GetKakaoLoginTokenService.KakaoLoginToken.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData) :
+                let defaults = UserDefaults.standard
+                defaults.set(loginData , forKey: "accessToken")
+                print("엑세스 토큰입니다." , defaults.string(forKey: "accessToken"))
             case .requestErr(let message) :
                 print("requestERR")
             case .pathErr :
