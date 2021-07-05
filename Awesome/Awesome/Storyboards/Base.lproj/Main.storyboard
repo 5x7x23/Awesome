@@ -405,10 +405,16 @@
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fM-IR-jmc">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="0.0"/>
                                         <state key="normal" image="plusSchedule"/>
+                                        <connections>
+                                            <action selector="plusScheduleButtonClicked:" destination="NFf-yO-6aq" eventType="touchUpInside" id="UJb-Uy-oaL"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-2J-0O0">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="0.0"/>
                                         <state key="normal" image="notSchedule"/>
+                                        <connections>
+                                            <action selector="notScheduleButtonCliecked:" destination="NFf-yO-6aq" eventType="touchUpInside" id="CRw-L9-aCB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phd-Ci-7yA">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>

@@ -38,7 +38,6 @@ class CallendarViewController: UIViewController {
                     if let image = UIImage(named: "closeButton") {
                         self!.ScheduleButton.setImage(image, for: .normal)
                     }
-                    
                     button.alpha = 1
                     self?.view.layoutIfNeeded()
                 }
@@ -65,6 +64,7 @@ class CallendarViewController: UIViewController {
        }
     //배경조절
     func setSizeView(){
+        self.scheduleTableview.separatorStyle = .none
         let screenheight = UIScreen.main.bounds.height
         print(screenheight)
         let sizeResolution = screenheight/568
@@ -83,6 +83,30 @@ class CallendarViewController: UIViewController {
             calendarHeaderViewConstraints.constant = 80
         }
     }
+    
+        func setUpEvents() {
+            let nowdate = Date()
+            let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+            let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+        let weekFromNow = Date().advanced(by: 30.0)
+            let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy-MM-dd"
+//더미 일정 입력
+        let xmas = formatter.date(from: "2020-12-25")
+        let userDate = formatter.date(from: "2021-06-08")
+        Userevents = [xmas!, userDate!]
+        
+            let events = eventStore.events(matching: predicate)
+            let UpdateFormatter = DateFormatter()
+            formatter.locale = Locale(identifier: "ko_KR")
+            formatter.dateFormat = "yyyy-MM-dd"
+            for event in events {
+                Userevents.append(event.startDate)
+            }
+        }
+    
 //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,12 +120,12 @@ class CallendarViewController: UIViewController {
         todayDate()
         setSizeView()
         calendarSet() // 날짜 및 디자인 세팅
-        setDummydata()
+        requestAccess()
+        setdate()
 
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     //MARK: funcSet
     //초기 날짜설정
@@ -132,37 +156,81 @@ class CallendarViewController: UIViewController {
     
     //날짜 선택시
    
-       
     //라벨 변경 함수
     func labelChange(yearD : String, monthD:String) {
         yearLabel.text = yearD
         monthLabel.text = monthD
     }
     
-    //이벤트 관리 함수
-    func setDummydata(){
-        
-        if checkDate == "2021-07-02"{
-            isSchedule = true
+    
+    func setdate(){
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-mm-DD"
+//        let convertDate = dateFormatter.date(from: checkDate)
+        let checkDateConvert = checkDate
+        let nowdate = Date()
+        let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+        let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+        let weekFromNow = Date().advanced(by: 30.0)
+              let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
             scheduleData = []
-            scheduleData.append(contentsOf:[scheduleDummy(name: "이민규", time: "11:00 ~ 12:00", icon: "continueIcon") , scheduleDummy(name: "백종원", time: "13:00 ~ 15:00", icon: "continueIcon")
-            ])
-        }
-        else{
+              let events = eventStore.events(matching: predicate)
+              let formatter = DateFormatter()
+              let startTimeFormatter = DateFormatter()
+              let finishTimeFormatter = DateFormatter()
+              formatter.locale = Locale(identifier: "ko_KR")
+              formatter.dateFormat = "yyyy-MM-dd"
+              startTimeFormatter.dateFormat = "HH:mm"
+              finishTimeFormatter.dateFormat = "HH:mm"
+              let comma : String = " ~ "
+            
+        for event in events {
+                  let start = formatter.string(from: event.startDate)
+                  let startTime = startTimeFormatter.string(from: event.startDate)
+                  let finishTime = finishTimeFormatter.string(from: event.endDate)
+            if checkDate == start{
+                    scheduleData.append(contentsOf:[scheduleDummy(name: event.title, time: startTime + comma + finishTime, icon: "continueIcon")])
+                      Userevents.append(event.startDate)
+                  print("dd", scheduleData)
+                scheduleTableview.reloadData()
+                  }
+            if scheduleData.count != 0{
+            isSchedule = true
+            }
+            else{
             isSchedule = false
-        }
-       
+            }
+          }
     }
+    
+        func requestAccess() {
+                eventStore.requestAccess(to: .event) { (granted, error) in
+                    if granted {
+                        DispatchQueue.main.async {
+                            // load events
+                        }
+                    }
+                }
+        }
+    //이벤트 관리 함수
+
+    @IBAction func plusScheduleButtonClicked(_ sender: Any) {
+        guard let plusVC = storyboard?.instantiateViewController(identifier: "PlusViewController" ) as? PlusViewController else {return}
+        self.present(plusVC, animated: true, completion: nil)
+    }
+    @IBAction func notScheduleButtonCliecked(_ sender: Any) {
+        guard let notVC = storyboard?.instantiateViewController(identifier: "NotScheduleViewController") as? NotScheduleViewController else {return}
+        self.present(notVC, animated: true, completion: nil
+        )
+    }
+    
 }
-
-
 
 //MARK: - Extention
 extension CallendarViewController: FSCalendarDelegate, FSCalendarDataSource{
     
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         scheduleTableview.reloadData()
-        setDummydata()
         let yearFormatter = DateFormatter()
             yearFormatter.dateFormat = "YYYY"
             yearData = yearFormatter.string(from: date)
@@ -177,10 +245,11 @@ extension CallendarViewController: FSCalendarDelegate, FSCalendarDataSource{
         labelChange(yearD: yearData, monthD: monthData)
         checkDate = yearData+"-"+monthData+"-"+dayData
         print(checkDate)
+        setdate()
           }
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         if self.Userevents.contains(date){
-            print("꽥",Userevents)
+            print("이벤트 표시",Userevents)
             return 1
         }
         return 0
@@ -192,6 +261,7 @@ extension CallendarViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath : IndexPath) -> CGFloat{
           return 60
       }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSchedule == true{
                   return scheduleData.count
@@ -210,10 +280,12 @@ extension CallendarViewController: UITableViewDelegate, UITableViewDataSource{
         guard let noScheduleCell = tableView.dequeueReusableCell(withIdentifier: NoScheduleTableViewCell.identifier) else {return UITableViewCell() }
         //스케쥴이 있을때
         if isSchedule == true{
+            print("셀실행")
             dummyScheduleCell.setData(nameData: scheduleData[indexPath.row].name, timedata: scheduleData[indexPath.row].time, scIcon: scheduleData[indexPath.row].icon)
             return dummyScheduleCell
         }
         if isSchedule == false{
+            print("없는셀 실행")
             return noScheduleCell
         }
         return UITableViewCell()

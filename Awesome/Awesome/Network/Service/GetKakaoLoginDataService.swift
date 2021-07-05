@@ -122,7 +122,12 @@ struct GetKakaoLoginTokenService
         // 우선 PersonDataModel 형태로 decode(해독)을 한번 거칩니다. 실패하면 pathErr
         // 해독에 성공하면 Person data를 success에 넣어줍니다.
         
+        
+        
         print("서버에서 받아온 값" , decodedData.accessToken)
+        let defaults = UserDefaults.standard
+        defaults.set(decodedData.accessToken , forKey: "accessToken")
+        print("엑세스 토큰입니다." , defaults.string(forKey: "accessToken"))
         return .success(decodedData.accessToken)
 
     }

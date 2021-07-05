@@ -36,9 +36,8 @@ class LoginCheckViewController: UIViewController , data {
     var dummyData : [mainViewDummy] = []
     
     override func viewDidLoad() {
-        setProfile()
-        uppdateProfile()
         super.viewDidLoad()
+        uppdateProfile()
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
@@ -96,21 +95,23 @@ class LoginCheckViewController: UIViewController , data {
         self.navigationController?.pushViewController(settingVC, animated: true)
     }
     func setProfile(){
+        self.uppdateProfile()
         let defaults = UserDefaults.standard
         userName.text = defaults.string(forKey: "name") ?? "none"
         
-        let url = URL(string: defaults.string(forKey: "profile") ?? "")
+        let url = URL(string: defaults.string(forKey: "profile") ?? "none")
+        print("url  " ,url)
             DispatchQueue.global().async { let data = try? Data(contentsOf: url!)
                 DispatchQueue.main.async { self.profileImageButton.setImage(UIImage(data: data!), for: .normal)}}
-
     }
     
     func uppdateProfile(){
         GetProfileDataService.ProfileData.getRecommendInfo{ (response) in
             switch(response)
             {
-            case .success(let ProfileData):
+            case .success(let loginData):
                 print("success")
+                self.setProfile()
             case .requestErr(let message):
                 print("requestERR")
             case .pathErr :

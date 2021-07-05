@@ -80,9 +80,7 @@ class KakaoLoginViewController: UIViewController {
             switch(response)
             {
             case .success(let loginData) :
-                let defaults = UserDefaults.standard
-                defaults.set(loginData , forKey: "accessToken")
-                print("엑세스 토큰입니다." , defaults.string(forKey: "accessToken"))
+                print("성공")
             case .requestErr(let message) :
                 print("requestERR")
             case .pathErr :
