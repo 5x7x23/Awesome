@@ -4,16 +4,17 @@ import Foundation
 
 
 
-struct GetProfileDataService
+struct GetCalendarDataService
 {
-    static let ProfileData = GetProfileDataService()
+    static let CalendarData = GetCalendarDataService()
     let userToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
     
     func getRecommendInfo(completion : @escaping (NetworkResult<Any>) -> Void)
     {
+        print("유저 토큰", userToken)
         
         // completion 클로저를 @escaping closure로 정의합니다.
-        let URL = Constants.profileDataURL
+        let URL = Constants.calendarURL
         let header : HTTPHeaders = ["Authorization": "Bearer " + userToken]
         let dataRequest = AF.request(URL,
                                      method: .get,
@@ -49,12 +50,12 @@ struct GetProfileDataService
         
         let defaults = UserDefaults.standard
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(ProfileDataModel.self, from: data)
+        guard let decodedData = try? decoder.decode(CalendarDataModel.self, from: data)
         else {return .pathErr}
         // 우선 PersonDataModel 형태로 decode(해독)을 한번 거칩니다. 실패하면 pathErr
         // 해독에 성공하면 Person data를 success에 넣어줍니다.
-        defaults.set(decodedData.name, forKey: "name")
-        defaults.set(decodedData.profileURL, forKey: "profile")
+//        defaults.set(decodedData, forKey: "myCalendar")
+        print(decodedData)
     
         return .success(decodedData)
 

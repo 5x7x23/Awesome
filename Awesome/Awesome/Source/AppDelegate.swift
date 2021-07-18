@@ -6,20 +6,29 @@ import KakaoSDKAuth
 class AppDelegate: UIResponder, UIApplicationDelegate {
    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                return AuthController.handleOpenUrl(url: url)
-            }
 
             return false
         }
     
-    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+            let   tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+            print("deviceToken: \(tokenString)")
+        }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        KakaoSDKCommon.initSDK(appKey: "be9d4fe6ccdd786bc8336ca55c1d2ffd")
         // Override point for customization after application launch.
         
         // Override point for customization after application launch. if #available(iOS 13, *) { print("set in SceneDelegate") } else { let window = UIWindow(frame: UIScreen.main.bounds) window.rootViewController = RootTabBarViewController() self.window = window window.makeKeyAndVisible() } return true
+        
+        UNUserNotificationCenter.current().delegate = self
+
+                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                UNUserNotificationCenter
+                  .current()
+                  .requestAuthorization(
+                    options: authOptions,completionHandler: { (_, _) in }
+                  )
+                application.registerForRemoteNotifications()
 
 
         return true
@@ -45,3 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    
+    // 1. Asks the delegate how to handle a notification that arrived while the app was running in the foreground.
+    func userNotificationCenter(_ center: UNUserNotificationCenter,willPresent notification: UNNotification,withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+
+    // 2. Asks the delegate to process the user's response to a delivered notification.
+    func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse,withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
+}

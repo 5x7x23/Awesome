@@ -38,6 +38,7 @@ class LoginCheckViewController: UIViewController , data {
     override func viewDidLoad() {
         super.viewDidLoad()
         uppdateProfile()
+        setCalendarData()
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
@@ -100,7 +101,6 @@ class LoginCheckViewController: UIViewController , data {
         userName.text = defaults.string(forKey: "name") ?? "none"
         
         let url = URL(string: defaults.string(forKey: "profile") ?? "none")
-        print("url  " ,url)
             DispatchQueue.global().async { let data = try? Data(contentsOf: url!)
                 DispatchQueue.main.async { self.profileImageButton.setImage(UIImage(data: data!), for: .normal)}}
     }
@@ -110,8 +110,25 @@ class LoginCheckViewController: UIViewController , data {
             switch(response)
             {
             case .success(let loginData):
-                print("success")
                 self.setProfile()
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func setCalendarData(){
+        GetCalendarDataService.CalendarData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData):
+                print("우가우가",loginData)
             case .requestErr(let message):
                 print("requestERR")
             case .pathErr :

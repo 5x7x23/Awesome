@@ -37,6 +37,8 @@
 		368A019B263FE4A300100B01 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */; };
 		3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A9372637173C0082B4AB /* LoginCheckViewController.swift */; };
+		369B01242692B2B9008AEDA7 /* CalendarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B01232692B2B9008AEDA7 /* CalendarDataModel.swift */; };
+		369B01262692B2C7008AEDA7 /* GetCalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B01252692B2C7008AEDA7 /* GetCalendarData.swift */; };
 		36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AA7C24263A97080084DD9C /* AlertViewController.swift */; };
 		36BB714926898DA900650E6E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB714826898DA900650E6E /* UserProfile.swift */; };
 		36BB714B2689A42200650E6E /* GetProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB714A2689A42200650E6E /* GetProfileData.swift */; };
@@ -100,6 +102,8 @@
 		368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentViewController.swift; sourceTree = "<group>"; };
 		368F135E2678D87E00143279 /* Awesome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awesome.entitlements; sourceTree = "<group>"; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
+		369B01232692B2B9008AEDA7 /* CalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataModel.swift; sourceTree = "<group>"; };
+		369B01252692B2C7008AEDA7 /* GetCalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendarData.swift; sourceTree = "<group>"; };
 		36AA7C24263A97080084DD9C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		36BB714826898DA900650E6E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		36BB714A2689A42200650E6E /* GetProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileData.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			children = (
 				3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */,
 				36BB714826898DA900650E6E /* UserProfile.swift */,
+				369B01232692B2B9008AEDA7 /* CalendarDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			children = (
 				3681BC412675CE2A00896A9A /* GetKakaoLoginDataService.swift */,
 				36BB714A2689A42200650E6E /* GetProfileData.swift */,
+				369B01252692B2C7008AEDA7 /* GetCalendarData.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -422,10 +428,12 @@
 				36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */,
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,
 				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
+				369B01262692B2C7008AEDA7 /* GetCalendarData.swift in Sources */,
 				36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */,
 				3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */,
 				36BB714B2689A42200650E6E /* GetProfileData.swift in Sources */,
 				36419DA02636E4630067C89D /* ViewController.swift in Sources */,
+				369B01242692B2B9008AEDA7 /* CalendarDataModel.swift in Sources */,
 				36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */,
 				36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */,
 				36BB714926898DA900650E6E /* UserProfile.swift in Sources */,
