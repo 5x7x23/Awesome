@@ -126,8 +126,9 @@ struct GetKakaoLoginTokenService
         
         print("서버에서 받아온 값" , decodedData.accessToken)
         let defaults = UserDefaults.standard
+        defaults.set(decodedData.refreshToken, forKey: "refreshToken")
         defaults.set(decodedData.accessToken , forKey: "accessToken")
-        print("엑세스 토큰입니다." , defaults.string(forKey: "accessToken"))
+//        print("엑세스 토큰입니다." , defaults.string(forKey: "accessToken"))
         return .success(decodedData.accessToken)
 
     }
