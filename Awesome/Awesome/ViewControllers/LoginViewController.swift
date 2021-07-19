@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, isLogin{
     var ifLoginFirst : Bool = false
     var ifAppleLoginFirst : Bool = false
     var userName :String = ""
+    var delegate: isLogin?
     
     func isLogin(data: Bool) {
         ifLoginFirst = data
@@ -57,11 +58,30 @@ class LoginViewController: UIViewController, isLogin{
         super.viewDidAppear(animated)
     }
 //MARK: 자동로그인
+    func updateToken(){
+        let defaults = UserDefaults.standard
+        let refresh = defaults.string(forKey: "refreshToken")
+        print("dfafd",refresh!)
+        GetAutoLoginService.shared.AutoLoginService(refresh_token: refresh!) { [self] result in
+            switch result{
+            case .success(let tokenData):
+                print("성공")
+            case .requestErr(let msg):
+                print("requestErr")
+            default :
+                print("ERROR")
+            }
+        }
+    }
+    
+    
+//MARK: 자동로그인
     func ifSecondLogin(){
         let userToken = UserDefaults.standard
         let loginCode = userToken.object(forKey: "loginSecond")
         guard let mainVC = storyboard?.instantiateViewController(identifier: "LoginCheckViewController") as? LoginCheckViewController else {return}
         if (loginCode != nil) == true{
+            self.updateToken()
             self.navigationController?.pushViewController(mainVC, animated: true)
         }
     }
