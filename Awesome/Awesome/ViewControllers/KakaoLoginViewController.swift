@@ -30,12 +30,10 @@ class KakaoLoginViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("카카오 뷰 사라짐")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("카카오 뷰 완전 사라짐")
         guard let presentVC = storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         presentVC.isLogin(data: true)
     }
@@ -52,6 +50,8 @@ class KakaoLoginViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         delegate?.kakaoLoginOn(data: true)
     }
+    
+   
     
     func setData(){
         GetKakaoLoginDataService.KakaoLoginData.getRecommendInfo{ (response) in
