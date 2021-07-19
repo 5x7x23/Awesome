@@ -1,10 +1,18 @@
 import Foundation
 
-// MARK: - AutoLoginDataModel
-struct LogOutDataModel: Codable {
-    let refreshToken: String
+// MARK: - LogoutDataModel
+struct LogoutDataModel: Codable {
+    let detail, code: String
+    let messages: [Message]
+}
+
+// MARK: - Message
+struct Message: Codable {
+    let tokenClass, tokenType, message: String
 
     enum CodingKeys: String, CodingKey {
-        case refreshToken = "refresh_token"
+        case tokenClass = "token_class"
+        case tokenType = "token_type"
+        case message
     }
 }
