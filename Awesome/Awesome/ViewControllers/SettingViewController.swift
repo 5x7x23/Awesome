@@ -59,17 +59,38 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func logOutButtonClicked(_ sender: Any) {
+        guard let logoutVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃하여 초기화면으로 이동합니다.", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in UserApi.shared.logout {(error) in
-            if let error = error {
-                print(error)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            let defaults = UserDefaults.standard
+            let refresh = defaults.string(forKey: "refreshToken")
+            print("dfafd",refresh!)
+            GetAutoLoginService.shared.AutoLoginService(refresh_token: refresh!) { [self] result in
+                switch result{
+                case .success(let tokenData):
+                    print("로그아웃 성공")
+                    defaults.removeObject(forKey: "refreshToken")
+                    defaults.removeObject(forKey: "accessToken")
+                    defaults.removeObject(forKey: "name")
+                    defaults.removeObject(forKey: "profile")
+                    defaults.removeObject(forKey: "loginSecond")
+                    self.navigationController?.pushViewController(logoutVC, animated: true)
+                case .requestErr(let msg):
+                    print("requestErr")
+                default :
+                    print("ERROR")
+                }
             }
-            else {
-                print("logout() success.")
-            }
-            guard let logoutVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
-            self.navigationController?.pushViewController(logoutVC, animated: true)
-        }
+//            UserApi.shared.logout {(error) in
+//            if let error = error {
+//                print(error)
+//            }
+//            else {
+//                print("logout() success.")
+//            }
+//            guard let logoutVC = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else {return}
+//            self.navigationController?.pushViewController(logoutVC, animated: true)
+//        }
         }
         let cancelAction = UIAlertAction(title: "취소", style: .default)
         {(action) in}

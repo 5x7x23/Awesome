@@ -56,6 +56,8 @@
 		36F3302D26A4E6A0009C0173 /* AutoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3302C26A4E6A0009C0173 /* AutoLoginDataModel.swift */; };
 		36F3302F26A4E94C009C0173 /* KaKaoLogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3302E26A4E94C009C0173 /* KaKaoLogOut.swift */; };
 		36F3303126A4E95A009C0173 /* LogOutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303026A4E95A009C0173 /* LogOutService.swift */; };
+		36F3303326A63B70009C0173 /* PostCalendarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */; };
+		36F3303526A63B80009C0173 /* PostCalendarDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303426A63B80009C0173 /* PostCalendarDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +121,8 @@
 		36F3302C26A4E6A0009C0173 /* AutoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginDataModel.swift; sourceTree = "<group>"; };
 		36F3302E26A4E94C009C0173 /* KaKaoLogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoLogOut.swift; sourceTree = "<group>"; };
 		36F3303026A4E95A009C0173 /* LogOutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutService.swift; sourceTree = "<group>"; };
+		36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCalendarDataModel.swift; sourceTree = "<group>"; };
+		36F3303426A63B80009C0173 /* PostCalendarDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCalendarDataService.swift; sourceTree = "<group>"; };
 		58C5C865E1A60B6024510B29 /* Pods-Awesome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awesome.release.xcconfig"; path = "Target Support Files/Pods-Awesome/Pods-Awesome.release.xcconfig"; sourceTree = "<group>"; };
 		E8302F9A49EF3264E52D9BAB /* Pods_Awesome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awesome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,6 +198,7 @@
 				36F3302C26A4E6A0009C0173 /* AutoLoginDataModel.swift */,
 				3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */,
 				36F3302E26A4E94C009C0173 /* KaKaoLogOut.swift */,
+				36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				369B01252692B2C7008AEDA7 /* GetCalendarData.swift */,
 				36F3302A26A4E695009C0173 /* AutoLoginService.swift */,
 				36F3303026A4E95A009C0173 /* LogOutService.swift */,
+				36F3303426A63B80009C0173 /* PostCalendarDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				36340BF0263FC5AA0089BC15 /* CallendarViewController.swift in Sources */,
 				361262152663F11E00E1475E /* StartDateViewController.swift in Sources */,
 				367F9C0126426DFC005324A2 /* DatepickerViewController.swift in Sources */,
+				36F3303326A63B70009C0173 /* PostCalendarDataModel.swift in Sources */,
 				36DD5CC52642654A00161EAE /* PlusViewController.swift in Sources */,
 				36369F63264291AB00115867 /* PromiseAlertViewController.swift in Sources */,
 				368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */,
@@ -442,6 +449,7 @@
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,
 				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
 				369B01262692B2C7008AEDA7 /* GetCalendarData.swift in Sources */,
+				36F3303526A63B80009C0173 /* PostCalendarDataService.swift in Sources */,
 				36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */,
 				3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */,
 				36BB714B2689A42200650E6E /* GetProfileData.swift in Sources */,
