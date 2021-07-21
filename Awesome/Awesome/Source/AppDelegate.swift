@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-            let   tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+            let tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
             print("deviceToken: \(tokenString)")
         }
 
@@ -61,6 +61,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         completionHandler([.alert, .sound])
     }
 
+
+    
     // 2. Asks the delegate to process the user's response to a delivered notification.
     func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive response: UNNotificationResponse,withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()

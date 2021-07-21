@@ -25,6 +25,7 @@ struct GetCalendarDataService
             case .success:
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 guard let value = dataResponse.value else {return}
+                print("dd", statusCode)
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
             
@@ -34,9 +35,7 @@ struct GetCalendarDataService
                 
             }
         }
-                                            
     }
-    
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isValidData(data: data)
@@ -50,6 +49,7 @@ struct GetCalendarDataService
         
         let defaults = UserDefaults.standard
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         guard let decodedData = try? decoder.decode(CalendarDataModel.self, from: data)
         else {return .pathErr}
         // 우선 PersonDataModel 형태로 decode(해독)을 한번 거칩니다. 실패하면 pathErr

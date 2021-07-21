@@ -29,11 +29,11 @@ class LoginCheckViewController: UIViewController , data {
     var ifPromise : Bool = false
     
     let userToken : Any = UserDefaults.standard.object(forKey: "userToken")
-    
     @IBOutlet weak var mainTableView: UITableView!
     let refreshControl = UIRefreshControl()
     
     var dummyData : [mainViewDummy] = []
+    var scheduleData: [CalendarDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +49,8 @@ class LoginCheckViewController: UIViewController , data {
         userName.font = userName.font.withSize(resolutionFontSize(size: 24))
         awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
         awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
+
+        
        
 
     }
@@ -91,6 +93,10 @@ class LoginCheckViewController: UIViewController , data {
         
     }
     
+    func setScheduleData(){
+        
+    }
+    
     @IBAction func settingButtonClicked(_ sender: Any) {
         guard let settingVC = storyboard?.instantiateViewController(identifier: "SettingViewController") as? SettingViewController else {return}
         self.navigationController?.pushViewController(settingVC, animated: true)
@@ -128,7 +134,13 @@ class LoginCheckViewController: UIViewController , data {
             switch(response)
             {
             case .success(let loginData):
-                print("우가우가",loginData)
+                if let response = loginData as? CalendarDataModel{
+                    DispatchQueue.global().sync {
+                        self.scheduleData.append(response)
+                    }
+                    self.mainTableView.reloadData()
+                }
+                print("우가우가", loginData)
             case .requestErr(let message):
                 print("requestERR")
             case .pathErr :
@@ -167,13 +179,14 @@ extension LoginCheckViewController : UITableViewDelegate{
 }
 extension LoginCheckViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyData.count
+//        print("스케쥴 데이터",  scheduleData[0].calendar[0].id)
+        return scheduleData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {return UITableViewCell() }
-
-        dummyCell.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, informationImage: dummyData[indexPath.row].informationImage, time: dummyData[indexPath.row].time)
+        dummyCell.setData(name: String(scheduleData[0].calendar[indexPath.row].id), information: scheduleData[0].calendar[indexPath.row].comment, informationImage: "calendar", time: String(scheduleData[0].calendar[indexPath.row].participant))
+//        dummyCell.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, informationImage: dummyData[indexPath.row].informationImage, time: dummyData[indexPath.row].time)
         
         
         return dummyCell
