@@ -35,6 +35,11 @@ class LoginCheckViewController: UIViewController , data {
     var dummyData : [mainViewDummy] = []
     var scheduleData: [CalendarDataModel] = []
     
+    var scheduleDateString: String = ""
+    var titleSchedule: String = ""
+    var finishSchedule: String = ""
+    var timeAgo: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         uppdateProfile()
@@ -49,10 +54,6 @@ class LoginCheckViewController: UIViewController , data {
         userName.font = userName.font.withSize(resolutionFontSize(size: 24))
         awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
         awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
-
-        
-       
-
     }
     
     func refresh(){
@@ -135,7 +136,7 @@ class LoginCheckViewController: UIViewController , data {
             {
             case .success(let loginData):
                 if let response = loginData as? CalendarDataModel{
-                    DispatchQueue.global().sync {
+                    DispatchQueue.global().async {
                         self.scheduleData.append(response)
                     }
                     self.mainTableView.reloadData()
@@ -152,6 +153,50 @@ class LoginCheckViewController: UIViewController , data {
             }
         }
     }
+    
+    func changeDate(start: Date, finish: Date, upload: String){
+        let startFormatter = DateFormatter()
+        let titleFormatter = DateFormatter()
+        let finishFormatter = DateFormatter()
+        let agoFormatter = DateFormatter()
+        var nowDate = Date()
+        
+        startFormatter.locale = Locale(identifier: "ko_KR")
+        startFormatter.dateFormat = "MM월 dd일 HH:mm"
+        finishFormatter.locale = Locale(identifier: "ko_KR")
+        finishFormatter.dateFormat = "HH:mm"
+        titleFormatter.dateFormat = "yyyy년 MM월 dd일"
+        agoFormatter.locale = Locale(identifier: "ko_KR")
+        agoFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+
+        print(upload)
+        var startUpload = agoFormatter.date(from: upload)
+        let distanceSecond = Calendar.current.dateComponents([.minute], from: startUpload ?? Date(), to: nowDate).minute
+        print(startUpload)
+        print(distanceSecond, "asgdafasdfeaa")
+        
+        titleSchedule = titleFormatter.string(from: start)
+        finishSchedule = finishFormatter.string(from: start)
+        
+        scheduleDateString = startFormatter.string(from: start) + "~" + finishFormatter.string(from: finish)
+        
+        if distanceSecond! < 1{
+            timeAgo = "1m ago"
+        }
+        else if distanceSecond! < 15{
+            timeAgo = "15m ago"
+        }
+        else if distanceSecond! < 30{
+            timeAgo = "30m ago"
+        }
+        else if distanceSecond! < 60{
+            timeAgo = "60m ago"
+        }
+        else{
+            timeAgo = "long time ago"
+        }
+        
+    }
 
     
     @IBAction func calendarButtonClicked(_ sender: Any) {
@@ -164,11 +209,9 @@ class LoginCheckViewController: UIViewController , data {
         guard let promiseVC = storyboard?.instantiateViewController(identifier: "PromiseAlertViewController") as? PromiseAlertViewController else {return}
       
         
-        if dummyData[indexPath.row].informationImage == "calendar"{
             self.present(promiseVC, animated: true, completion: nil)
-            promiseVC.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, person: dummyData[indexPath.row].person)
+            promiseVC.setData(time: scheduleDateString, information: scheduleData[0].calendar[indexPath.row].comment, person: String( scheduleData[0].calendar[indexPath.row].id))
             promiseVC.deleteDelegate = self
-        }
         
     }
 }
@@ -179,17 +222,23 @@ extension LoginCheckViewController : UITableViewDelegate{
 }
 extension LoginCheckViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("스케쥴 데이터",  scheduleData[0].calendar[0].id)
-        return scheduleData.count
+        if scheduleData.count == 0{
+        return 0
+        }
+        else{
+            return scheduleData[0].myCalendar.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let dummyCell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {return UITableViewCell() }
-        dummyCell.setData(name: String(scheduleData[0].calendar[indexPath.row].id), information: scheduleData[0].calendar[indexPath.row].comment, informationImage: "calendar", time: String(scheduleData[0].calendar[indexPath.row].participant))
-//        dummyCell.setData(name: dummyData[indexPath.row].name, information: dummyData[indexPath.row].information, informationImage: dummyData[indexPath.row].informationImage, time: dummyData[indexPath.row].time)
+        print(scheduleData)
         
-        
+       
+        changeDate(start: scheduleData[0].myCalendar[indexPath.row].startDate, finish: scheduleData[0].myCalendar[indexPath.row].endDate, upload: scheduleData[0].myCalendar[indexPath.row].createdAt)
+        dummyCell.setData(name: titleSchedule, information: scheduleData[0].myCalendar[indexPath.row].comment, informationImage: "calendar", time: timeAgo)
         return dummyCell
+        
     }
     
     
