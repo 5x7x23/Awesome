@@ -17,11 +17,13 @@ struct MyCalendar: Codable {
     let id, creator, participant: Int
     let comment: String
     let startDate, endDate: Date
+    let createdAt: String
 
     enum CodingKeys: String, CodingKey {
         case id, creator, participant, comment
         case startDate = "start_date"
         case endDate = "end_date"
+        case createdAt = "created_at"
     }
 }
 
