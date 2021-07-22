@@ -44,9 +44,9 @@ class PromiseAlertViewController: UIViewController {
 //        let result = width * sizeFormatter
 //        return result
 //    }
-    func setData(name : String , information : String, person : String){
+    func setData(time : String , information : String, person : String){
         nameLabel.text = person
-        timeLabel.text = name
+        timeLabel.text = time
         promiseObject.text = information
     }
     
