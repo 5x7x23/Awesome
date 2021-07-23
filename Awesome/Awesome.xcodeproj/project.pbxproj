@@ -58,6 +58,8 @@
 		36F3303126A4E95A009C0173 /* LogOutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303026A4E95A009C0173 /* LogOutService.swift */; };
 		36F3303326A63B70009C0173 /* PostCalendarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */; };
 		36F3303526A63B80009C0173 /* PostCalendarDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303426A63B80009C0173 /* PostCalendarDataService.swift */; };
+		36F3303726AA77E3009C0173 /* InviteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303626AA77E3009C0173 /* InviteDataModel.swift */; };
+		36F3303926AA77F3009C0173 /* InviteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3303826AA77F3009C0173 /* InviteDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +125,8 @@
 		36F3303026A4E95A009C0173 /* LogOutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutService.swift; sourceTree = "<group>"; };
 		36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCalendarDataModel.swift; sourceTree = "<group>"; };
 		36F3303426A63B80009C0173 /* PostCalendarDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCalendarDataService.swift; sourceTree = "<group>"; };
+		36F3303626AA77E3009C0173 /* InviteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDataModel.swift; sourceTree = "<group>"; };
+		36F3303826AA77F3009C0173 /* InviteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteDataService.swift; sourceTree = "<group>"; };
 		58C5C865E1A60B6024510B29 /* Pods-Awesome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awesome.release.xcconfig"; path = "Target Support Files/Pods-Awesome/Pods-Awesome.release.xcconfig"; sourceTree = "<group>"; };
 		E8302F9A49EF3264E52D9BAB /* Pods_Awesome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Awesome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,6 +203,7 @@
 				3681BC3F2675CE0E00896A9A /* KakaoLoginDataModel.swift */,
 				36F3302E26A4E94C009C0173 /* KaKaoLogOut.swift */,
 				36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */,
+				36F3303626AA77E3009C0173 /* InviteDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				36F3302A26A4E695009C0173 /* AutoLoginService.swift */,
 				36F3303026A4E95A009C0173 /* LogOutService.swift */,
 				36F3303426A63B80009C0173 /* PostCalendarDataService.swift */,
+				36F3303826AA77F3009C0173 /* InviteDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			files = (
 				36419DED2636ECBC0067C89D /* LoginViewController.swift in Sources */,
 				36F3303126A4E95A009C0173 /* LogOutService.swift in Sources */,
+				36F3303926AA77F3009C0173 /* InviteDataService.swift in Sources */,
 				36F0164A267C91A1004FE85B /* LoginNavigationController.swift in Sources */,
 				36340BF0263FC5AA0089BC15 /* CallendarViewController.swift in Sources */,
 				361262152663F11E00E1475E /* StartDateViewController.swift in Sources */,
@@ -460,6 +467,7 @@
 				36419D9C2636E4630067C89D /* AppDelegate.swift in Sources */,
 				36419D9E2636E4630067C89D /* SceneDelegate.swift in Sources */,
 				36BB714926898DA900650E6E /* UserProfile.swift in Sources */,
+				36F3303726AA77E3009C0173 /* InviteDataModel.swift in Sources */,
 				361262172663F12E00E1475E /* FinishDataViewController.swift in Sources */,
 				3698A9382637173C0082B4AB /* LoginCheckViewController.swift in Sources */,
 				3681BC402675CE0E00896A9A /* KakaoLoginDataModel.swift in Sources */,
