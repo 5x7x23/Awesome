@@ -18,6 +18,9 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var logoutView: UIView!
     
     @IBOutlet weak var shareMyAwesome: UILabel!
+    
+    var inviteLink: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewRadius()
@@ -41,8 +44,44 @@ class SettingViewController: UIViewController {
         
         
     }
+    
+    func uppdateProfile(){
+        GetInviteService.inviteData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData):
+                if let response = loginData as? InviteDataModel{
+                    DispatchQueue.global().async {
+                        self.inviteLink.append("\(UserDefaults.standard.string(forKey: "name")!) 님께서 약속 어플 ‘어떰’의 초대장을 보내셨습니다. 초대장이 있어야만 약속 캘린더를 작성하실 수 있습니다.초대링크: \(response.link) ")
+                        print(self.inviteLink, response.link)
+                    }
+                }
+                print(loginData)
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    
+    @IBAction func inviteButtonClicked(_ sender: Any) {
+        uppdateProfile()
+            print(inviteLink)
+        let activityVC = UIActivityViewController(activityItems: inviteLink, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+//        activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+        self.present(activityVC, animated: true, completion: nil)
+   
+    }
     @IBAction func linkshareButtonClicked(_ sender: Any) {
         var objectsToShare = [String]()
+        
         if let text = shareMyAwesome.text{
                    objectsToShare.append(text)
                    print("[INFO] textField's Text : ", text)
