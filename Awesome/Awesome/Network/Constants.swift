@@ -18,6 +18,8 @@ struct Constants {
     static var profileDataURL = baseURL + "/user/me"
     /// 3.약속 리스트 URL
     static var calendarURL = baseURL + "/calendar/"
+    /// 4.초대장 URL
+    static var inviteURL = baseURL + "/invite/link"
     
 
 }
