@@ -29,6 +29,7 @@ class CallendarViewController: UIViewController {
     var Userevents : [Date] = []
     var userEventsDetail: [CalendarDataModel] = []
     
+    
 //MARK: - 플로팅버튼
     @IBAction func scheduleButtonClicked(_ sender: Any) {
             if isShowFloating == false {
@@ -238,6 +239,28 @@ class CallendarViewController: UIViewController {
             isSchedule = false
             }
           }
+        
+        if userEventsDetail.count != 0{
+        for userEvents in userEventsDetail[0].myCalendar{
+            let start = formatter.string(from: userEvents.startDate)
+            let startTime = startTimeFormatter.string(from: userEvents.startDate)
+            let finishTime = finishTimeFormatter.string(from: userEvents.endDate)
+            if checkDate == start{
+                scheduleData.append(contentsOf:[scheduleDummy(name: userEvents.comment, time: startTime + comma + finishTime, icon: "continueIcon")])
+//                  Userevents.append(userEvents.startDate)
+              print("dd", scheduleData)
+                scheduleTableview.reloadData()
+            }
+            if scheduleData.count != 0{
+            isSchedule = true
+            }
+            else{
+            isSchedule = false
+            }
+        }
+        }
+        
+        
     }
     
         func requestAccess() {
