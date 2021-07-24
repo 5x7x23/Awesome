@@ -84,27 +84,41 @@ class CallendarViewController: UIViewController {
         }
     }
     
-        func setUpEvents() {
-            let nowdate = Date()
-            let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
-            let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
-        let weekFromNow = Date().advanced(by: 30.0)
-            let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "yyyy-MM-dd"
-//더미 일정 입력
-        let xmas = formatter.date(from: "2020-12-25")
-        let userDate = formatter.date(from: "2021-06-08")
-        Userevents = [xmas!, userDate!]
+    func getServerData(){
         
+    }
+    
+    
+    
+    func setUserEvents(){
+        let nowdate = Date()
+        let enddate = Calendar.current.date(byAdding: .day, value: 30, to: nowdate)
+        let startDate = Calendar.current.date(byAdding: .day, value: -30, to: nowdate)
+    let weekFromNow = Date().advanced(by: 30.0)
+        let predicate = eventStore.predicateForEvents(withStart: startDate!, end: enddate!, calendars: nil)
             let events = eventStore.events(matching: predicate)
             let UpdateFormatter = DateFormatter()
-            formatter.locale = Locale(identifier: "ko_KR")
-            formatter.dateFormat = "yyyy-MM-dd"
+            UpdateFormatter.locale = Locale(identifier: "ko_KR")
+            UpdateFormatter.dateFormat = "yyyy-MM-dd"
             for event in events {
-                Userevents.append(event.startDate)
+                let dateData = UpdateFormatter.string(from: event.startDate!)
+                let realData = UpdateFormatter.date(from: dateData)
+                Userevents.append(realData!)
             }
+            print("일정" , Userevents)
+            CalendarView.reloadData()
+    }
+    
+        func setUpEvents() {
+            
+//        let formatter = DateFormatter()
+//        formatter.locale = Locale(identifier: "ko_KR")
+//        formatter.dateFormat = "yyyy-MM-dd"
+////더미 일정 입력
+//        let xmas = formatter.date(from: "2020-12-25")
+//        let userDate = formatter.date(from: "2021-06-08")
+//        Userevents = [xmas!, userDate!]
+        
         }
     
 //MARK: - ViewDidLoad
@@ -122,6 +136,7 @@ class CallendarViewController: UIViewController {
         calendarSet() // 날짜 및 디자인 세팅
         requestAccess()
         setdate()
+        setUserEvents()
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -247,13 +262,20 @@ extension CallendarViewController: FSCalendarDelegate, FSCalendarDataSource{
         print(checkDate)
         setdate()
           }
+    
+    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        if self.Userevents.contains(date){
-            print("이벤트 표시",Userevents)
+        if Userevents.contains(date){
+            print("dddd")
             return 1
         }
-        return 0
+        else{
+
+            return 0
+        }
     }
+    
+
     
 }
 extension CallendarViewController: UITableViewDelegate, UITableViewDataSource{
