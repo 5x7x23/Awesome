@@ -27,6 +27,7 @@ class CallendarViewController: UIViewController {
     let eventStore = EKEventStore()
     var scheduleData : [scheduleDummy] = []
     var Userevents : [Date] = []
+    var userEventsDetail: [CalendarDataModel] = []
     
 //MARK: - 플로팅버튼
     @IBAction func scheduleButtonClicked(_ sender: Any) {
@@ -84,11 +85,42 @@ class CallendarViewController: UIViewController {
         }
     }
     
-    func getServerData(){
-        
+    func setCalendarData(){
+        GetCalendarDataService.CalendarData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData):
+                if let response = loginData as? CalendarDataModel{
+                    DispatchQueue.global().sync {
+                        self.userEventsDetail.append(response)
+                    }
+                    self.serverData()
+                    self.CalendarView.reloadData()
+                    print(self.Userevents)
+                }
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
     
-    
+    func serverData(){
+        let UpdateFormatter = DateFormatter()
+        UpdateFormatter.locale = Locale(identifier: "ko_KR")
+        UpdateFormatter.dateFormat = "yyyy-MM-dd"
+        for i in 0 ... userEventsDetail[0].myCalendar.count - 1{
+            let dateData = UpdateFormatter.string(from: userEventsDetail[0].myCalendar[i].startDate)
+            let realData = UpdateFormatter.date(from: dateData)
+            
+            Userevents.append(realData!)
+        }
+    }
     
     func setUserEvents(){
         let nowdate = Date()
@@ -105,22 +137,9 @@ class CallendarViewController: UIViewController {
                 let realData = UpdateFormatter.date(from: dateData)
                 Userevents.append(realData!)
             }
-            print("일정" , Userevents)
-            CalendarView.reloadData()
+      
     }
-    
-        func setUpEvents() {
-            
-//        let formatter = DateFormatter()
-//        formatter.locale = Locale(identifier: "ko_KR")
-//        formatter.dateFormat = "yyyy-MM-dd"
-////더미 일정 입력
-//        let xmas = formatter.date(from: "2020-12-25")
-//        let userDate = formatter.date(from: "2021-06-08")
-//        Userevents = [xmas!, userDate!]
-        
-        }
-    
+
 //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,10 +156,12 @@ class CallendarViewController: UIViewController {
         requestAccess()
         setdate()
         setUserEvents()
+      
 
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setCalendarData()
     }
     //MARK: funcSet
     //초기 날짜설정
@@ -175,6 +196,7 @@ class CallendarViewController: UIViewController {
     func labelChange(yearD : String, monthD:String) {
         yearLabel.text = yearD
         monthLabel.text = monthD
+
     }
     
     
