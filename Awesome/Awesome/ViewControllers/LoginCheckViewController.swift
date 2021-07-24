@@ -47,7 +47,6 @@ class LoginCheckViewController: UIViewController , data {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
-        setDummydata()
         print(HiLabel.font.fontName)
         profileImageRound()
         HiLabel.font = HiLabel.font.withSize(resolutionFontSize(size: 24))
@@ -88,11 +87,11 @@ class LoginCheckViewController: UIViewController , data {
         return result
     }
 
-    func setDummydata(){
-        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 6월 21일", information: "HEY 억만, 내가 분위기 좋은 카페를 찾아놨어 월요일에 시간 괜찮다면 나랑 해방촌에 있는 카페 가지 않겠어? 연락은 집사에게 부탁한다구 010-1234-1234", time: "1mAgo", person: "박순대"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 24일", information: "억만짱,, 바쁘지 않다면,, 이 나랑,, 한잔 하지 않겠,,,어? 나는 마치 29개 짜리 계란 한판 같지,, 한-계란 없그든,,킄", time: "30mAgo",person: "구방장")
-        ])
-        
-    }
+//    func setDummydata(){
+//        dummyData.append(contentsOf:[mainViewDummy(informationImage: "calendar", name: "2021년 6월 21일", information: "HEY 억만, 내가 분위기 좋은 카페를 찾아놨어 월요일에 시간 괜찮다면 나랑 해방촌에 있는 카페 가지 않겠어? 연락은 집사에게 부탁한다구 010-1234-1234", time: "1mAgo", person: "박순대"), mainViewDummy(informationImage: "calendar", name: "2021년 6월 24일", information: "억만짱,, 바쁘지 않다면,, 이 나랑,, 한잔 하지 않겠,,,어? 나는 마치 29개 짜리 계란 한판 같지,, 한-계란 없그든,,킄", time: "30mAgo",person: "구방장")
+//        ])
+//
+//    }
     
     func setScheduleData(){
         
@@ -210,7 +209,8 @@ class LoginCheckViewController: UIViewController , data {
       
         
             self.present(promiseVC, animated: true, completion: nil)
-            promiseVC.setData(time: scheduleDateString, information: scheduleData[0].calendar[indexPath.row].comment, person: String( scheduleData[0].calendar[indexPath.row].id))
+            promiseVC.setData(time: scheduleDateString, information: scheduleData[0].myCalendar[indexPath.row].comment, person: String( scheduleData[0].myCalendar[indexPath.row].id))
+        print(scheduleData[0].calendar[indexPath.row].comment)
             promiseVC.deleteDelegate = self
         
     }
