@@ -52,7 +52,7 @@ class SettingViewController: UIViewController {
             case .success(let loginData):
                 if let response = loginData as? InviteDataModel{
                     DispatchQueue.global().async {
-                        self.inviteLink.append("\(UserDefaults.standard.string(forKey: "name")!) 님께서 약속 어플 ‘어떰’의 초대장을 보내셨습니다. 초대장이 있어야만 약속 캘린더를 작성하실 수 있습니다.초대링크: \(response.link) ")
+                        self.inviteLink.append("📩 \(UserDefaults.standard.string(forKey: "name")!)님께서 '어떰'의 초대장을 보내셨습니다!\n\n '어떰'은 개인링크로 일정📅을 공유해 간편하게 약속을 잡을 수 있는 서비스입니다.\n\n ✉ 초대링크: \(response.link) \n\n😝잉여 시간에 약속신청 받고 놀러가자😝")
                         print(self.inviteLink, response.link)
                     }
                 }
