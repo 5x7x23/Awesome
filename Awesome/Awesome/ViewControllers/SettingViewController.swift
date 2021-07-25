@@ -12,6 +12,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var linkShare: UIView!
     @IBOutlet weak var linkshareButton: UIButton!
     @IBOutlet weak var notificationView: UIView!
+    @IBOutlet weak var inviteCountLabel: UILabel!
     
     
     @IBOutlet weak var withdrawView: UIView!
@@ -19,11 +20,14 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var shareMyAwesome: UILabel!
     
+    var inviteCount: [InviteCountDataModel] = []
+    
     var inviteLink: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewRadius()
+        getInviteCount()
 
     }
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -41,8 +45,29 @@ class SettingViewController: UIViewController {
         logoutView.layer.cornerRadius = 15
         withdrawView.clipsToBounds = true
         withdrawView.layer.cornerRadius = 15
-        
-        
+    }
+    
+    func getInviteCount(){
+        GetInviteCountService.inviteCountData.getRecommendInfo{ (response) in
+            switch(response)
+            {
+            case .success(let loginData):
+                if let response = loginData as? InviteCountDataModel{
+                    let inviteCount = 3 - response.invitations.count
+                    print(inviteCount)
+                    self.inviteCountLabel.text = String(inviteCount)
+                }
+                print(loginData)
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
     
     func uppdateProfile(){
@@ -104,7 +129,7 @@ class SettingViewController: UIViewController {
             let defaults = UserDefaults.standard
             let refresh = defaults.string(forKey: "refreshToken")
             print("dfafd",refresh!)
-            GetAutoLoginService.shared.AutoLoginService(refresh_token: refresh!) { [self] result in
+            GetLogoutService.shared.AutoLoginService(refresh_token: refresh!) { [self] result in
                 switch result{
                 case .success(let tokenData):
                     print("로그아웃 성공")
