@@ -16,7 +16,7 @@ protocol dateData {
 class DatepickerViewController: UIViewController {
 
     @IBOutlet weak var pickerView: UIDatePicker!
-    var chooseDate : String = ""
+    var chooseDate: String = ""
     var delegate : dateData?
     
     override func viewDidLoad() {
@@ -31,7 +31,9 @@ class DatepickerViewController: UIViewController {
     func changed(){
            let dateformatter = DateFormatter()
            dateformatter.dateStyle = .none
-           dateformatter.timeStyle = .short
+        dateformatter.timeStyle = .short
+        dateformatter.locale = Locale(identifier: "en_GB")
+        print(pickerView.date)
         chooseDate = dateformatter.string(from: pickerView.date)
            
     }
