@@ -24,6 +24,7 @@ class CallendarViewController: UIViewController {
     var isSchedule : Bool = false
     var today = Date()
     var checkDate : String = "2021-07-03"
+    var selectDate: String = ""
     let eventStore = EKEventStore()
     var scheduleData : [scheduleDummy] = []
     var Userevents : [Date] = []
@@ -95,7 +96,9 @@ class CallendarViewController: UIViewController {
                     DispatchQueue.global().sync {
                         self.userEventsDetail.append(response)
                     }
-                    self.serverData()
+                    if response.myCalendar.count != 0{
+                        self.serverData()
+}
                     self.CalendarView.reloadData()
                     print(self.Userevents)
                 }
@@ -276,6 +279,7 @@ class CallendarViewController: UIViewController {
 
     @IBAction func plusScheduleButtonClicked(_ sender: Any) {
         guard let plusVC = storyboard?.instantiateViewController(identifier: "PlusViewController" ) as? PlusViewController else {return}
+        plusVC.selectDay = checkDate
         self.present(plusVC, animated: true, completion: nil)
     }
     @IBAction func notScheduleButtonCliecked(_ sender: Any) {
@@ -291,6 +295,10 @@ extension CallendarViewController: FSCalendarDelegate, FSCalendarDataSource{
     
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         scheduleTableview.reloadData()
+        
+//        let selectFormatter = DateFormatter()
+//        selectFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        
         let yearFormatter = DateFormatter()
             yearFormatter.dateFormat = "YYYY"
             yearData = yearFormatter.string(from: date)
