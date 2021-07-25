@@ -1,8 +1,17 @@
-//
-//  InviteCountDataModel.swift
-//  Awesome
-//
-//  Created by 박익범 on 2021/07/25.
-//
-
 import Foundation
+
+// MARK: - LogoutDataModel
+struct InviteCountDataModel: Codable {
+    let invitations: [Invitation]
+}
+
+// MARK: - Invitation
+struct Invitation: Codable {
+    let invitationToken: String
+    let isUsed: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case invitationToken = "invitation_token"
+        case isUsed = "is_used"
+    }
+}
