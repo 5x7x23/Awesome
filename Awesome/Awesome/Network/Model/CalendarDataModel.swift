@@ -14,6 +14,8 @@ struct CalendarDataModel: Codable {
 
 // MARK: - Calendar
 struct MyCalendar: Codable {
+    let creatorName: String
+    let participantName: String
     let id, creator, participant: Int
     let comment: String
     let startDate, endDate: Date
@@ -21,6 +23,8 @@ struct MyCalendar: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, creator, participant, comment
+        case creatorName = "creator_name"
+        case participantName = "participant_name"
         case startDate = "start_date"
         case endDate = "end_date"
         case createdAt = "created_at"
