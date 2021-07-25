@@ -27,6 +27,7 @@ struct GetLogoutService {
             case .success:
                 
                 print("----- 데이터 요청 성공")
+                print(userToken," aaa ", refresh_token)
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 print(dataRequest.response?.statusCode)
                 guard let value = dataResponse.value else {return}
@@ -56,7 +57,6 @@ struct GetLogoutService {
         
         case 200:
             print("--- 데이터 받기 성공")
-            print("로그아웃 성공" , decodedData.code)
             return .success(decodedData)
         case 400: return .requestErr(decodedData)
         case 500: return .serverErr
