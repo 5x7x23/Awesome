@@ -37,6 +37,8 @@
 		<string>GmarketSansTTFMedium.ttf</string>
 		<string>GmarketSansTTFBold.ttf</string>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>KAKAO_APP_KEY</key>
 	<string></string>
 	<key>KAKAO_SECURE_MODE</key>
@@ -56,9 +58,9 @@
 		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string></string>
+	<string>사용자의 일정을 불러오기 위해 꼭 필요한 권한입니다.</string>
 	<key>NSContactsUsageDescription</key>
-	<string></string>
+	<string>사용자의 일정을 불러오기 위해 꼭 필요한 권한입니다.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
