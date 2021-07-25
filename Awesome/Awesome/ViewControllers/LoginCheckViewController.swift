@@ -53,6 +53,7 @@ class LoginCheckViewController: UIViewController , data {
         userName.font = userName.font.withSize(resolutionFontSize(size: 24))
         awesomeLabel.font = awesomeLabel.font.withSize(resolutionFontSize(size: 18))
         awesomeLabel2.font = awesomeLabel2.font.withSize(resolutionFontSize(size: 18))
+
     }
     
     func refresh(){
@@ -209,7 +210,7 @@ class LoginCheckViewController: UIViewController , data {
       
         
             self.present(promiseVC, animated: true, completion: nil)
-            promiseVC.setData(time: scheduleDateString, information: scheduleData[0].myCalendar[indexPath.row].comment, person: String( scheduleData[0].myCalendar[indexPath.row].id))
+        promiseVC.setData(time: scheduleDateString, information: scheduleData[0].myCalendar[indexPath.row].comment, person: scheduleData[0].myCalendar[indexPath.row].creatorName)
         print(scheduleData[0].calendar[indexPath.row].comment)
             promiseVC.deleteDelegate = self
         
