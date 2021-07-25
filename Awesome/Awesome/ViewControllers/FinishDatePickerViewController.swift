@@ -28,6 +28,7 @@ class FinishDatePickerViewController: UIViewController {
            let dateformatter = DateFormatter()
            dateformatter.dateStyle = .none
            dateformatter.timeStyle = .short
+        dateformatter.locale = Locale(identifier: "en_GB")
         chooseDate = dateformatter.string(from: finishDatepicker.date)
            
     }
