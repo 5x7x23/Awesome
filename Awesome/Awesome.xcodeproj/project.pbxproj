@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20B2BAA9EB7D2E795EA4EB19 /* Pods_Awesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8302F9A49EF3264E52D9BAB /* Pods_Awesome.framework */; };
+		360C828C26AD5BF700119506 /* InviteCountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360C828B26AD5BF700119506 /* InviteCountDataModel.swift */; };
+		360C828F26AD5C0C00119506 /* InviteCounterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360C828E26AD5C0C00119506 /* InviteCounterService.swift */; };
 		361262152663F11E00E1475E /* StartDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361262142663F11E00E1475E /* StartDateViewController.swift */; };
 		361262172663F12E00E1475E /* FinishDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361262162663F12E00E1475E /* FinishDataViewController.swift */; };
 		36174C7D26382F0C00E8A0CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36174C7C26382F0C00E8A0CD /* SettingViewController.swift */; };
@@ -78,6 +80,8 @@
 
 /* Begin PBXFileReference section */
 		291B0FCE3BEADAB660264CBF /* Pods-Awesome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Awesome.debug.xcconfig"; path = "Target Support Files/Pods-Awesome/Pods-Awesome.debug.xcconfig"; sourceTree = "<group>"; };
+		360C828B26AD5BF700119506 /* InviteCountDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCountDataModel.swift; sourceTree = "<group>"; };
+		360C828E26AD5C0C00119506 /* InviteCounterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCounterService.swift; sourceTree = "<group>"; };
 		361262142663F11E00E1475E /* StartDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDateViewController.swift; sourceTree = "<group>"; };
 		361262162663F12E00E1475E /* FinishDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishDataViewController.swift; sourceTree = "<group>"; };
 		36174C7C26382F0C00E8A0CD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				36F3302E26A4E94C009C0173 /* KaKaoLogOut.swift */,
 				36F3303226A63B70009C0173 /* PostCalendarDataModel.swift */,
 				36F3303626AA77E3009C0173 /* InviteDataModel.swift */,
+				360C828B26AD5BF700119506 /* InviteCountDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				36F3303026A4E95A009C0173 /* LogOutService.swift */,
 				36F3303426A63B80009C0173 /* PostCalendarDataService.swift */,
 				36F3303826AA77F3009C0173 /* InviteDataService.swift */,
+				360C828E26AD5C0C00119506 /* InviteCounterService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -453,9 +459,11 @@
 				368AC810267C2C3B009A5E7E /* LoginPresentViewController.swift in Sources */,
 				36EDFE00264160C10088A538 /* ScheduleTableViewCell.swift in Sources */,
 				36AA7C25263A97080084DD9C /* AlertViewController.swift in Sources */,
+				360C828F26AD5C0C00119506 /* InviteCounterService.swift in Sources */,
 				36DE494E263EA88E00AE02DA /* MainTableViewCell.swift in Sources */,
 				367F9C1526427AB2005324A2 /* FinishDatePickerViewController.swift in Sources */,
 				369B01262692B2C7008AEDA7 /* GetCalendarData.swift in Sources */,
+				360C828C26AD5BF700119506 /* InviteCountDataModel.swift in Sources */,
 				36F3303526A63B80009C0173 /* PostCalendarDataService.swift in Sources */,
 				36429E3E26564AEC006CF81F /* NoScheduleTableViewCell.swift in Sources */,
 				3681BC422675CE2A00896A9A /* GetKakaoLoginDataService.swift in Sources */,
@@ -639,12 +647,12 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Awesome/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = "-all_Load";
 				PRODUCT_BUNDLE_IDENTIFIER = wouldyouin.Awesome.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,12 +680,12 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Awesome/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_Load";
 				PRODUCT_BUNDLE_IDENTIFIER = wouldyouin.Awesome.dev;
