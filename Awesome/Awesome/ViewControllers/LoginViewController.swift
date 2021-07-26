@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, isLogin{
         LoginVC.loginApple = true
         LoginVC.userNameText = userName
         self.navigationController?.pushViewController(LoginVC, animated: true)
-        self.present(alertVC, animated: true, completion: nil)
+//        self.present(alertVC, animated: true, completion: nil)
     }
     
 //MARK: viewdidload
