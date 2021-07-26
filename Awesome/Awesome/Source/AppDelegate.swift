@@ -22,13 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().delegate = self
 
-                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-                UNUserNotificationCenter
-                  .current()
-                  .requestAuthorization(
-                    options: authOptions,completionHandler: { (_, _) in }
-                  )
-                application.registerForRemoteNotifications()
+        UNUserNotificationCenter.current() .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] granted, error in print("Permission granted: \(granted)") }
+        // APNS 등록
+        application.registerForRemoteNotifications() 
+
 
 
         return true
