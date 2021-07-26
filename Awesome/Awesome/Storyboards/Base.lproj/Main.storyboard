@@ -1465,23 +1465,6 @@
             </objects>
             <point key="canvasLocation" x="3313" y="1475"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="h8I-ms-Oil">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tcK-Vn-FSS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hc-Ll-Wzk">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MGL-cG-wld" kind="relationship" relationship="rootViewController" id="2Nc-Ax-U6h"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14p-mm-tL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="832.5" y="748.94366197183103"/>
-        </scene>
         <!--Login Navigation Controller-->
         <scene sceneID="Zu7-nX-Ud5">
             <objects>

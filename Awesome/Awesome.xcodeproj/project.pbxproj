@@ -112,7 +112,6 @@
 		3681BC452675D0DE00896A9A /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		368A017F263FE43F00100B01 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368AC80F267C2C3B009A5E7E /* LoginPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentViewController.swift; sourceTree = "<group>"; };
-		368F135E2678D87E00143279 /* Awesome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awesome.entitlements; sourceTree = "<group>"; };
 		3698A9372637173C0082B4AB /* LoginCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckViewController.swift; sourceTree = "<group>"; };
 		369B01232692B2B9008AEDA7 /* CalendarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataModel.swift; sourceTree = "<group>"; };
 		369B01252692B2C7008AEDA7 /* GetCalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCalendarData.swift; sourceTree = "<group>"; };
@@ -169,7 +168,6 @@
 		36419D9A2636E4630067C89D /* Awesome */ = {
 			isa = PBXGroup;
 			children = (
-				368F135E2678D87E00143279 /* Awesome.entitlements */,
 				36E5B4F42648528C0079170F /* Storyboards */,
 				36E5B4EC2648520B0079170F /* Source */,
 				36E5B4F3264852510079170F /* ViewControllers */,
